@@ -15,7 +15,6 @@ This is London Referees Group website. Our aim is to create an effective platfor
 * MySQL
 
 
-
 ## Prerequisites
 * HTML
 * CSS

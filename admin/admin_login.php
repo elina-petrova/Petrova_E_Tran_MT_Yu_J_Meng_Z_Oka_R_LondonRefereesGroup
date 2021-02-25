@@ -50,7 +50,7 @@ if(isset($_SESSION['user_id'])){
     <link rel="stylesheet" type="text/css"  href="../public/css/reset.css">
     <title>Welcome to the admin panel</title>
 </head>
-<body>
+<body class="cms">
     <section class="login_area">
             <div class="logo_area">
                 <img class="logo" src="../public/images/LRG_logo.svg" alt="LRG_logo">

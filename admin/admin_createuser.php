@@ -109,7 +109,7 @@ if(isset($_POST['submit'])){
     <link rel="stylesheet" type="text/css"  href="../public/css/reset.css">
     <title>Create User Page</title>
 </head>
-<body>
+<body class="cms">
     <section class="create_user_area">
         <h2>Create New User</h2>
         <?php echo !empty($message)?$message:'';?> <!--if $message isnt empty, print $message info-->

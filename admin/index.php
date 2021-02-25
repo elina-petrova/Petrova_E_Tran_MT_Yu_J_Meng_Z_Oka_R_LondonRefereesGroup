@@ -14,7 +14,7 @@ confirm_logged_in();//only login in user can see the index.php page
     <link rel="stylesheet" type="text/css"  href="../public/css/reset.css">
     <title>Welcome Page</title>
 </head>
-<body>
+<body class="cms">
     <section class="index_php">
         <div class="login_user">
             <div class="login_info">

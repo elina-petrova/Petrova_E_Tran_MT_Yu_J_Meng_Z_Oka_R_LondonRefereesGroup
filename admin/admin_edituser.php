@@ -37,7 +37,7 @@ if(isset($_POST['submit'])){
     <link rel="stylesheet" type="text/css"  href="../public/css/reset.css">
     <title>Edit User</title>
 </head>
-<body>
+<body class="cms">
     <section class="edit_user_area">
         <h2>Edit User</h2>
         <div class="edit_user_form">

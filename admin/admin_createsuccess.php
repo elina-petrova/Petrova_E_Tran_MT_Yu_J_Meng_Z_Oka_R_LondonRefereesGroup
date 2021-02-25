@@ -14,7 +14,7 @@ confirm_logged_in();//only login in user can see the index.php page
     <link rel="stylesheet" type="text/css"  href="../public/css/reset.css">
     <title>Create user successful page.</title>
 </head>
-<body>
+<body class="cms">
     <section class="create_success_area">
         <h2>Hi, <?php echo $_SESSION['user_name'];?>! You have successfully create a new user. </h2>
         <br>

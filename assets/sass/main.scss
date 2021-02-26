@@ -1,7 +1,13 @@
 @import "modules/_vars.scss";
 @import "modules/_defaults.scss";
+@import "modules/_fonts.scss";
+//cms
 @import "modules/_loginform.scss";
 @import "modules/_index.scss";
 @import "modules/_createuser.scss";
 @import "modules/_edituser.scss";
 @import "modules/_createsuccess.scss";
+
+@import "modules/_header.scss";
+@import "modules/_mediaqueries.scss";
+

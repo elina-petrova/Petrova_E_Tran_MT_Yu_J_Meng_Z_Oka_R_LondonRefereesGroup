@@ -1,5 +1,17 @@
 @font-face {
     font-family: 'SfSportsNightNs';
-    src:  url('public/fonts/SfSportsNightNs.ttf')  format('truetype'), 
-    
+    src:  url('../../assets/fonts/SfSportsNightNs.ttf')  format('truetype'),   
 }
+
+@font-face {
+    font-family: 'Hahaha';
+    src:  url('../../assets/fonts/GrotesqueMTStd.otf')  format('truetype'),   
+}
+
+@font-face {
+    font-family: 'Condensed';
+    src:  url('../../assets/fonts/GrotesqueMTStd-Condensed.otf')  format('truetype'),   
+}
+
+$nav-font-family: 'Condensed',Fallback, Arial, "sans-serif";
+$main-font-family: 'Grotesque MT Std', Fallback, Arial, "sans-serif";

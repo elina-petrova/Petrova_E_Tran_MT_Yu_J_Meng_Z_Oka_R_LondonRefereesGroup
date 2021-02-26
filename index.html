@@ -15,6 +15,7 @@
 
 <body>
     <main id="app">
+        <!-- header -->
         <nav class="navbar">
 
             <div class="logo-wrap">
@@ -28,7 +29,6 @@
                 <!-- mobile menu-->
                 <div class="mobile_menu">
                     <router-link to="/about">About Us</router-link>
-
                     <router-link to="/team">Our Team</router-link>
                     <router-link to="/programs">Our Programs</router-link>
                     <router-link to="/contact">Contact Us</router-link>
@@ -77,6 +77,64 @@
         <!-- component matched by the route will render here -->
         <router-view></router-view>
 
+        <!--footer-->
+        <footer>
+            <div class="footer_nav_wrap">
+
+                <div class="social_media_wrap">
+                    <ul class="social_media_links">
+                        <li><a href=""><img src="./public/images/instagram.svg" alt="Instagram"></a></li>
+                        <li><a href=""><img src="./public/images/twitter.svg" alt="Twitter"></a></li>
+                        <li><a href=""><img src="./public/images/youtube.svg" alt="Instagram"></a></li>
+                        <li><a href=""><img src="./public/images/facebook.svg" alt="Facebook"></a></li>
+                    </ul>
+                    <div class="toTopButton">
+                        <div class="Teamarrow"></div>
+                        <div class="Teamarrow-line">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer_links_wrap">
+                    <router-link to="/">Home</router-link>
+                    <router-link to="/about">About Us</router-link>
+                    <div class="block">
+                        <router-link to="/team">Our Team</router-link>
+                        <router-link to="/"><span>Events</span></router-link>
+                    </div>
+                    <div class="block">
+                        <router-link to="/programs">Our Programs</router-link>
+                        <router-link to="/"><span>Juniour Mentorship</span></router-link>
+                        <router-link to="/"><span>Training capms</span></router-link>
+                    </div>
+                    <router-link to="/contact">Contact Us</router-link>
+                </div>
+            </div>
+
+            <div class="creds">
+
+                <div class="text">
+                    <div class="rights">
+                        <p>© 2021 <span>London Referees Group</span> - All rights reserved</p>
+                    </div>
+                    <div class="contact_info">
+                        <div>
+                            <img src="./public/images/phone-call.svg" alt="">
+                            <p> +1 226-000-0000</p>
+                        </div>
+                        <div>
+                            <img src="./public/images/email.svg" alt="">
+                            <p>lrg@londonrefereesgroup.com</p>
+                        </div>
+                        <div>
+                            <img src="./public/images/map.svg" alt="">
+                            <p>360 Sheldon London, ON N1T 2H9</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
     </main>
 
     <script type="module" src="public/js/main.js"></script>

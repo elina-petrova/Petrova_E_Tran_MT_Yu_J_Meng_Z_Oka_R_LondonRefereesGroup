@@ -14,16 +14,64 @@
 
 <body>
     <main id="app">
-        <div>
+        <nav class="navbar">
 
-            <!-- `<router-link>` will be rendered as an `<a>` tag by default -->
-            <router-link to="/">Home</router-link>
-            <router-link to="/about">About</router-link>
-            <router-link to="/team">Team</router-link>
-            <router-link to="/contact">Contact</router-link>
-            <a href="admin/admin_login.php">Login</a>
-            <!-- <router-link to="/login">Login</router-link> -->
-        </div>
+            <div class="logo-wrap">
+                <router-link to="/">
+                    <img class="logo" src="public/images/LRG_logo.svg" alt="LRG logo">
+                </router-link>
+            </div>
+            <div class="show_mobile  mobile_menu_wrap">
+                <div class="menu_icon"></div>
+
+                <!-- mobile menu-->
+                <div class="mobile_menu">
+                    <router-link to="/about">About Us</router-link>
+
+                    <router-link to="/team">Our Team</router-link>
+                    <router-link to="/programs">Our Programs</router-link>
+                    <router-link to="/contact">Contact Us</router-link>
+                    <a href="admin/admin_login.php">Login</a>
+                    <a href="admin/admin_login.php">Already a member?</a>
+
+                </div>
+                <!-- mobile menu end-->
+            </div>
+            <div class="show_desktop">
+                <!-- `<router-link>` will be rendered as an `<a>` tag by default -->
+                <router-link to="/about">About Us</router-link>
+                <div class="dropdown">
+                    <router-link to="/team">Our Team <img class="dd_icon" src="public/images/dd_icon.svg" alt="dd_icon">
+                    </router-link>
+                    <div class="dropdown-content">
+                        <router-link to="/">Events
+                        </router-link>
+                        <router-link to="/">Events</router-link>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <router-link to="/programs">Our Programs <img class="dd_icon" src="public/images/dd_icon.svg"
+                            alt="dd_icon"></router-link>
+                    <div class="dropdown-content">
+                        <router-link to="/">Program 1</router-link>
+                        <router-link to="/">Program 2</router-link>
+                    </div>
+                </div>
+
+                <router-link to="/contact">Contact Us</router-link>
+                <!-- <router-link to="/login">Login</router-link> -->
+            </div>
+            <div class="show_desktop_flex login-wrap">
+                <a href="admin/admin_login.php">
+                    <div class="alinks">
+                        Login
+
+                        <img class="login_icon" src="public/images/login.svg" alt="LRG logo">
+                    </div>
+                </a>
+                <a class="toDashboard" href="admin/admin_login.php">Already a member?</a>
+            </div>
+        </nav>
 
         <!-- component matched by the route will render here -->
         <router-view></router-view>
@@ -31,6 +79,7 @@
     </main>
 
     <script type="module" src="public/js/main.js"></script>
+    <script type="module" src="public/js/animations.js"></script>
 </body>
 
 </html>

@@ -1,11 +1,10 @@
 .navbar{
     left: 0;
-    padding: 1.4rem;
+    padding: 1.4rem 13%;
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 100;
-
     background: $black;
     position: relative;
     display: flex;
@@ -20,6 +19,12 @@
         font-family: monotype-grotesque-condensed, sans-serif;
         font-size: 25px;
         padding: 1.5rem;
+    }
+}
+.logo-wrap{
+    width: 50px;
+    a{
+        padding: 0;
     }
 }
 .login-wrap{

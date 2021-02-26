@@ -24,3 +24,21 @@ img{
 li{
     list-style: none;
 }
+
+#app{
+    display: flex;
+    flex-direction: column;
+    font-family: monotype-grotesque, sans-serif;
+}
+
+.heading{
+            font-size: $heading-font-size;
+        text-transform: uppercase;
+        font-family: SF Sports Night NS;
+        letter-spacing: 1px;
+        padding:60px;
+        color: white;
+        span{
+            color: $red;
+        }
+}

@@ -1,5 +1,5 @@
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
     .show_desktop{
         display: block;
     }
@@ -10,16 +10,19 @@
     .show_mobile{
         display: none;
     }
+    .features{
+        justify-content: space-between;
+    }
 }
 
-@media (min-width: 700px){
+@media (min-width: 800px){
     .footer_nav_wrap{
         align-items: center;
     }
     .footer_links_wrap{
     flex-direction: row;
     a{
-        padding: .3rem 1rem;
+        padding: .3rem 2.3rem;
     }
 }
 .social_media_wrap{
@@ -41,4 +44,95 @@
          .social_media_links{
              padding: .3rem 2rem 2rem 2rem;
          }
+}
+
+@media (min-width: 1750px) {
+    .features{
+        width: 1700px;
+    }
+}
+
+
+@media (min-width: 1080px){
+    #partnersSection .logos{
+        flex-wrap: nowrap;
+    }
+}
+@media (min-width: 950px){
+   #partnersSection .logos{
+        width: 70%;
+    }
+}
+
+@media (max-width:800px){
+
+    #partnersSection h1{
+        font-size: 50px;
+    }
+
+
+       .juniourcontent #heroText{
+        h2{
+            width:80%;
+            font-size: 25px;
+        }
+        h3{
+
+            font-size: 70px;
+        }
+        h4{
+
+            font-size: 40px;
+        }
+    }
+
+    .juniourcontent .juniorText{
+        width: 60%;
+            font-size: 20px;
+        }
+
+        .feature{
+            width: auto;
+            padding: 30px 30px 30px 10px;
+        }
+        .programButton span::after{
+                left: 60%;
+                transform: translateX(-50%);
+        }
+        .text{
+            flex-direction: column-reverse;
+        } 
+   
+}
+
+
+@media (min-width: 1080px){
+    #partnersSection .logos{
+        flex-wrap: nowrap;
+    }
+    .partner-logo-wrap{
+            width: 100px;
+    }
+}
+@media (min-width: 950px){
+   #partnersSection .logos{
+        width: 70%;
+    }
+    .partner-logo-wrap{
+            width: 150px;
+    }
+                        .goals_wrap{
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 700px){
+    .partner-logo-wrap{
+            width: 150px;
+    }
+}
+@media (max-width:700px){
+    .partner-logo-wrap{
+            width: 100px;
+    }
 }

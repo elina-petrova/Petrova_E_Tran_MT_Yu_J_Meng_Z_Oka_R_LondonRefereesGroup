@@ -177,15 +177,14 @@ header{
 
 //referee section starts
 #refereeSection{
-    position:relative;
-     width: 100vw;
-    min-height: 130vh;
-    max-width:100%;
+    position: relative;
+    width: 100vw;
+    min-height: 110vh;
+    max-width: 100%;
     padding-bottom: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
 
     h1{
         font-size: $heading-font-size;

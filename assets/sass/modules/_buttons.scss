@@ -1,0 +1,27 @@
+.button{
+    border: solid 2px $red;
+
+
+    height: 60px;
+    width: 200px;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        color: $red;
+        font-family: monotype-grotesque, sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+
+.goalsButton{
+    border-color: #fff;
+    margin-top: 100px;
+    a{
+        color: #fff;
+    }
+}

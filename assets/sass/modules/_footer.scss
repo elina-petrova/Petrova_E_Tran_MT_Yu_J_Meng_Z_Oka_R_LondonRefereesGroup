@@ -13,7 +13,7 @@
     flex-direction: column;
 
     a{
-        padding: 0.3rem 13%;
+        padding: 0.3rem $offset;
         font-family: monotype-grotesque, sans-serif;
         font-weight: 700;
         text-transform: uppercase;
@@ -32,7 +32,7 @@
 
 .social_media_links{
     display: flex;
-    padding: .3rem 2rem 2rem 13%;
+    padding: .3rem 2rem 2rem $offset;
     a{
         color: white;
     }
@@ -46,7 +46,7 @@
 }
 
 .creds{
-    padding: 1.4rem 13%;
+    padding: 1.4rem $offset;
 }
 
 
@@ -63,7 +63,7 @@
     height: 30px;
     border-radius: 100%;
     position: absolute;
-    right: 13%;
+    right: $offset;
     justify-self: flex-end;
 
     margin-top: .3rem;

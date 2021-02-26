@@ -1,0 +1,335 @@
+#heroSection{
+    background: $black;
+    font-size: 16px;
+    width: 100vw;
+    max-height: 95vh;
+    min-height: 95vh;
+    max-width:100%;
+    position: relative;
+    color: $white;
+    overflow: hidden;
+    display: flex;
+}
+
+//header start
+.mobile{
+    display:none;
+}
+header{
+        height: 100%;
+    padding: 60px 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    .logo{
+        justify-self: flex-start;
+        align-self: center;
+    }
+}
+#menuSection{
+    font-size: 25px;
+    margin-top: 15vh;
+    .menuContainer{ 
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    li{
+        margin-top: 20px;
+    }
+    a{
+        color: $white;
+        text-decoration: none;
+    }
+    }
+}
+//header end
+
+//social-media icons
+.Herofooter{
+    position: absolute;
+    top: 25vh;
+    right: 6vw;
+    ul{
+        li{
+            margin-top: 30px;
+        }
+    }
+}
+
+#socialMedia{
+  
+    .socialMediaContainer{
+        width: 30px;
+
+    a{
+        color: $white;
+        text-decoration: none;
+    }
+    }
+}
+//social-media end
+
+//button
+#learnMoreButton{
+    font-size: 25px;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 150px;
+}
+#arrow-line{
+    display: block;
+    position: relative;
+    bottom: -5px;
+    left: 0;
+    width: 93%;
+    height: 2px;
+    background-color: white;
+    transition: all 0.5s;
+
+}
+#arrow{
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(
+-45deg
+);
+    position: absolute;
+    top: -5px;
+    right: 1px;
+    
+}
+#arrow-line::after{
+    content: "";
+    position: absolute;
+    right: -17px;
+    top: -20px;
+    border-radius: 100%;
+    background-color: white;
+    opacity: 0.3;
+    width: 40px;
+    height: 40px;
+
+    transition: all 0.5s;
+}
+//button end
+.hero-content-wrapper{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-gap: 20px;
+    gap: 20px;
+    grid-template-rows: minmax(700px, 100vh);
+    width: 100vw;
+}
+
+
+
+#man {
+    grid-column: 3/11;
+    grid-row: 1/2;
+    height: fit-content;
+    z-index: 99999;
+    align-self: end;
+    z-index: 22;
+        padding: 13% 13% 0 13%;
+    margin-top: 5%;
+
+    min-height: 0;
+}
+
+
+
+#tweet{
+    font-family: "SF Sports Night NS";
+    letter-spacing: 3px;
+    font-size: 210px;
+    animation-fill-mode: forwards;
+    color: #fff;
+    grid-row: 1/2;
+    grid-column: 3/9;
+    /* margin-top: -6%; */
+    z-index: 11;
+    margin-top: 13vw;
+    span{
+        color: $red;
+    }
+}
+
+#heroMainContent{
+    z-index: 999999;
+    grid-column: 3/7;
+    grid-row: 1/2;
+    height: fit-content;
+    margin-top: 25vh;
+    margin-left: 20px;
+    h1{
+        font-size: 23px;
+        z-index: 333;
+          font-family: monotype-grotesque, sans-serif;
+    font-weight: 400;
+    }
+}
+
+
+
+//referee section starts
+#refereeSection{
+    position:relative;
+     width: 100vw;
+    min-height: 130vh;
+    max-width:100%;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    h1{
+        font-size: $heading-font-size;
+        text-transform: uppercase;
+        font-family: SF Sports Night NS;
+        letter-spacing: 1px;
+        padding:60px;
+        color: $red;
+        span{
+            color: $black;
+        }
+    }
+}
+
+.features{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: fit-content;
+    padding: 0 5%;
+    font-family: "Grotesque MT Std";
+}
+
+.feature-text{
+    line-height: 20px;
+    max-width: 250px;
+}
+
+.feature{
+    width: 450px;
+    display: flex;
+    flex-direction: row;
+    padding: 20px 5%;
+
+    h2{
+        text-transform: uppercase;
+        padding-bottom: 20px;
+        white-space: nowrap;
+    }
+}
+
+.number{
+    font-size: 150px;
+    font-family: 'Grotesque MT Std';
+    font-weight: bold;
+    padding-right: 20px;
+    top: -30px;
+    position: relative;
+    color: $grey;
+}
+
+
+
+//referee section ends
+
+
+#partnersSection{
+    width: 100vw;
+    min-height: 89vh;
+    display: inline-flex;
+    max-width:100%;
+    background-image: url('../images/partners-bg.jpg');
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: space-evenly;
+
+    h1{
+        font-family: 'SF Sports Night NS';
+             font-size: $heading-font-size;
+            color:#fff;
+            padding-top: 100px;
+            span{
+                color: $red;
+            }
+    }
+    .logos{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        padding-top: 100px;
+        flex-wrap: wrap;
+        padding-bottom: 100px;
+    }
+    .partner-logo-wrap{
+            // width: 100px;
+            margin: 20px 20px;
+        img{
+            object-fit: cover;
+            max-width: 100%;
+        }
+    }
+}
+
+#goals{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../images/ourgoals-bg.jpg');
+    background-position: center bottom;
+    background-size: cover;
+    max-width: 100%;
+    padding: 100px;
+}
+
+.goals_wrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.goals_col{
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem;
+}
+
+.goal{
+    color: white;
+    height: 60px;
+    width: 300px;
+    
+    background-color: $grey;
+    margin: 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.red{
+    background-color: $red;
+}
+
+.goalsText{
+ 
+    color: #fff;
+    font-family: monotype-grotesque, sans-serif;
+    font-size: 20px;
+    width: 500px;
+    text-align: center;
+    padding-top:100px;
+
+}

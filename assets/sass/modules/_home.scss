@@ -8,10 +8,11 @@
     position: relative;
     color: $white;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
-//header start
 .mobile{
     display:none;
 }
@@ -24,15 +25,22 @@ header{
     left: 0;
     .logo{
         justify-self: flex-start;
-        align-self: center;
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
     }
 }
 #menuSection{
     font-size: 25px;
     margin-top: 15vh;
     .menuContainer{ 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-decoration: none;
     li{
         margin-top: 20px;
@@ -43,9 +51,7 @@ header{
     }
     }
 }
-//header end
 
-//social-media icons
 .Herofooter{
     position: absolute;
     top: 25vh;
@@ -68,9 +74,7 @@ header{
     }
     }
 }
-//social-media end
 
-//button
 #learnMoreButton{
     font-size: 25px;
     position: absolute;
@@ -86,6 +90,8 @@ header{
     width: 93%;
     height: 2px;
     background-color: white;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
 
 }
@@ -94,7 +100,13 @@ header{
     border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 5px;
-    transform: rotate(
+    -webkit-transform: rotate(
+-45deg
+);
+        -ms-transform: rotate(
+-45deg
+);
+            transform: rotate(
 -45deg
 );
     position: absolute;
@@ -113,26 +125,100 @@ header{
     width: 40px;
     height: 40px;
 
+    -webkit-transition: all 0.5s;
+
+    -o-transition: all 0.5s;
+
     transition: all 0.5s;
 }
-//button end
+
 .hero-content-wrapper{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
     grid-template-columns: repeat(12,1fr);
     grid-gap: 20px;
     gap: 20px;
+    -ms-grid-rows: minmax(700px, 100vh);
     grid-template-rows: minmax(700px, 100vh);
     width: 100vw;
+}
+
+.hero-content-wrapper > *:nth-child(1){
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+
+.hero-content-wrapper > *:nth-child(2){
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+}
+
+.hero-content-wrapper > *:nth-child(3){
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+}
+
+.hero-content-wrapper > *:nth-child(4){
+    -ms-grid-row: 1;
+    -ms-grid-column: 7;
+}
+
+.hero-content-wrapper > *:nth-child(5){
+    -ms-grid-row: 1;
+    -ms-grid-column: 9;
+}
+
+.hero-content-wrapper > *:nth-child(6){
+    -ms-grid-row: 1;
+    -ms-grid-column: 11;
+}
+
+.hero-content-wrapper > *:nth-child(7){
+    -ms-grid-row: 1;
+    -ms-grid-column: 13;
+}
+
+.hero-content-wrapper > *:nth-child(8){
+    -ms-grid-row: 1;
+    -ms-grid-column: 15;
+}
+
+.hero-content-wrapper > *:nth-child(9){
+    -ms-grid-row: 1;
+    -ms-grid-column: 17;
+}
+
+.hero-content-wrapper > *:nth-child(10){
+    -ms-grid-row: 1;
+    -ms-grid-column: 19;
+}
+
+.hero-content-wrapper > *:nth-child(11){
+    -ms-grid-row: 1;
+    -ms-grid-column: 21;
+}
+
+.hero-content-wrapper > *:nth-child(12){
+    -ms-grid-row: 1;
+    -ms-grid-column: 23;
 }
 
 
 
 #man {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 16;
     grid-column: 3/11;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     grid-row: 1/2;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     z-index: 99999;
-    align-self: end;
+    -ms-grid-row-align: end;
+        align-self: end;
     z-index: 22;
         padding: 13% 13% 0 13%;
     margin-top: 5%;
@@ -146,11 +232,16 @@ header{
     font-family: "SF Sports Night NS";
     letter-spacing: 3px;
     font-size: 210px;
-    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
     color: #fff;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     grid-row: 1/2;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 6;
     grid-column: 3/9;
-    /* margin-top: -6%; */
+
     z-index: 11;
     margin-top: 13vw;
     span{
@@ -160,8 +251,14 @@ header{
 
 #heroMainContent{
     z-index: 999999;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 7;
     grid-column: 3/7;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     grid-row: 1/2;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     margin-top: 25vh;
     margin-left: 20px;
@@ -173,18 +270,22 @@ header{
     }
 }
 
-
-
-//referee section starts
 #refereeSection{
     position: relative;
     width: 100vw;
     min-height: 110vh;
     max-width: 100%;
     padding-bottom: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     h1{
         font-size: $heading-font-size;
@@ -200,10 +301,20 @@ header{
 }
 
 .features{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     padding: 0 5%;
     font-family: "Grotesque MT Std";
@@ -216,8 +327,13 @@ header{
 
 .feature{
     width: 450px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     padding: 20px 5%;
 
     h2{
@@ -239,20 +355,25 @@ header{
 
 
 
-//referee section ends
-
-
 #partnersSection{
     width: 100vw;
     min-height: 89vh;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     max-width:100%;
     background-image: url('../images/partners-bg.jpg');
     background-position: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    // justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     h1{
         font-family: 'SF Sports Night NS';
@@ -264,19 +385,25 @@ header{
             }
     }
     .logos{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-around;
-        align-items: center;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         width: 80%;
         padding-top: 100px;
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         padding-bottom: 100px;
     }
     .partner-logo-wrap{
-            // width: 100px;
             margin: 20px 20px;
         img{
-            object-fit: cover;
+            -o-object-fit: cover;
+               object-fit: cover;
             max-width: 100%;
         }
     }
@@ -285,9 +412,16 @@ header{
 #goals{
     width: 100vw;
     min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-image: url('../images/ourgoals-bg.jpg');
     background-position: center bottom;
     background-size: cover;
@@ -296,13 +430,23 @@ header{
 }
 
 .goals_wrap{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .goals_col{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 0 5rem;
 }
 
@@ -314,9 +458,17 @@ header{
     background-color: $grey;
     margin: 5%;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .red{
     background-color: $red;
@@ -327,7 +479,7 @@ header{
     color: #fff;
     font-family: monotype-grotesque, sans-serif;
     font-size: 20px;
-    width: 500px;
+    max-width: 500px;
     text-align: center;
     padding-top:100px;
 

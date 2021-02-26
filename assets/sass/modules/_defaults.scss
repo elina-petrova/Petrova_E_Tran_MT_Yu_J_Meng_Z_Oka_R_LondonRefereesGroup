@@ -29,6 +29,10 @@ li{
     display: flex;
     flex-direction: column;
     font-family: monotype-grotesque, sans-serif;
+
+        -ms-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
 }
 
 .heading{
@@ -38,6 +42,7 @@ li{
         letter-spacing: 1px;
         padding:60px;
         color: white;
+        white-space: nowrap;
         span{
             color: $red;
         }

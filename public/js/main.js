@@ -1,5 +1,7 @@
 console.log('hi');
 
+// var Promise = require('es6-promise').Promise;
+
 import Home from "./components/HomeComponent.js";
 import About from "./components/AboutComponent.js";
 import Team from "./components/TeamComponent.js";
@@ -23,6 +25,10 @@ const router = new VueRouter({
 const vm = new Vue({
     router,
     data: {
+    },
+
+    mounted: function () {
+        console.log('vue cinnected');
     },
 
 }).$mount("#app");

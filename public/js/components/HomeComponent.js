@@ -190,7 +190,7 @@ export default {
 
             </div>
 
-            <div class="member">
+            <div class="member transparent">
                 <div class="member-img-wrap">
                     <img src="./public/images/hockey-junior-player2-bw.jpg" alt="member-img">
                 </div>
@@ -215,7 +215,7 @@ export default {
                 </div>
             </div>
 
-            <div class="member">
+            <div class="member transparent">
                 <div class="member-img-wrap">
                     <img src="./public/images/hockey-junior-player3-bw.jpg" alt="member-img">
                 </div>

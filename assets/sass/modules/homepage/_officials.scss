@@ -1,5 +1,4 @@
 #officials{
-    min-height: 120vh;
     overflow: hidden;
     position: relative;
     h1{
@@ -28,14 +27,14 @@
 
 .officialsGalleryWrap{
     width: 68vw;
-    height: 500px;
+    // height: 500px;
     // overflow-x: hidden;
     position: relative;
 }
 
 .officialsGallery{
-    height: 500px;
-    width: 3000px;
+    // height: 500px;
+    // width: 3000px;
     display: flex;
     flex-direction: row;
 }
@@ -107,9 +106,10 @@
 }
 
 @media (min-width: 800px) {
-    // .officialsGallery{
-    //     width: max-content;
-    // }
+    .officialsGallery{
+       height: 500px;
+       width: 3000px;
+    }
     .member{
     flex-direction: row;
     width: 68vw;

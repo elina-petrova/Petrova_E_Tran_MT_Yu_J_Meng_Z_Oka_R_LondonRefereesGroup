@@ -1,5 +1,4 @@
 #partnersSection{
-    min-height: 89vh;
     background-image: url('../images/partners-bg.jpg');
     background-position: center;
     span{
@@ -17,14 +16,26 @@
         width: 80%;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        padding-bottom: 100px;
+        padding: 5rem 0;
+        padding-bottom: 8rem;
     }
     .partner-logo-wrap{
             margin: 20px 20px;
+            position: relative;
         img{
             -o-object-fit: cover;
                object-fit: cover;
             max-width: 100%;
         }
+        .partner-logo-color{
+            position: absolute;
+            left:0;
+            opacity: 0;
+            z-index:999;
+            transition: all 0.5s;
+        }
+        .partner-logo-color:hover{
+    opacity: 1;
+}
     }
 }

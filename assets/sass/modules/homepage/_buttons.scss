@@ -10,6 +10,7 @@
     
     justify-content: center;
     align-items: center;
+    transition: all 0.3s;
 
     a {
         color: $red;
@@ -26,5 +27,25 @@
     margin-top: 100px;
     a{
         color: #fff;
+    }
+}
+
+.memberInfo .button:hover{
+     background-color: $red;
+    a{
+    color: #fff;
+    }
+}
+.meetTheTeamButton:hover{
+    background-color: $red;
+    a{
+    color: #fff;
+    }
+}
+
+.goalsButton:hover{
+    background-color: #fff;
+    a{
+    color: $red;
     }
 }

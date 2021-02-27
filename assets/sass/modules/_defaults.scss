@@ -33,6 +33,8 @@ li{
         -ms-flex: 1;
     -webkit-flex: 1;
     flex: 1;
+    max-width: 100vw;
+    overflow: hidden;
 }
 
 // .heading{

@@ -252,15 +252,21 @@ export default {
     <section id="partnersSection" class="sectionShell">
         <h1><span>I </span>Partners</h1>
         <div class="logos">
-            <div class="partner-logo-wrap"><img src="./public/images/alliance-hockey-gs.png" alt="Alliance Hockey Logo">
+            <div class="partner-logo-wrap"><img class="partner-logo" src="./public/images/alliance-hockey-gs.png" alt="Alliance Hockey Logo">
+            <img class="partner-logo-color" src="./public/images/alliance-hockey.png" alt="Alliance Hockey Logo">
             </div>
-            <div class="partner-logo-wrap"><img src="./public/images/hockey-canada-gs.svg" alt="Alliance Hockey Logo">
+            <div class="partner-logo-wrap"><img class="partner-logo" src="./public/images/hockey-canada-gs.svg" alt="Alliance Hockey Logo">
+            <img class="partner-logo-color" src="./public/images/hockey-canada.svg" alt="Alliance Hockey Logo">
             </div>
-            <div class="partner-logo-wrap"><img src="./public/images/OMHA-gs.svg" alt="Alliance Hockey Logo"></div>
-            <div class="partner-logo-wrap"><img src="./public/images/sportability-gs.png" alt="Alliance Hockey Logo">
+            <div class="partner-logo-wrap"><img class="partner-logo" src="./public/images/OMHA-gs.svg" alt="Alliance Hockey Logo">
+            <img class="partner-logo-color" src="./public/images/OMHA.svg" alt="Alliance Hockey Logo"></div>
+            <div class="partner-logo-wrap"><img class="partner-logo" src="./public/images/sportability-gs.png" alt="Alliance Hockey Logo">
+            <img class="partner-logo-color" src="./public/images/sportability.png" alt="Alliance Hockey Logo">
             </div>
-            <div class="partner-logo-wrap"><img src="./public/images/OHF-gs.svg" alt="Alliance Hockey Logo"></div>
-            <div class="partner-logo-wrap"><img src="./public/images/OWHA-gs.svg" alt="Alliance Hockey Logo"></div>
+            <div class="partner-logo-wrap"><img class="partner-logo" src="./public/images/OHF-gs.svg" alt="Alliance Hockey Logo">
+            <img class="partner-logo-color" src="./public/images/OHF.svg" alt="Alliance Hockey Logo"></div>
+            <div class="partner-logo-wrap"><img class="partner-logo" src="./public/images/OWHA-gs.svg" alt="Alliance Hockey Logo">
+            <img class="partner-logo-color" src="./public/images/OWHA.svg" alt="Alliance Hockey Logo"></div>
         </div>
     </section>
 

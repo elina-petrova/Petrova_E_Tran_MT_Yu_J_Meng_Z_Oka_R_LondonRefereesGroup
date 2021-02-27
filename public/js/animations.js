@@ -46,9 +46,17 @@ function slideBack() {
     }
 }
 
+function scrollToTop() {
+    rootElement.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+}
 
+var scrollToTopBtn = document.querySelector(".toTopButton");
+var rootElement = document.documentElement;
 
-
+scrollToTopBtn.addEventListener("click", scrollToTop)
 navPrev.addEventListener("click", slide);
 navNext.addEventListener("click", slideBack);
 

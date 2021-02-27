@@ -1,6 +1,6 @@
 export default {
     template: `
-    <section>
+    <section class="transition">
     <section id="heroSection">
         <div class="Herofooter">
             <div id="socialMedia" class="show_desktop">

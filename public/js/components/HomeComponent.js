@@ -1,19 +1,11 @@
+
+import SocialMedia from "./socialMediaComponent.js";
+
 export default {
     template: `
     <section class="transition">
-    <section id="heroSection">
-        <div class="Herofooter">
-            <div id="socialMedia" class="show_desktop">
-                <ul class="socialMediaContainer">
-                    <li><a href=""><img src="./public/images/instagram.svg" alt="Instagram"></a></li>
-                    <li><a href=""><img src="./public/images/twitter.svg" alt="Twitter"></a></li>
-                    <li><a href=""><img src="./public/images/youtube.svg" alt="Instagram"></a></li>
-                    <li><a href=""><img src="./public/images/facebook.svg" alt="Facebook"></a></li>
-                    <li></li>
-                </ul>
-            </div>
-        </div>
-
+    <section class="heroSection">
+    <social-media></social-media>
         </div>
         <!-- <h2 id="tweet">TWEEET!</h2> -->
         <div class="hero-content-wrapper">
@@ -99,7 +91,7 @@ export default {
 
         </div>
         <div class="button meetTheTeamButton">
-            <a href="/team"><span>Meet the team</span></a>
+            <a href="/team">Meet the team</a>
         </div>
 
         <!-- design -->
@@ -115,24 +107,24 @@ export default {
         <div class="goals_wrap">
             <div class="goals_col">
                 <div class="goal red">
-                    <h2>PASSION</h2>
+                    <h3>PASSION</h3>
                 </div>
                 <div class="goal">
-                    <h2>FAIRNESS</h2>
+                    <h3>FAIRNESS</h3>
                 </div>
                 <div class="goal red">
-                    <h2>COMMUNICATION</h2>
+                    <h3>COMMUNICATION</h3>
                 </div>
             </div>
             <div class="goals_col">
                 <div class="goal">
-                    <h2>LEADERSHIP</h2>
+                    <h3>LEADERSHIP</h3>
                 </div>
                 <div class="goal red">
-                    <h2>RESPECT</h2>
+                    <h3>RESPECT</h3>
                 </div>
                 <div class="goal">
-                    <h2>SAFE PLAY</h2>
+                    <h3>SAFE PLAY</h3>
                 </div>
             </div>
         </div>
@@ -174,7 +166,7 @@ export default {
                         </div>
 
                         <div>
-                            <h2> John Doe </h2>
+                            <h3> John Doe </h3>
                             <p>Junior Membership Program Graduate</p>
                         </div>
                         <div class="button">
@@ -204,7 +196,7 @@ export default {
                         </div>
 
                         <div>
-                            <h2> John Doe </h2>
+                            <h3> John Doe </h3>
                             <p>Junior Membership Program Graduate</p>
                         </div>
                         <div class="button">
@@ -229,7 +221,7 @@ export default {
                         </div>
 
                         <div>
-                            <h2> John Doe </h2>
+                            <h3> John Doe </h3>
                             <p>Junior Membership Program Graduate</p>
                         </div>
                         <div class="button">
@@ -272,5 +264,10 @@ export default {
 
 
 </section>
-        `
+        `,
+
+    components: {
+        "social-media": SocialMedia
+    }
+
 }

@@ -29,22 +29,24 @@
 }
 
 .feature-text{
-    line-height: 23px;
+line-height: 23px;
     max-width: 250px;
     font-size: 19px;
-    color: $black;
+    color: #1D1B1D;
 }
 
 .feature{
-    width: 455px;
+    /* width: 380px; */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    padding: 20px 5%;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    /* padding: 6rem 5% 0 5%; */
+    /* padding: 3rem; */
+    padding: 1rem 0 1rem 0;
 
     h2{
         text-transform: uppercase;

@@ -30,6 +30,7 @@
     // height: 500px;
     // overflow-x: hidden;
     position: relative;
+    padding-top: $default-padding;
 }
 
 .officialsGallery{
@@ -79,26 +80,22 @@
     padding-bottom: 0;
     font-weight: 400;
     justify-content: space-between;
-      h2{
-        font-size: 23px;
+      h3{
         color:$red;
-        text-transform: uppercase;
-        font-weight: 700;
         margin-bottom: 10px;
     }
     p{
         color: #fff;
-        font-family: monotype-grotesque, sans-serif;
-        font-size: 20px;
+        font-weight: 700;
         margin-bottom: 2rem;
     }
 
 }
 
 .memberText{
-        padding: 3rem 0 2rem 0;
+    padding: 3rem 0 2rem 0;
     color: $white;
-        font-size: 20px;
+    font-size: 20px;
     line-height: 26px;
 }
 .transparent{

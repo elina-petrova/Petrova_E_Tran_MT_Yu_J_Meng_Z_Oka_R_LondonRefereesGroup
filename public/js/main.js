@@ -10,7 +10,7 @@ import Contact from "./components/ContactComponent.js";
 
 const routes = [
     { path: "/", name: "Home", component: Home },
-    { path: "/about", name: "About", component: About },
+    { path: "/about", name: "Home", component: Home },
     { path: "/team", name: "Team", component: Team },
     { path: "/programs", name: "Programs", component: Programs },
     { path: "/contact", name: "Contact", component: Contact },

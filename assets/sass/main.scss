@@ -9,7 +9,7 @@
 @import "modules/_edituser.scss";
 @import "modules/_createsuccess.scss";
 
-
+@import "modules/transition";
 @import "modules/_header.scss";
 @import "modules/_footer.scss";
 
@@ -22,6 +22,7 @@
 @import "modules/homepage/goals";
 @import "modules/homepage/partners";
 @import "modules/homepage/officials";
+
 
 @import "modules/_mediaqueries.scss";
 

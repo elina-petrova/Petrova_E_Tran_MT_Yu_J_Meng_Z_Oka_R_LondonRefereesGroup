@@ -1,0 +1,93 @@
+
+
+header{
+    height: 100%;
+    padding: 60px 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    .logo{
+        justify-self: flex-start;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
+}
+#menuSection{
+    font-size: 25px;
+    margin-top: 15vh;
+    .menuContainer{ 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-decoration: none;
+    li{
+        margin-top: 20px;
+    }
+    a{
+        color: $white;
+        text-decoration: none;
+    }
+    }
+}
+
+
+#learnMoreButton{
+    font-size: 25px;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 150px;
+}
+#arrow-line{
+    display: block;
+    position: relative;
+    bottom: -5px;
+    left: 0;
+    width: 93%;
+    height: 2px;
+    background-color: white;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+
+}
+#arrow{
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 5px;
+    -webkit-transform: rotate(
+-45deg
+);
+        -ms-transform: rotate(
+-45deg
+);
+            transform: rotate(
+-45deg
+);
+    position: absolute;
+    top: -5px;
+    right: 1px;
+    
+}
+#arrow-line::after{
+    content: "";
+    position: absolute;
+    right: -17px;
+    top: -20px;
+    border-radius: 100%;
+    background-color: white;
+    opacity: 0.3;
+    width: 40px;
+    height: 40px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+

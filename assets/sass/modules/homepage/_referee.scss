@@ -1,0 +1,66 @@
+#refereeSection{
+    position: relative;
+    h1{
+        color: $red;
+        span{
+            color: $black;
+        }
+    }
+}
+
+.features{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 0 5%;
+    font-family: "Grotesque MT Std";
+}
+
+.feature-text{
+    line-height: 23px;
+    max-width: 250px;
+    font-size: 19px;
+    color: $black;
+}
+
+.feature{
+    width: 455px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 20px 5%;
+
+    h2{
+        text-transform: uppercase;
+        padding-bottom: 20px;
+        white-space: nowrap;
+        font-weight: 700;
+        font-size: 23px;
+    }
+}
+
+.number{
+    font-size: 150px;
+    font-family: 'Grotesque MT Std';
+    font-weight: bold;
+    padding-right: 20px;
+    top: -30px;
+    position: relative;
+    color: $grey;
+}

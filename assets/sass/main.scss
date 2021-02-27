@@ -2,7 +2,6 @@
 @import "modules/_vars.scss";
 @import "modules/_defaults.scss";
 @import "modules/_fonts.scss";
-@import "modules/_buttons.scss";
 //cms
 @import "modules/_loginform.scss";
 @import "modules/_index.scss";
@@ -10,8 +9,19 @@
 @import "modules/_edituser.scss";
 @import "modules/_createsuccess.scss";
 
+
 @import "modules/_header.scss";
 @import "modules/_footer.scss";
-@import "modules/_home.scss";
+
+//homepage
+@import "modules/homepage/homeDefaults";
+@import "modules/homepage/homeHero";
+@import "modules/homepage/home";
+@import "modules/homepage/buttons";
+@import "modules/homepage/referee";
+@import "modules/homepage/goals";
+@import "modules/homepage/partners";
+@import "modules/homepage/officials";
+
 @import "modules/_mediaqueries.scss";
 

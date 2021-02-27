@@ -1,0 +1,169 @@
+#heroSection{
+    background: $black;
+    font-size: 16px;
+    width: 100vw;
+    max-height: 95vh;
+    min-height: 95vh;
+    max-width:100%;
+    position: relative;
+    color: $white;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.Herofooter{
+    position: absolute;
+    top: 25vh;
+    right: 6vw;
+    ul{
+        li{
+            margin-top: 30px;
+        }
+    }
+}
+
+#socialMedia{
+    .socialMediaContainer{
+        width: 30px;
+    a{
+        color: $white;
+        text-decoration: none;
+    }
+    }
+}
+
+#tweet{
+    font-family: "SF Sports Night NS";
+    letter-spacing: 3px;
+    font-size: 210px;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    color: #fff;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 6;
+    grid-column: 3/9;
+    z-index: 11;
+    margin-top: 13vw;
+    span{
+        color: $red;
+    }
+}
+
+.hero-content-wrapper{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: repeat(12,1fr);
+    grid-gap: 20px;
+    gap: 20px;
+    -ms-grid-rows: minmax(700px, 100vh);
+    grid-template-rows: minmax(700px, 100vh);
+    width: 100vw;
+}
+
+.hero-content-wrapper > *:nth-child(1){
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+
+.hero-content-wrapper > *:nth-child(2){
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+}
+
+.hero-content-wrapper > *:nth-child(3){
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+}
+
+.hero-content-wrapper > *:nth-child(4){
+    -ms-grid-row: 1;
+    -ms-grid-column: 7;
+}
+
+.hero-content-wrapper > *:nth-child(5){
+    -ms-grid-row: 1;
+    -ms-grid-column: 9;
+}
+
+.hero-content-wrapper > *:nth-child(6){
+    -ms-grid-row: 1;
+    -ms-grid-column: 11;
+}
+
+.hero-content-wrapper > *:nth-child(7){
+    -ms-grid-row: 1;
+    -ms-grid-column: 13;
+}
+
+.hero-content-wrapper > *:nth-child(8){
+    -ms-grid-row: 1;
+    -ms-grid-column: 15;
+}
+
+.hero-content-wrapper > *:nth-child(9){
+    -ms-grid-row: 1;
+    -ms-grid-column: 17;
+}
+
+.hero-content-wrapper > *:nth-child(10){
+    -ms-grid-row: 1;
+    -ms-grid-column: 19;
+}
+
+.hero-content-wrapper > *:nth-child(11){
+    -ms-grid-row: 1;
+    -ms-grid-column: 21;
+}
+
+.hero-content-wrapper > *:nth-child(12){
+    -ms-grid-row: 1;
+    -ms-grid-column: 23;
+}
+
+#man {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 16;
+    grid-column: 3/11;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    z-index: 99999;
+    -ms-grid-row-align: end;
+        align-self: end;
+    z-index: 22;
+        padding: 13% 13% 0 13%;
+    margin-top: 5%;
+
+    min-height: 0;
+}
+
+
+#heroMainContent{
+    z-index: 999999;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 7;
+    grid-column: 3/7;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 25vh;
+    margin-left: 20px;
+    h1{
+        font-size: 23px;
+        z-index: 333;
+          font-family: monotype-grotesque, sans-serif;
+    font-weight: 400;
+    }
+}

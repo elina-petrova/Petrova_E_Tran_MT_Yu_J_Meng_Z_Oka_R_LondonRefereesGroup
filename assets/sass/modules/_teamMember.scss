@@ -1,0 +1,77 @@
+
+// .membershipWrap{
+//     padding: 0 8%;
+//     display: flex;
+//     flex-wrap: wrap;
+//     flex-direction: row;
+//     justify-content: space-between;
+// }
+// .membershipText{
+//     width: 30%;
+//     p{
+//         color: #fff;
+//     }
+// }
+
+// .memberWrap{
+//     width:200px;
+//     height: 300px;
+//     margin: 2rem 2%;
+// }
+
+
+.membershipWrap{
+    margin: 6rem 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.membershipText{
+    width: 100%;
+    align-self: center;
+    padding: 2rem 0;
+    p{
+        color: #fff;
+    }
+}
+.memberWrap{
+    width: 50%;
+    padding: 2rem 1rem;
+}
+
+@media (min-width: 700px){
+.memberWrap{
+    width: 30%;
+    padding: 2rem 1rem;
+}
+}
+
+@media (min-width: 1200px){
+    .membershipWrap{
+    margin: 6rem 10%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 2rem;
+    row-gap: 6rem;
+}
+.membershipText{
+    grid-column: 1/3;
+    align-self: center;
+    padding: 2rem;
+    p{
+        color: #fff;
+    }
+}
+.memberWrap{
+    width: auto;
+    padding: 0;
+}
+}
+
+@media (min-width: 2000px){
+    .sectionShell{
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
+

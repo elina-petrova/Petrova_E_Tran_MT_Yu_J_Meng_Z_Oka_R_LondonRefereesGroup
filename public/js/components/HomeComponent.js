@@ -1,11 +1,20 @@
-
 import SocialMedia from "./socialMediaComponent.js";
+
+
+
+var slider;
+var member;
+var members;
+var currentSlide;
+var i;
+var offset;
+var slideWidth;
 
 export default {
     template: `
     <section class="transition">
-    <section class="heroSection">
     <social-media></social-media>
+    <section class="heroSection">
         </div>
         <!-- <h2 id="tweet">TWEEET!</h2> -->
         <div class="hero-content-wrapper">
@@ -19,7 +28,7 @@ export default {
     </section>
 
 
-    <section id="refereeSection" class="sectionShell">
+    <section id="refereeSection" class="sectionShell white-bg">
         <h1> <span>I </span>The Referee</h1>
         <div class="features">
             <div class="feature">
@@ -138,14 +147,14 @@ export default {
 
     </section>
 
-    <section id="officials" class="sectionShell">
+    <section id="officials" class="sectionShell white-bg">
         <h1><span>I </span> Our Officials </h1>
 
-        <div class="gallery_button btn-left go-next">
+        <div class="gallery_button btn-left go-next" v-on:click="slideNext">
             <img src="./public/images/officials-button.svg">
         </div>
 
-        <div class="gallery_button btn-right go-prev">
+        <div class="gallery_button btn-right go-prev" v-on:click="slide">
             <img src="./public/images/officials-button.svg">
         </div>
 
@@ -268,6 +277,40 @@ export default {
 
     components: {
         "social-media": SocialMedia
+    },
+    mounted: function () {
+        slider = document.querySelector(".officialsGallery");
+        member = document.querySelector(".member");
+        members = document.querySelectorAll(".member");
+        currentSlide = members[0];
+        i = 0;
+        offset = 0;
+        slideWidth = member.offsetWidth;
+    },
+    methods: {
+        slide: function () {
+
+            console.log('lol');
+            if (currentSlide != members[members.length - 1]) {
+                offset -= slideWidth + 50;
+                gsap.to(slider, { x: offset, rotation: 0.001, ease: Power1.easeInOuteaseInOut, duration: 0.5 });
+                i += 1;
+                gsap.to(currentSlide, { opacity: .5 });
+                currentSlide = members[i];
+                gsap.to(currentSlide, { opacity: 1 });
+            }
+        },
+        slideNext: function () {
+
+            if (currentSlide != members[0]) {
+                offset += slideWidth + 50;
+                gsap.to(slider, { x: offset, rotation: 0.001, ease: Power1.easeInOuteaseInOut, duration: 0.5 });
+                i -= 1;
+                gsap.to(currentSlide, { opacity: .5 });
+                currentSlide = members[i];
+                gsap.to(currentSlide, { opacity: 1 });
+            }
+        },
     }
 
 }

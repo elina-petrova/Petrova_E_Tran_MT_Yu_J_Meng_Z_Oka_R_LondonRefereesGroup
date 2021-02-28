@@ -1,4 +1,75 @@
 
 .about-hero{
-    background-image: url('./images/aboutus-hero.jpg');
+    background-image: url(../images/aboutus-hero.jpg);
+    background-position: 70% 50%;
+    background-size: cover;
+
+    h1{
+        font-size: 50px;
+    }
+    p{
+        width: 60%;
+        padding-left: -10px;
+        color: #fff;
+    }
+    span{
+        position: absolute;
+        bottom: 0px;
+        left: 9%;
+        color: #C10E11;
+        font-family: Sf Sports Night Ns;
+        font-size: 60px;
+    }
+} 
+
+.about-us-hero-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 0 10%;
+    div {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem;
+    }
+}
+
+@media (min-width: 1000px){
+    .about-us-hero-content{
+    display: block;
+     div {
+        padding-right: 5rem;
+        padding-left: 0;
+    }
+}
+    .about-hero {
+    justify-content: center;
+    min-height: 100vh;
+    h1{
+        font-size: 100px;
+    }
+    }
+    .hero-section{
+            max-height: 95vh;
+    min-height: 95vh;
+    }
+    .hero-content-wrapper{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+    gap: 20px;
+    -ms-grid-rows: minmax(700px, 100vh);
+    grid-template-rows: minmax(700px, 100vh);
+    }
+}
+
+@media (min-width: 1200px){
+    .about-hero{
+    background-size: cover;
+    background-position: 60% 100%;
+    justify-content: center;
+    }
 }

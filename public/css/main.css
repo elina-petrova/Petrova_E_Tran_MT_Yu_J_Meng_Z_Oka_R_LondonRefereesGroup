@@ -37,6 +37,11 @@ h3 {
   font-size: 23px;
   text-transform: uppercase;
   font-weight: 700;
+  line-height: 27px;
+}
+
+.white-bg {
+  background-color: #fff;
 }
 
 #app {
@@ -53,6 +58,7 @@ h3 {
   flex: 1;
   max-width: 100vw;
   overflow: hidden;
+  background-color: #1D1B1D;
 }
 
 .sectionShell {
@@ -72,7 +78,7 @@ h3 {
 }
 .sectionShell h1 {
   font-family: SF Sports Night NS;
-  font-size: 30px;
+  font-size: 50px;
   text-transform: uppercase;
   white-space: nowrap;
   color: #fff;
@@ -87,37 +93,11 @@ h3 {
     font-size: 55px;
   }
 }
-.hero-content-wrapper {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 20px;
-  gap: 20px;
-  -ms-grid-rows: minmax(700px, 100vh);
-  grid-template-rows: minmax(700px, 100vh);
-  width: 100vw;
-}
-
-.heroSection {
-  background: #1D1B1D;
-  font-size: 16px;
-  width: 100vw;
-  max-height: 95vh;
-  min-height: 95vh;
-  max-width: 100%;
-  position: relative;
-  color: #EAEAF4;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .Herofooter {
   position: absolute;
-  top: 25vh;
-  right: 6vw;
+  top: 45vh;
+  right: 10%;
+  z-index: 999;
 }
 .Herofooter ul li {
   margin-top: 30px;
@@ -742,6 +722,23 @@ h3 {
   margin-top: 25px;
 }
 
+.hero-content-wrapper {
+  width: 100vw;
+}
+
+.heroSection {
+  background: #1D1B1D;
+  font-size: 16px;
+  width: 100vw;
+  max-width: 100%;
+  position: relative;
+  color: #EAEAF4;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 #tweet {
   font-family: "SF Sports Night NS";
   letter-spacing: 3px;
@@ -1230,9 +1227,218 @@ header .logo {
   }
 }
 .about-hero {
-  background-image: url("./images/aboutus-hero.jpg");
+  background-image: url(../images/aboutus-hero.jpg);
+  background-position: 70% 50%;
+  background-size: cover;
+}
+.about-hero h1 {
+  font-size: 50px;
+}
+.about-hero p {
+  width: 60%;
+  padding-left: -10px;
+  color: #fff;
+}
+.about-hero span {
+  position: absolute;
+  bottom: 0px;
+  left: 9%;
+  color: #C10E11;
+  font-family: Sf Sports Night Ns;
+  font-size: 60px;
 }
 
+.about-us-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 0 10%;
+}
+.about-us-hero-content div {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+}
+
+@media (min-width: 1000px) {
+  .about-us-hero-content {
+    display: block;
+  }
+  .about-us-hero-content div {
+    padding-right: 5rem;
+    padding-left: 0;
+  }
+
+  .about-hero {
+    justify-content: center;
+    min-height: 100vh;
+  }
+  .about-hero h1 {
+    font-size: 100px;
+  }
+
+  .hero-section {
+    max-height: 95vh;
+    min-height: 95vh;
+  }
+
+  .hero-content-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+    gap: 20px;
+    -ms-grid-rows: minmax(700px, 100vh);
+    grid-template-rows: minmax(700px, 100vh);
+  }
+}
+@media (min-width: 1200px) {
+  .about-hero {
+    background-size: cover;
+    background-position: 60% 100%;
+    justify-content: center;
+  }
+}
+.aboutSection h1 {
+  color: #1D1B1D;
+}
+.aboutSection h1 span {
+  color: #C10E11;
+}
+
+.about-article-logo {
+  max-width: 12vw;
+  min-width: 200px;
+  margin: 2rem;
+}
+
+.about-article {
+  padding-top: 2rem;
+  margin: 0 10%;
+  border-top: solid 6px #C10E11;
+}
+.about-article .ab-col {
+  padding-top: 2rem;
+}
+
+@media (min-width: 800px) {
+  .about-article {
+    margin: 0 20%;
+  }
+}
+@media (min-width: 1200px) {
+  .about-article {
+    display: flex;
+    margin: 0 25%;
+  }
+  .about-article .ab-col {
+    padding: 0 3rem;
+  }
+}
+.about-goals {
+  flex-direction: column;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.about-goals h1 {
+  color: #C10E11;
+}
+.about-goals h1 span {
+  color: #fff;
+}
+
+.goals {
+  width: 100%;
+  padding-top: 5rem;
+}
+.goals p {
+  padding-bottom: 5rem;
+  padding-top: 1rem;
+  color: #fff;
+  padding-left: 9rem;
+}
+
+.ref:last-child p {
+  padding-bottom: 0;
+}
+
+.about-referee {
+  width: 35%;
+  padding: 5rem;
+  padding-bottom: 0;
+  padding-top: 5rem;
+}
+
+@media (min-width: 1200px) {
+  .about-goals {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .about-referee {
+    padding-top: 0;
+    margin-top: -2rem;
+  }
+
+  .goals {
+    width: 60%;
+  }
+}
+.aboutAtSection {
+  flex-direction: column;
+  align-items: center;
+  padding: 8% 10%;
+}
+.aboutAtSection h1 {
+  color: #1D1B1D;
+}
+.aboutAtSection h1 span {
+  color: #C10E11;
+}
+
+.aboutAtText {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+}
+.aboutAtText h3 {
+  padding: 3rem 0 1.5rem 0;
+}
+
+.aboutAtPic {
+  background-image: url("../images/aboutus-atlrg.jpg");
+  background-position: center;
+  background-size: cover;
+  min-width: 400px;
+  width: 100%;
+  height: 80vh;
+}
+
+@media (min-width: 1200px) {
+  .aboutAtSection {
+    flex-direction: row;
+    align-items: center;
+    padding: 8% 10%;
+  }
+  .aboutAtSection h1 {
+    color: #1D1B1D;
+  }
+  .aboutAtSection h1 span {
+    color: #C10E11;
+  }
+
+  .aboutAtText {
+    padding: 4rem;
+    width: 60%;
+  }
+
+  .aboutAtPic {
+    width: 60%;
+  }
+}
 @media (min-width: 1024px) {
   .show_desktop {
     display: block;

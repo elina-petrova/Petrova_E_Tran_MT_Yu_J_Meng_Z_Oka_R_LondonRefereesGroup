@@ -1,0 +1,38 @@
+.aboutSection{
+    h1{
+        color: $black;
+        span{
+            color: $red;
+        }
+    }
+}
+.about-article-logo{
+    max-width: 12vw;
+    min-width: 200px;
+    margin: 2rem;
+}
+
+.about-article{
+    padding-top: 2rem;
+    margin: 0 10%;
+    border-top: solid 6px $red;
+    .ab-col{
+        padding-top: 2rem;
+    }
+}
+
+@media (min-width: 800px){
+    .about-article{
+        margin: 0 20%;
+}
+}
+
+@media (min-width: 1200px){
+    .about-article{
+        display: flex;
+        margin: 0 25%;
+        .ab-col{
+            padding: 0 3rem;
+    }
+}
+}

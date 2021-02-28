@@ -14,7 +14,6 @@
 @import "modules/_footer.scss";
 
 //homepage
-@import "modules/homepage/homeDefaults";
 @import "modules/homepage/homeHero";
 @import "modules/homepage/home";
 @import "modules/homepage/buttons";
@@ -25,6 +24,9 @@
 
 //aboutpage 
 @import "modules/aboutpage/aboutHero";
+@import "modules/aboutpage/aboutArticle";
+@import "modules/aboutpage/about_goals";
+@import "modules/aboutpage/aboutAt";
 
 @import "modules/_mediaqueries.scss";
 

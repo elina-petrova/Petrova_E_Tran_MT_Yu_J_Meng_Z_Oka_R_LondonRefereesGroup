@@ -1,5 +1,6 @@
 
-.about-hero{
+
+.about-hero, .team-hero{
     background-image: url(../images/aboutus-hero.jpg);
     background-position: 70% 50%;
     background-size: cover;
@@ -21,8 +22,18 @@
         font-size: 60px;
     }
 } 
-
-.about-us-hero-content{
+.team-hero{
+     background-image: url(../images/ourteam-hero.jpg);
+     background-position: center right;
+     background-size: cover;
+     p{
+         width: 100%;
+     }
+     span{
+         left: 9%;
+     }
+}
+.about-us-hero-content, .our-team-hero-content{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,15 +46,20 @@
     }
 }
 
+
 @media (min-width: 1000px){
-    .about-us-hero-content{
+    .about-us-hero-content, .our-team-hero-content{
     display: block;
      div {
         padding-right: 5rem;
         padding-left: 0;
     }
 }
-    .about-hero {
+.our-team-hero-content{
+    margin-left: 30rem;
+    padding-right: 0;
+}
+    .about-hero, .team-hero {
     justify-content: center;
     min-height: 100vh;
     h1{
@@ -51,7 +67,7 @@
     }
     }
     .hero-section{
-            max-height: 95vh;
+    max-height: 95vh;
     min-height: 95vh;
     }
     .hero-content-wrapper{
@@ -67,9 +83,15 @@
 }
 
 @media (min-width: 1200px){
-    .about-hero{
+    .about-hero, .team-hero{
     background-size: cover;
     background-position: 60% 100%;
     justify-content: center;
+    }
+    .team-hero{
+        background-position: 60% 100%;
+        span{
+         left: 6rem;
+     }
     }
 }

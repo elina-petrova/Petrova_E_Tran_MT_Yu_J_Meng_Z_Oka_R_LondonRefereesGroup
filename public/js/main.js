@@ -1,5 +1,7 @@
 console.log('hi');
 
+
+
 // var Promise = require('es6-promise').Promise;
 
 import Home from "./components/HomeComponent.js";
@@ -7,6 +9,8 @@ import About from "./components/AboutComponent.js";
 import Team from "./components/TeamComponent.js";
 import Programs from "./components/ProgramsComponent.js";
 import Contact from "./components/ContactComponent.js";
+
+var rootElement = document.documentElement;
 
 const routes = [
     { path: "/", name: "Home", component: Home },
@@ -29,6 +33,16 @@ const vm = new Vue({
 
     mounted: function () {
         console.log('vue cinnected');
+    },
+    methods: {
+        scrollToTop: function () {
+            rootElement.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        },
+
+
     },
 
 }).$mount("#app");

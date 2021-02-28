@@ -1,4 +1,25 @@
 
+.hero-content-wrapper{
+    width: 100vw;
+}
+
+.heroSection{
+    background: $black;
+    font-size: 16px;
+    width: 100vw;
+    // max-height: 95vh;
+    // min-height: 95vh;
+    max-width:100%;
+    position: relative;
+    color: $white;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+
+
 #tweet{
     font-family: "SF Sports Night NS";
     letter-spacing: 3px;

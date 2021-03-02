@@ -1,7 +1,7 @@
 import SocialMedia from "./socialMediaComponent.js";
 
 export default {
-    template: `
+  template: `
     <section>
     <section class="sectionShell team-hero">
     <social-media></social-media>
@@ -39,43 +39,94 @@ and the competence of these individuals.
     </div>
 
 <div class="memberWrap">
+
 <img src="public/images/members.jpg" alt="Referee Picture">
+<img class="member-colored" src="public/images/member-clr.jpeg" alt="Referee Picture">
+<div class="mmbInfo">
+<h3>John Doe</h3>
+<p>Official Referee</p>
+</div>
 </div>
 
 <div class="memberWrap">
 <img src="public/images/members2.jpg" alt="Referee Picture">
+<img class="member-colored" src="public/images/member-clr.jpeg" alt="Referee Picture">
+<div class="mmbInfo">
+<h3>John Doe</h3>
+<p>Official Referee</p>
+</div>
 </div>
 
 <div class="memberWrap">
 <img src="public/images/members3.jpg" alt="Referee Picture">
+<img class="member-colored" src="public/images/member-clr.jpeg" alt="Referee Picture">
+<div class="mmbInfo">
+<h3>John Doe</h3>
+<p>Official Referee</p>
+</div>
 </div>
 
 <div class="memberWrap">
 <img src="public/images/members.jpg" alt="Referee Picture">
+<img class="member-colored" src="public/images/member-clr.jpeg" alt="Referee Picture">
+<div class="mmbInfo">
+<h3>John Doe</h3>
+<p>Official Referee</p>
+</div>
 </div>
 
 <div class="memberWrap">
 <img src="public/images/members2.jpg" alt="Referee Picture">
+<img class="member-colored" src="public/images/member-clr.jpeg" alt="Referee Picture">
+<div class="mmbInfo">
+<h3>John Doe</h3>
+<p>Official Referee</p>
+</div>
 </div>
 
 <div class="memberWrap">
 <img src="public/images/members3.jpg" alt="Referee Picture">
+<img class="member-colored" src="public/images/member-clr.jpeg" alt="Referee Picture">
+<div class="mmbInfo">
+<h3>John Doe</h3>
+<p>Official Referee</p>
+</div>
 </div>
 
 <div class="memberWrap">
 <img src="public/images/members.jpg" alt="Referee Picture">
+<img class="member-colored" src="public/images/member-clr.jpeg" alt="Referee Picture">
+<div class="mmbInfo">
+<h3>John Doe</h3>
+<p>Official Referee</p>
+</div>
 </div>
 
 <div class="memberWrap">
 <img src="public/images/members2.jpg" alt="Referee Picture">
+<img class="member-colored" src="public/images/member-clr.jpeg" alt="Referee Picture">
+<div class="mmbInfo">
+<h3>John Doe</h3>
+<p>Official Referee</p>
+</div>
 </div>
 
 <div class="memberWrap">
 <img src="public/images/members3.jpg" alt="Referee Picture">
+<img class="member-colored" src="public/images/member-clr.jpeg" alt="Referee Picture">
+<div class="mmbInfo">
+<h3>John Doe</h3>
+<p>Official Referee</p>
+</div>
 </div>
 
 <div class="memberWrap">
 <img src="public/images/members.jpg" alt="Referee Picture">
+<img class="member-colored" src="public/images/member-clr.jpeg" alt="Referee Picture">
+<div class="mmbInfo">
+<h3>John Doe</h3>
+<p>Official Referee</p>
+</div>
 </div>
 
     </div>
@@ -83,7 +134,7 @@ and the competence of these individuals.
 
     </section>
         `,
-    components: {
-        "social-media": SocialMedia
-    }
+  components: {
+    "social-media": SocialMedia
+  }
 }

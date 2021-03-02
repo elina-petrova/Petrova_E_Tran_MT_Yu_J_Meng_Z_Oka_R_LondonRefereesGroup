@@ -9,7 +9,7 @@ var currentSlide;
 var i;
 var offset;
 var slideWidth;
-
+var margin;
 
 export default {
     template: `

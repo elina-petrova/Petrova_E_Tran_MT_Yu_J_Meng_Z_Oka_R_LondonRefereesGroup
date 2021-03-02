@@ -1,12 +1,16 @@
 import SocialMedia from "./socialMediaComponent.js";
 
 export default {
-  template: `
+        template: `
     <section>
     <social-media></social-media>
         <section class="sectionShell about-hero ">
             <section class="about-us-hero-content">
-            <span>I </span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="43.373" height="36.857" viewBox="0 0 43.373 36.857">
+  <g id="c1" data-name="c1" transform="translate(-710.954 -4491.438)">
+    <path id="c1" data-name="c1" d="M0,36.857,21.686,0H43.373L21.686,36.857Z" transform="translate(710.954 4491.438)" fill="#c10e10"/>
+  </g>
+</svg></span>
             <div>
                 <h1>About us</h1>
                 <p>We are an organisation that strives to promote
@@ -16,7 +20,11 @@ export default {
         </section>
 
         <section class="aboutSection sectionShell white-bg">
-        <h1> <span>I </span> Who we are?</h1>
+        <h1> <span><svg xmlns="http://www.w3.org/2000/svg" width="43.373" height="36.857" viewBox="0 0 43.373 36.857">
+  <g id="c1" data-name="c1" transform="translate(-710.954 -4491.438)">
+    <path id="c1" data-name="c1" d="M0,36.857,21.686,0H43.373L21.686,36.857Z" transform="translate(710.954 4491.438)" fill="#c10e10"/>
+  </g>
+</svg></span> Who we are?</h1>
         <div class="about-article-logo">
         <img src="public/images/LRG_logo.svg" alt="LRG logo">
         </div>
@@ -69,7 +77,11 @@ lifelong passion for the game.
         <div class="ref">
                  
                     <div class="goals-text-wrap">
-                    <h1><span>I  </span>OUR VISION</h1>
+                    <h1><span><svg xmlns="http://www.w3.org/2000/svg" width="43.373" height="36.857" viewBox="0 0 43.373 36.857">
+  <g id="c1" data-name="c1" transform="translate(-710.954 -4491.438)">
+    <path id="c1" data-name="c1" d="M0,36.857,21.686,0H43.373L21.686,36.857Z" transform="translate(710.954 4491.438)" fill="#fff"/>
+  </g>
+</svg></span> OUR VISION</h1>
                     <p>To promote the game of hockey through fair and safe play, and a
 respect for all individuals involved in the game.</p>
                     </div>
@@ -78,7 +90,11 @@ respect for all individuals involved in the game.</p>
              <div class="ref">
           
                     <div class="goals-text-wrap">
-                    <h1><span>I  </span>OUR MISSION</h1>
+                    <h1><span><svg xmlns="http://www.w3.org/2000/svg" width="43.373" height="36.857" viewBox="0 0 43.373 36.857">
+  <g id="c1" data-name="c1" transform="translate(-710.954 -4491.438)">
+    <path id="c1" data-name="c1" d="M0,36.857,21.686,0H43.373L21.686,36.857Z" transform="translate(710.954 4491.438)" fill="#fff"/>
+  </g>
+</svg></span> OUR MISSION</h1>
                     <p>To provide a high standard and quality hockey ofciating in the
 City of London and surrounding area</p>
                     </div>
@@ -87,7 +103,11 @@ City of London and surrounding area</p>
              <div class="ref">
      
                     <div class="goals-text-wrap">
-                    <h1><span>I  </span>OUR PRIORITIES</h1>
+                    <h1><span><svg xmlns="http://www.w3.org/2000/svg" width="43.373" height="36.857" viewBox="0 0 43.373 36.857">
+  <g id="c1" data-name="c1" transform="translate(-710.954 -4491.438)">
+    <path id="c1" data-name="c1" d="M0,36.857,21.686,0H43.373L21.686,36.857Z" transform="translate(710.954 4491.438)" fill="#fff"/>
+  </g>
+</svg></span> OUR PRIORITIES</h1>
                     <p>Responsibility – being physically and mentally prepared for
 each game.
 Education &Training – providing resources to continue the
@@ -112,7 +132,11 @@ the community.</p>
         <div class="aboutAtPic">
         </div>
         <div class="aboutAtText">
-        <h1><span>I  </span> AT LRG</h1>
+        <h1><span><svg xmlns="http://www.w3.org/2000/svg" width="43.373" height="36.857" viewBox="0 0 43.373 36.857">
+  <g id="c1" data-name="c1" transform="translate(-710.954 -4491.438)">
+    <path id="c1" data-name="c1" d="M0,36.857,21.686,0H43.373L21.686,36.857Z" transform="translate(710.954 4491.438)" fill="#c10e10"/>
+  </g>
+</svg></span> AT LRG</h1>
         <h3>WE ARE FOCUSED ON DEVELOPING <br>
 AND MAINTAINING A MEMBERSHIP
 COSISTING OF EXPERIENCED OFFCIALS</h3>
@@ -125,8 +149,8 @@ at all levels of competition.
         </section>
     </section>
         `,
-  components: {
-    "social-media": SocialMedia
-  }
+        components: {
+                "social-media": SocialMedia
+        }
 
 }

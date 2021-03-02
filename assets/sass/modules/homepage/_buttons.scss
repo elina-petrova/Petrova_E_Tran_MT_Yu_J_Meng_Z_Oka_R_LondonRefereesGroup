@@ -1,5 +1,13 @@
 .button{
     border: solid 2px $red;
+
+
+border-top-width: 2px;
+border-right-width: 2px;
+border-bottom-width: 1px;
+border-left-width: 2px;
+
+
     height: 50px;
     width: 180px;
     
@@ -12,13 +20,63 @@
     align-items: center;
     transition: all 0.3s;
 
+    position: relative;
+
     a {
         color: $red;
         font-family: monotype-grotesque, sans-serif;
         font-weight: 700;
         text-transform: uppercase;
+        z-index:999;
+        transition: all 0.3s ease-out;
     }
 }
+
+.button:before{
+    content: "";
+    position: absolute;
+    background: #fff;
+    bottom: -2px;
+    left:-2px;
+    right: -2px;
+    top: 100%;
+    transition: top 0.3s ease-out;
+}
+
+.button:hover:before{
+    top:-2px;
+    bottom: -2px;
+}
+.button:hover a{
+    color: $black;
+}
+
+.memberInfo .button:before{
+    background: $red;
+}
+
+.memberInfo .button:hover:before{
+    top:-2px;
+    bottom: -2px;
+}
+.memberInfo .button:hover a{
+    color: #fff;
+}
+
+
+#refereeSection .button:before{
+    background: $red;
+}
+
+#refereeSection .button:hover:before{
+    top:-2px;
+    bottom: -2px;
+}
+#refereeSection .button:hover a{
+    color: #fff;
+}
+
+
 .meetTheTeamButton{
     margin-top: $default-padding;
 }
@@ -30,22 +88,22 @@
     }
 }
 
-.memberInfo .button:hover{
-     background-color: $red;
-    a{
-    color: #fff;
-    }
-}
-.meetTheTeamButton:hover{
-    background-color: $red;
-    a{
-    color: #fff;
-    }
-}
+// .memberInfo .button:hover{
+//      background-color: $red;
+//     a{
+//     color: #fff;
+//     }
+// }
+// .meetTheTeamButton:hover{
+//     background-color: $red;
+//     a{
+//     color: #fff;
+//     }
+// }
 
-.goalsButton:hover{
-    background-color: #fff;
-    a{
-    color: $red;
-    }
-}
+// .goalsButton:hover{
+//     background-color: #fff;
+//     a{
+//     color: $red;
+//     }
+// }

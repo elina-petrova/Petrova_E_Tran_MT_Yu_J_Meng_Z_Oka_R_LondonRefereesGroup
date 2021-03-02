@@ -31,7 +31,7 @@ li{
 
 p, a{
     font-size: 18px;
-    line-height: 27px;
+    line-height: 23px;
     font-family: monotype-grotesque, sans-serif;
 }
 
@@ -100,8 +100,8 @@ $heading-font-size: 55px;
 
 .Herofooter{
     position: absolute;
-    top: 45vh;
-    right: 10%;
+    top: 20vw;
+    right: 7%;
     z-index: 999;
     ul{
         li{
@@ -117,5 +117,16 @@ $heading-font-size: 55px;
         color: $white;
         text-decoration: none;
     }
+    li a svg:hover path{
+        fill:$red;
+    }
     }
 }
+
+ul{
+    li a svg path{
+        fill: #fff;
+        transition: all 0.3s ease-in-out;
+    }
+}
+

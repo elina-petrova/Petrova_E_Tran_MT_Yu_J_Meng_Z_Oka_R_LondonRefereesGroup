@@ -7,8 +7,6 @@
     background: $black;
     font-size: 16px;
     width: 100vw;
-    // max-height: 95vh;
-    // min-height: 95vh;
     max-width:100%;
     position: relative;
     color: $white;
@@ -23,7 +21,7 @@
 #tweet{
     font-family: "SF Sports Night NS";
     letter-spacing: 3px;
-    font-size: 210px;
+    font-size: 14vw;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     color: #fff;
@@ -32,9 +30,11 @@
     grid-row: 1/2;
     -ms-grid-column: 4;
     -ms-grid-column-span: 6;
-    grid-column: 3/9;
+    grid-column: 1/6;
     z-index: 11;
     margin-top: 13vw;
+    padding-left: 20%;
+    position: relative;
     span{
         color: $red;
     }
@@ -43,9 +43,9 @@
 
 
 #man {
-    -ms-grid-column: 4;
+    -ms-grid-column: 2;
     -ms-grid-column-span: 16;
-    grid-column: 3/11;
+    grid-column: 2/6;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
@@ -56,30 +56,38 @@
     -ms-grid-row-align: end;
         align-self: end;
     z-index: 22;
-        padding: 13% 13% 0 13%;
-    margin-top: 5%;
-
+    margin-bottom: -5%;
     min-height: 0;
+        padding: 8% 8% 0 8%;
 }
 
-
+ 
 #heroMainContent{
     z-index: 999999;
+    font-size: 1vw;
     -ms-grid-column: 4;
     -ms-grid-column-span: 7;
-    grid-column: 3/7;
+    grid-column: 1/6;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    margin-top: 25vh;
-    margin-left: 20px;
+    padding-left: 2%;
+    position: absolute;
+    top: -20px;
+    z-index: 9999;
     h1{
-        font-size: 23px;
-        z-index: 333;
-          font-family: monotype-grotesque, sans-serif;
+        font-family: monotype-grotesque, sans-serif;
         font-weight: 400;
     }
+}
+
+.hero-content-wrapper{
+    display: grid;
+    -ms-grid-rows: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    gap: 20px;
 }

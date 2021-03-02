@@ -504,7 +504,7 @@ ul li a svg path {
 }
 
 .logo-wrap {
-  width: 50px;
+  width: 60px;
 }
 .logo-wrap a {
   padding: 0;
@@ -1529,6 +1529,32 @@ header .logo {
 .memberWrap {
   width: 50%;
   padding: 2rem 1rem;
+  position: relative;
+}
+.memberWrap .member-colored, .memberWrap .mmbInfo {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+}
+.memberWrap .member-colored {
+  top: 0;
+  bottom: 0;
+}
+.memberWrap .mmbInfo {
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 2rem;
+  color: white;
+}
+
+.memberWrap:hover .member-colored {
+  opacity: 1;
+}
+
+.memberWrap:hover .mmbInfo {
+  opacity: 1;
 }
 
 @media (min-width: 700px) {

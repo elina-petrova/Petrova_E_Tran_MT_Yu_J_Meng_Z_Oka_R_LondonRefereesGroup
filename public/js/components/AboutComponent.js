@@ -1,7 +1,7 @@
 import SocialMedia from "./socialMediaComponent.js";
 
 export default {
-        template: `
+  template: `
     <section>
     <social-media></social-media>
         <section class="sectionShell about-hero ">
@@ -24,7 +24,7 @@ export default {
   <g id="c1" data-name="c1" transform="translate(-710.954 -4491.438)">
     <path id="c1" data-name="c1" d="M0,36.857,21.686,0H43.373L21.686,36.857Z" transform="translate(710.954 4491.438)" fill="#c10e10"/>
   </g>
-</svg></span> Who we are?</h1>
+</svg></span> Who are we?</h1>
         <div class="about-article-logo">
         <img src="public/images/LRG_logo.svg" alt="LRG logo">
         </div>
@@ -149,8 +149,8 @@ at all levels of competition.
         </section>
     </section>
         `,
-        components: {
-                "social-media": SocialMedia
-        }
+  components: {
+    "social-media": SocialMedia
+  }
 
 }

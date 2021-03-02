@@ -16,9 +16,6 @@
         text-transform: uppercase;
         transition: all 0.2s ease-in-out;
     }
-    a:nth-child(5){
-        margin-left: -45px;
-    }
     a:hover{
         color: $black;
     }
@@ -135,6 +132,9 @@
             flex-direction: row;
     a{
         padding: .3rem 2.3rem;
+    }
+    a:nth-child(5){
+        margin-left: -45px;
     }
 }
 

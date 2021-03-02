@@ -15,8 +15,8 @@
     }
     span{
         position: absolute;
-        bottom: 0px;
-        left: 9%;
+        bottom: -8px;
+        left: -4vw;
         color: #C10E11;
         font-family: Sf Sports Night Ns;
         font-size: 60px;
@@ -30,7 +30,7 @@
          width: 100%;
      }
      span{
-         left: 9%;
+         left: -4vw;
      }
 }
 .about-us-hero-content, .our-team-hero-content{
@@ -38,7 +38,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    padding: 0 10%;
+    margin: 0 10%;
     div {
         display: flex;
         flex-direction: column;
@@ -56,8 +56,9 @@
     }
 }
 .our-team-hero-content{
-    margin-left: 30rem;
+    margin-left: 47rem;
     padding-right: 0;
+    margin-top: 5rem;
 }
     .about-hero, .team-hero {
     justify-content: center;
@@ -80,8 +81,6 @@
     }
     .team-hero{
         background-position: 60% 100%;
-        span{
-         left: 6rem;
-     }
+        background-size: 110%;
     }
 }

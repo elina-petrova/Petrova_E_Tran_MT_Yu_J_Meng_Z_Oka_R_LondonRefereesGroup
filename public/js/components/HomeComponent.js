@@ -10,7 +10,6 @@ var i;
 var offset;
 var slideWidth;
 
-var margin;
 
 export default {
     template: `
@@ -320,7 +319,6 @@ export default {
                 gsap.to(currentSlide, { opacity: .5 });
                 currentSlide = members[i];
                 gsap.to(currentSlide, { opacity: 1 });
-                canHoverLeft = true;
             }
         },
         slideNext: function () {
@@ -332,7 +330,6 @@ export default {
                 gsap.to(currentSlide, { opacity: .5 });
                 currentSlide = members[i];
                 gsap.to(currentSlide, { opacity: 1 });
-                canHoverRight = true;
             }
         },
 

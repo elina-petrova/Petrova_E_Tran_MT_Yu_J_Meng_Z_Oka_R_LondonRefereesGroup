@@ -10,6 +10,8 @@ var i;
 var offset;
 var slideWidth;
 
+var margin;
+
 export default {
     template: `
     <section class="transition">
@@ -19,17 +21,26 @@ export default {
         <!-- <h2 id="tweet">TWEEET!</h2> -->
         <div class="hero-content-wrapper">
             <div id="man"><img src="./public/images/man.svg"></div>
-            <div id="tweet"> <span>TWE</span>EET!</div>
+            <div id="tweet">
             <div id="heroMainContent" class="noshow">
                 <h1>LONDON REFEREES GROUP</h1>
-
             </div>
+             <span>TWE</span>EET!
+             </div>
         </div>
     </section>
 
 
     <section id="refereeSection" class="sectionShell white-bg">
-        <h1> <span>I </span>The Referee</h1>
+        <h1> <span>
+<svg xmlns="http://www.w3.org/2000/svg" width="43.373" height="36.857" viewBox="0 0 43.373 36.857">
+  <g id="c1" data-name="c1" transform="translate(-710.954 -4491.438)">
+    <path id="c1" data-name="c1" d="M0,36.857,21.686,0H43.373L21.686,36.857Z" transform="translate(710.954 4491.438)" fill="#1D1B1D"/>
+  </g>
+</svg>
+
+
+         </span> The Referee</h1>
         <div class="features">
             <div class="feature">
                 <div class="number">1</div>
@@ -103,16 +114,15 @@ export default {
             <a href="/team">Meet the team</a>
         </div>
 
-        <!-- design -->
-
-
-        <div id="triangle-down"></div>
-
-
     </section>
 
     <section id="goals" class="sectionShell">
-        <h1 class="heading"><span>I </span> Our Goals </h1>
+        <h1 class="heading"><span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="43.373" height="36.857" viewBox="0 0 43.373 36.857">
+  <g id="c1" data-name="c1" transform="translate(-710.954 -4491.438)">
+    <path id="c1" data-name="c1" d="M0,36.857,21.686,0H43.373L21.686,36.857Z" transform="translate(710.954 4491.438)" fill="#c10e10"/>
+  </g>
+</svg> </span> Our Goals </h1>
         <div class="goals_wrap">
             <div class="goals_col">
                 <div class="goal red">
@@ -148,7 +158,13 @@ export default {
     </section>
 
     <section id="officials" class="sectionShell white-bg">
-        <h1><span>I </span> Our Officials </h1>
+        <h1><span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="43.373" height="36.857" viewBox="0 0 43.373 36.857">
+  <g id="c1" data-name="c1" transform="translate(-710.954 -4491.438)">
+    <path id="c1" data-name="c1" d="M0,36.857,21.686,0H43.373L21.686,36.857Z" transform="translate(710.954 4491.438)" fill="#1D1B1D"/>
+  </g>
+</svg>
+ </span> Our Officials </h1>
 
         <div class="gallery_button btn-left go-next" v-on:click="slideNext">
             <img src="./public/images/officials-button.svg">
@@ -251,7 +267,12 @@ export default {
     </section>
 
     <section id="partnersSection" class="sectionShell">
-        <h1><span>I </span>Partners</h1>
+        <h1><span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="43.373" height="36.857" viewBox="0 0 43.373 36.857">
+  <g id="c1" data-name="c1" transform="translate(-710.954 -4491.438)">
+    <path id="c1" data-name="c1" d="M0,36.857,21.686,0H43.373L21.686,36.857Z" transform="translate(710.954 4491.438)" fill="#c10e10"/>
+  </g>
+</svg>  </span> Partners</h1>
         <div class="logos">
             <div class="partner-logo-wrap"><img class="partner-logo" src="./public/images/alliance-hockey-gs.png" alt="Alliance Hockey Logo">
             <img class="partner-logo-color" src="./public/images/alliance-hockey.png" alt="Alliance Hockey Logo">
@@ -282,35 +303,39 @@ export default {
         slider = document.querySelector(".officialsGallery");
         member = document.querySelector(".member");
         members = document.querySelectorAll(".member");
+        margin = 5 * parseFloat(getComputedStyle(document.documentElement).fontSize);
         currentSlide = members[0];
         i = 0;
         offset = 0;
         slideWidth = member.offsetWidth;
     },
     methods: {
-        slide: function () {
+        slide: function (e) {
 
             console.log('lol');
             if (currentSlide != members[members.length - 1]) {
-                offset -= slideWidth + 50;
+                offset -= slideWidth + margin;
                 gsap.to(slider, { x: offset, rotation: 0.001, ease: Power1.easeInOuteaseInOut, duration: 0.5 });
                 i += 1;
                 gsap.to(currentSlide, { opacity: .5 });
                 currentSlide = members[i];
                 gsap.to(currentSlide, { opacity: 1 });
+                canHoverLeft = true;
             }
         },
         slideNext: function () {
 
             if (currentSlide != members[0]) {
-                offset += slideWidth + 50;
+                offset += slideWidth + margin;
                 gsap.to(slider, { x: offset, rotation: 0.001, ease: Power1.easeInOuteaseInOut, duration: 0.5 });
                 i -= 1;
                 gsap.to(currentSlide, { opacity: .5 });
                 currentSlide = members[i];
                 gsap.to(currentSlide, { opacity: 1 });
+                canHoverRight = true;
             }
         },
+
     }
 
 }

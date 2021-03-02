@@ -6,16 +6,24 @@ export default {
     <section class="sectionShell team-hero">
     <social-media></social-media>
     <div class="our-team-hero-content">
-        <span>I </span>
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="43.373" height="36.857" viewBox="0 0 43.373 36.857">
+  <g id="c1" data-name="c1" transform="translate(-710.954 -4491.438)">
+    <path id="c1" data-name="c1" d="M0,36.857,21.686,0H43.373L21.686,36.857Z" transform="translate(710.954 4491.438)" fill="#c10e10"/>
+  </g>
+</svg></span>
              <div>
-                 <h1>Our Team</h1>
+                 <h1> Our Team</h1>
                  <p>We are team of passionate individuals <br> who deeply understand the role of referee.</p>
                      </div>
                      </div>
     </section>
 
     <section class="sectionShell teamMembers">
-    <h1><span>I  </span> Our membership</h1>
+    <h1><span><svg xmlns="http://www.w3.org/2000/svg" width="43.373" height="36.857" viewBox="0 0 43.373 36.857">
+  <g id="c1" data-name="c1" transform="translate(-710.954 -4491.438)">
+    <path id="c1" data-name="c1" d="M0,36.857,21.686,0H43.373L21.686,36.857Z" transform="translate(710.954 4491.438)" fill="#fff"/>
+  </g>
+</svg></span> Our membership</h1>
     <div class="membershipWrap">
 
     <div class="membershipText">

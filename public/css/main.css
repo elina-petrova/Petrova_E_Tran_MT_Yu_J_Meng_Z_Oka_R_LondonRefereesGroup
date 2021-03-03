@@ -1506,7 +1506,7 @@ header .logo {
     width: 60%;
   }
 }
-.teamMembers h1 {
+.teamMembers h1, .team-gal-section h1 {
   color: #C10E11;
 }
 
@@ -1592,6 +1592,125 @@ header .logo {
     padding-right: 20%;
   }
 }
+.team-gal-section {
+  position: relative;
+}
+
+.team-gal {
+  height: 40vw;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.team-gal-wrap {
+  width: 60vw;
+  margin-top: 6rem;
+}
+
+.team-gal-img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.team-gal-img img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.team-gal-overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  z-index: 9999;
+  background-color: #1D1B1D;
+}
+
+.team-gal-current, .team-gal-next, .team-gal-prev {
+  transition: all 0s 0.9s ease-in-out;
+}
+
+.team-gal-current {
+  left: 0;
+  z-index: 11;
+}
+
+.team-gal-next {
+  left: 100%;
+  z-index: 8;
+}
+
+.team-gal-prev {
+  left: -100%;
+  z-index: 8;
+}
+
+.team-gal-img-info {
+  display: flex;
+  justify-content: space-between;
+  color: #1D1B1D;
+  width: 100%;
+  padding-top: 1.5rem;
+}
+
+.team-bottom-gallery {
+  width: 100%;
+  height: 30vw;
+  position: relative;
+  z-index: 8;
+}
+.team-bottom-gallery div {
+  width: 25%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 1s ease-in-out;
+}
+.team-bottom-gallery .left_three {
+  left: -43%;
+  transition: all 1s ease-in-out;
+  opacity: 0;
+}
+.team-bottom-gallery .left_two {
+  left: -16%;
+  transition: all 1s ease-in-out;
+  z-index: 999;
+  opacity: 1;
+}
+.team-bottom-gallery .left_one {
+  left: 11%;
+  transition: all 1s ease-in-out;
+  z-index: 999;
+  opacity: 1;
+}
+.team-bottom-gallery .current {
+  left: 38%;
+  transition: all 1s ease-in-out;
+  opacity: 1;
+  z-index: 999;
+}
+.team-bottom-gallery .current img {
+  border: solid 5px #C10E11;
+}
+.team-bottom-gallery .right_one {
+  left: 65%;
+  transition: all 1s ease-in-out;
+  z-index: 9999;
+  opacity: 1;
+}
+.team-bottom-gallery .right_two {
+  left: 92%;
+  transition: all 1s ease-in-out;
+  z-index: 999;
+  opacity: 1;
+}
+.team-bottom-gallery .right_three {
+  left: 119%;
+  transition: all 1s ease-in-out;
+  z-index: 5;
+  opacity: 0;
+}
+
 @media (min-width: 1024px) {
   .show_desktop {
     display: block;

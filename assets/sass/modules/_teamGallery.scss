@@ -1,0 +1,117 @@
+
+.team-gal-section{
+    position: relative;
+}
+.team-gal{
+    height: 40vw;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.team-gal-wrap{
+    width: 60vw;
+    margin-top: $default-padding;
+}
+
+.team-gal-img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    img{
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.team-gal-overlay{
+    position: absolute;
+    top: 0;
+    // right: 0;
+    height: 100%;
+    z-index: 9999;
+    background-color: #1D1B1D;
+}
+.team-gal-current, .team-gal-next, .team-gal-prev{
+    transition: all 0s 0.9s ease-in-out;
+}
+.team-gal-current{
+    left: 0;
+    z-index: 11;
+}
+
+.team-gal-next{
+    left: 100%;
+    z-index:8;
+}
+.team-gal-prev{
+    left: -100%;
+    z-index:8;
+}
+
+.team-gal-img-info{
+    display: flex;
+    justify-content: space-between;
+    color:$black;
+    width: 100%;
+    padding-top: 1.5rem;
+}
+
+.team-bottom-gallery{
+    width: 100%;
+    height: 30vw;
+    position: relative;
+    z-index: 8;
+    div{
+          width: 25%;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: all 1s ease-in-out;
+    }
+    .left_three{
+        left: -43%;
+        transition: all 1s ease-in-out;
+        opacity: 0;
+    }
+    .left_two{
+        left: -16%;
+        transition: all 1s ease-in-out;
+        z-index: 999;
+        opacity: 1;
+    }
+    .left_one{
+        left: 11%;
+        transition: all 1s ease-in-out;
+        z-index: 999;
+        opacity: 1;
+    }
+    .current{
+        left: 38%;
+        transition: all 1s ease-in-out;
+        opacity: 1;
+        // transform: translateX(-50%);
+        z-index: 999;
+        img{
+            border: solid 5px $red;
+        }
+    }
+    .right_one{
+        left: 65%;
+        transition: all 1s ease-in-out;
+        z-index: 9999;
+        opacity: 1;
+    }
+    .right_two{
+        left: 92%;
+        transition: all 1s ease-in-out;
+        z-index: 999;
+        opacity: 1;
+    }
+    .right_three{
+        left: 119%;
+        transition: all 1s ease-in-out;
+        z-index: 5;
+        opacity: 0;
+    }
+}

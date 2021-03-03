@@ -1608,7 +1608,7 @@ header .logo {
 .team-gal {
   height: 40vw;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .team-gal-wrap {

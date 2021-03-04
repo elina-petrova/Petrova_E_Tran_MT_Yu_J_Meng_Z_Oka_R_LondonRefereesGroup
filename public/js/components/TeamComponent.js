@@ -1,4 +1,5 @@
 import SocialMedia from "./socialMediaComponent.js";
+import TeamGalleryImg from "./teamGalleryImg.js";
 
 var nextSlide;
 var curSlide;
@@ -6,21 +7,6 @@ var prevSlide;
 var i = 0;
 var bottomSlides;
 
-var bottomSlidesClassList = [
-  "left_three", "left_two", "left_one", "current", "right_one", "right_two", "right_three"
-];
-
-var teamGalleryImages = [
-  ['public/images/ourteam-gallery-hockey2.jpg', 'Weekend match #3', '20.02.10'],
-  ['public/images/ourteam-gallery.jpg', 'Weekend match #3', '20.02.40'],
-  ['public/images/ourteam-gallery2.jpg', 'Weekend match #4', '20.05.11'],
-  ['public/images/ourteam-gallery3.jpg', 'Weekend match #5', '20.05.16'],
-  ['public/images/ourteam-gallery4.jpg', 'Weekend match #6', '20.02.17'],
-  ['public/images/ourteam-gallery5.jpg', 'Weekend match #7', '20.02.10'],
-  ['public/images/ourteam-gallery6.jpg', 'Weekend match #8', '20.05.07']
-];
-
-var teamGalleryEndless = [];
 
 export default {
   template: `
@@ -173,50 +159,103 @@ and the competence of these individuals.
   <div class="team-gal">
   <div class="team-gal-overlay"></div>
 <div class="team-gal-img team-gal-prev"><img src="" alt="Referee Picture"></div>
- <div class="team-gal-img team-gal-current"><img src="public/images/ourteam-gallery-hockey2.jpg" alt="Referee Picture"></div>
+ <div class="team-gal-img team-gal-current"><img :src="currentBigImage" alt="Referee Picture"></div>
   <div class="team-gal-next team-gal-img"><img src="" alt="Referee Picture"></div>
 
  </div>
   <div class="team-gal-img-info">
-<h3>Weekend match #3</h3>
-<p>20.02.9</p>
+  <div class="img-info-wrap">
+  <div class="team-gal-overlay"></div>
+<h3> {{ currentTitle }} </h3></div>
+<div class="img-info-wrap">
+<div class="team-gal-overlay"></div>
+<p> {{ currentDate }} </p></div>
 </div>
  </div>
 
     </section>
 
     <section class="team-bottom-gallery">
-    <div class="bot-gal left_three"><img src="public/images/ourteam-gallery4.jpg" alt="Referee Picture"></div>
-    <div class="bot-gal left_two"><img src="public/images/ourteam-gallery5.jpg" alt="Referee Picture"></div>
-    <div class="bot-gal left_one"><img src="public/images/ourteam-gallery6.jpg" alt="Referee Picture"></div>
-    <div class="bot-gal current" ><img src="public/images/ourteam-gallery-hockey2.jpg" alt="Referee Picture"></div>
-    <div class="bot-gal right_one" ><img src="public/images/ourteam-gallery.jpg" alt="Referee Picture"></div>
-    <div class="bot-gal right_two"><img src="public/images/ourteam-gallery2.jpg" alt="Referee Picture"></div>
-    <div class="bot-gal right_three"><img src="public/images/ourteam-gallery3.jpg" alt="Referee Picture"></div>
+    <team-gal-img-bottom v-for="img in teamGalleryImages" :key="img.id" :img="img" class="bot-gal" v-bind:class="bottomSlidesClassList[img.id]"></team-gal-img-bottom>
 </section>
-
 
     </section>
         `,
   components: {
-    "social-media": SocialMedia
+    "social-media": SocialMedia,
+    "team-gal-img-bottom": TeamGalleryImg
+  },
+  data() {
+    return {
+      teamGalleryImages: [
+        {
+          id: 3,
+          src: 'public/images/ourteam-gallery-hockey2.jpg',
+          title: 'Weekend match #3',
+          date: '20.02.10',
+        },
+        {
+          id: 4,
+          src: 'public/images/ourteam-gallery.jpg',
+          title: 'Weekend match #33',
+          date: '20.02.40',
+        },
+        {
+          id: 5,
+          src: 'public/images/ourteam-gallery2.jpg',
+          title: 'Weekend match #4',
+          date: '20.05.11',
+        },
+        {
+          id: 6,
+          src: 'public/images/ourteam-gallery3.jpg',
+          title: 'Weekend match #5',
+          date: '20.05.16',
+        },
+        {
+          id: 0,
+          src: 'public/images/ourteam-gallery4.jpg',
+          title: 'Weekend match #6',
+          date: '20.02.17',
+        },
+        {
+          id: 1,
+          src: 'public/images/ourteam-gallery5.jpg',
+          title: 'Weekend match #7',
+          date: '20.02.10',
+        },
+        {
+          id: 2,
+          src: 'public/images/ourteam-gallery6.jpg',
+          title: 'Weekend match #8',
+          date: '20.05.07',
+        }
+      ],
+      bottomSlidesClassList: [
+        "left_three", "left_two", "left_one", "current", "right_one", "right_two", "right_three"
+      ],
+      currentBigImage: "",
+      currentTitle: "",
+      currentDate: "",
+    }
+
   },
   mounted: function () {
     nextSlide = document.querySelector(".team-gal-next");
     curSlide = document.querySelector(".team-gal-current");
     prevSlide = document.querySelector(".team-gal-prev");
     bottomSlides = document.querySelectorAll(".bot-gal");
-
+    this.currentBigImage = Object.values(this.teamGalleryImages[0])[1];
+    this.currentTitle = Object.values(this.teamGalleryImages[0])[2];
+    this.currentDate = Object.values(this.teamGalleryImages[0])[3];
   },
   methods: {
     slideNext: function () {
       var tl = gsap.timeline();
 
-      tl.to(".team-gal-overlay", { width: 0, right: 0, left: nextSlide.offsetWidth, duration: 0.4 });
-      tl.to(".team-gal-overlay", { width: nextSlide.offsetWidth, left: 0, duration: 0.4 });
+      tl.to(".team-gal-overlay", { width: 0, right: 0, left: '100%', duration: 0.4 });
+      tl.to(".team-gal-overlay", { width: '100%', left: 0, duration: 0.4 });
       tl.to(".team-gal-overlay", { width: 0, duration: 0.4, delay: 0.2 });
-
-
 
 
       if (i < 6) {
@@ -224,7 +263,13 @@ and the competence of these individuals.
       } else {
         i = 0;
       }
-      nextSlide.firstChild.src = teamGalleryImages[i][0];
+
+      setTimeout(this.changeInfo, 1000);
+
+      nextSlide.firstChild.src = Object.values(this.teamGalleryImages[i])[1];
+
+
+
       nextSlide.classList.add("team-gal-current");
       nextSlide.classList.remove("team-gal-next");
 
@@ -242,14 +287,14 @@ and the competence of these individuals.
       var cur_class_id;
       bottomSlides.forEach(bot_slide => {
         cur_class = bot_slide.classList[1];
-        cur_class_id = bottomSlidesClassList.indexOf(cur_class);
+        cur_class_id = this.bottomSlidesClassList.indexOf(cur_class);
         if (cur_class_id != 0) {
-          bot_slide.classList.add(bottomSlidesClassList[cur_class_id - 1]);
-          bot_slide.classList.remove(bottomSlidesClassList[cur_class_id]);
+          bot_slide.classList.add(this.bottomSlidesClassList[cur_class_id - 1]);
+          bot_slide.classList.remove(this.bottomSlidesClassList[cur_class_id]);
         }
         if (cur_class_id === 0) {
-          bot_slide.classList.add(bottomSlidesClassList[6]);
-          bot_slide.classList.remove(bottomSlidesClassList[0]);
+          bot_slide.classList.add(this.bottomSlidesClassList[6]);
+          bot_slide.classList.remove(this.bottomSlidesClassList[0]);
         }
       });
 
@@ -258,17 +303,18 @@ and the competence of these individuals.
     slideBack: function () {
       var tl = gsap.timeline();
 
-      tl.to(".team-gal-overlay", { width: 0, right: 0, left: nextSlide.offsetWidth, duration: 0.4 });
-      tl.to(".team-gal-overlay", { width: nextSlide.offsetWidth, left: 0, duration: 0.4 });
-      tl.to(".team-gal-overlay", { width: 0, duration: 0.4, delay: 0.2 });
+      tl.to(".team-gal-overlay", { width: 0, left: 0, right: '100%', duration: 0.4 });
+      tl.to(".team-gal-overlay", { width: '100%', right: 0, duration: 0.4 });
+      tl.to(".team-gal-overlay", { width: 0, left: '100%', duration: 0.4, delay: 0.2 });
 
       if (i > 0) {
         i = i - 1;
       } else {
         i = 6;
       }
-      prevSlide.firstChild.src = teamGalleryImages[i][0];
+      prevSlide.firstChild.src = Object.values(this.teamGalleryImages[i])[1];
 
+      setTimeout(this.changeInfo, 1000);
 
       prevSlide.classList.add("team-gal-current");
       prevSlide.classList.remove("team-gal-prev");
@@ -284,23 +330,23 @@ and the competence of these individuals.
       curSlide = document.querySelector(".team-gal-current");
       prevSlide = document.querySelector(".team-gal-prev");
 
-
       var cur_class;
       var cur_class_id;
       bottomSlides.forEach(bot_slide => {
         cur_class = bot_slide.classList[1];
-        cur_class_id = bottomSlidesClassList.indexOf(cur_class);
+        cur_class_id = this.bottomSlidesClassList.indexOf(cur_class);
         if (cur_class_id != 6) {
-          bot_slide.classList.add(bottomSlidesClassList[cur_class_id + 1]);
-          bot_slide.classList.remove(bottomSlidesClassList[cur_class_id]);
+          bot_slide.classList.add(this.bottomSlidesClassList[cur_class_id + 1]);
+          bot_slide.classList.remove(this.bottomSlidesClassList[cur_class_id]);
         } if (cur_class_id === 6) {
-          bot_slide.classList.add(bottomSlidesClassList[0]);
-          bot_slide.classList.remove(bottomSlidesClassList[6]);
+          bot_slide.classList.add(this.bottomSlidesClassList[0]);
+          bot_slide.classList.remove(this.bottomSlidesClassList[6]);
         }
       });
-
-
-
     },
+    changeInfo: function () {
+      this.currentTitle = Object.values(this.teamGalleryImages[i])[2];
+      this.currentDate = Object.values(this.teamGalleryImages[i])[3];
+    }
   }
 }

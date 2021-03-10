@@ -10,21 +10,63 @@ var i;
 var offset;
 var slideWidth;
 var margin;
+var allNoShow;
+var mountedCount = 0;
 
 export default {
     template: `
-    <section class="transition">
-    <social-media></social-media>
-    <section class="heroSection">
+    <section class="transition" v-once>
+    <social-media class="noshow"></social-media>
+    <section v-once class="heroSection">
         </div>
         <!-- <h2 id="tweet">TWEEET!</h2> -->
         <div class="hero-content-wrapper">
-            <div id="man"><img src="./public/images/man.svg"></div>
+            <div id="man" class="manAnimation"><img src="./public/images/man.svg"></div>
             <div id="tweet">
             <div id="heroMainContent" class="noshow">
                 <h1>LONDON REFEREES GROUP</h1>
             </div>
-             <span>TWE</span>EET!
+             <!-- <span>TWE</span>EET! -->
+                             <svg id="tweetText" viewBox="0 0 504.87 230.63" fill="white">
+                    <path id="curve" fill="transparent"
+                        d="M36.4,181.5c10.5-11.7,30.4-30.8,61-44c24-10.4,45.7-13.3,60-14c121,0,242,0,383,0" />
+                    <text width="500">
+                        <textPath class="textPathAnimation text-path redTweet" xlink:href="#curve">
+                            T
+                            <animate attributeName="startOffset" from="0" to="138" begin="1s" dur="1.4s"
+                                fill="freeze" />
+                        </textPath>
+                        <textPath class="textPathAnimation text-path redTweet" xlink:href="#curve">
+                            w
+                            <animate attributeName="startOffset" from="5" to="186" begin="1s" dur="1.3s"
+                                fill="freeze" />
+                        </textPath>
+                        <textPath class="textPathAnimation text-path redTweet" xlink:href="#curve">
+                            e
+                            <animate attributeName="startOffset" from="10" to="257" begin="1s" dur="1.2"
+                                fill="freeze" />
+                        </textPath>
+                        <textPath class="textPathAnimation text-path" xlink:href="#curve">
+                            e
+                            <animate attributeName="startOffset" from="15" to="304" begin="1s" dur="1.1s"
+                                fill="freeze" />
+                        </textPath>
+                        <textPath class="textPathAnimation text-path" xlink:href="#curve">
+                            e
+                            <animate attributeName="startOffset" from="15" to="350" begin="1s" dur="1s" fill="freeze" />
+                        </textPath>
+                        <textPath class="textPathAnimation text-path" xlink:href="#curve">
+                            t
+                            <animate attributeName="startOffset" from="35" to="395" begin="1s" dur="0.9s"
+                                fill="freeze" />
+                        </textPath>
+                        <textPath class="textPathAnimation text-path lastT" xlink:href="#curve">
+                            !
+                            <animate attributeName="startOffset" from="40" to="443" begin="1s" dur="0.8s"
+                                fill="freeze" />
+                        </textPath>
+                    </text>
+                </svg>
              </div>
         </div>
     </section>
@@ -302,11 +344,19 @@ export default {
         slider = document.querySelector(".officialsGallery");
         member = document.querySelector(".member");
         members = document.querySelectorAll(".member");
+        allNoShow = document.querySelectorAll(".noshow");
         margin = 5 * parseFloat(getComputedStyle(document.documentElement).fontSize);
         currentSlide = members[0];
         i = 0;
         offset = 0;
         slideWidth = member.offsetWidth;
+        if (mountedCount != 0) {
+            allNoShow.forEach(element => element.classList.remove("noshow"));
+            document.querySelector(".manAnimation").classList.remove("manAnimation");
+            document.querySelectorAll(".textPathAnimation").forEach(element => element.classList.remove("textPathAnimation"));
+
+        }
+        mountedCount += 1;
     },
     methods: {
         slide: function (e) {

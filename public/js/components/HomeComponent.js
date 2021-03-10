@@ -274,20 +274,20 @@ export default {
 </svg>  </span> Partners</h1>
         <div class="logos">
             <div class="partner-logo-wrap"><img class="partner-logo" src="./public/images/alliance-hockey-gs.png" alt="Alliance Hockey Logo">
-            <img class="partner-logo-color" src="./public/images/alliance-hockey.png" alt="Alliance Hockey Logo">
+            <a href="https://alliancehockey.com/" target="_blank"><img class="partner-logo-color" src="./public/images/alliance-hockey.png" alt="Alliance Hockey Logo"></a>
             </div>
             <div class="partner-logo-wrap"><img class="partner-logo" src="./public/images/hockey-canada-gs.svg" alt="Alliance Hockey Logo">
-            <img class="partner-logo-color" src="./public/images/hockey-canada.svg" alt="Alliance Hockey Logo">
+            <a href="https://www.hockeycanada.ca/en-ca/home" target="_blank"><img class="partner-logo-color" src="./public/images/hockey-canada.svg" alt="Alliance Hockey Logo"></a>
             </div>
             <div class="partner-logo-wrap"><img class="partner-logo" src="./public/images/OMHA-gs.svg" alt="Alliance Hockey Logo">
-            <img class="partner-logo-color" src="./public/images/OMHA.svg" alt="Alliance Hockey Logo"></div>
+            <a href="https://www.omha.net/" target="_blank"><img class="partner-logo-color" src="./public/images/OMHA.svg" alt="Alliance Hockey Logo"></a></div>
             <div class="partner-logo-wrap"><img class="partner-logo" src="./public/images/sportability-gs.png" alt="Alliance Hockey Logo">
-            <img class="partner-logo-color" src="./public/images/sportability.png" alt="Alliance Hockey Logo">
+            <a href="https://sportabilitybc.ca/" target="_blank"><img class="partner-logo-color" src="./public/images/sportability.png" alt="Alliance Hockey Logo"></a>
             </div>
             <div class="partner-logo-wrap"><img class="partner-logo" src="./public/images/OHF-gs.svg" alt="Alliance Hockey Logo">
-            <img class="partner-logo-color" src="./public/images/OHF.svg" alt="Alliance Hockey Logo"></div>
+            <a href="https://www.ohf.on.ca/" target="_blank"><img class="partner-logo-color" src="./public/images/OHF.svg" alt="Alliance Hockey Logo"></a></div>
             <div class="partner-logo-wrap"><img class="partner-logo" src="./public/images/OWHA-gs.svg" alt="Alliance Hockey Logo">
-            <img class="partner-logo-color" src="./public/images/OWHA.svg" alt="Alliance Hockey Logo"></div>
+            <a href="https://www.owha.on.ca/" target="_blank"><img class="partner-logo-color" src="./public/images/OWHA.svg" alt="Alliance Hockey Logo"></a></div>
         </div>
     </section>
 

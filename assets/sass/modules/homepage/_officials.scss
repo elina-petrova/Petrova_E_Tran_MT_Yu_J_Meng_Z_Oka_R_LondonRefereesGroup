@@ -125,3 +125,15 @@ transition: all 0.3s ease-in-out;
     width: 5vw;
 }
 }
+
+@media (min-width: 2000px){
+    .member-img-wrap{
+    height: 100%;
+}
+.memberInfoWrap {
+     width: auto;
+}
+.officialsGalleryWrap{
+        width: 100%;
+    }
+}

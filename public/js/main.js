@@ -40,6 +40,13 @@ const vm = new Vue({
                 top: 0,
                 behavior: "smooth"
             });
+            console.log('scrolled to top');
+        },
+        scrollToTopFot: function () {
+            rootElement.scrollTo({
+                top: 0,
+            });
+            console.log('scrolled to top');
         },
 
 

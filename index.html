@@ -159,18 +159,18 @@
                 </div>
 
                 <div class="footer_links_wrap">
-                    <router-link to="/">Home</router-link>
-                    <router-link to="/about">About Us</router-link>
+                    <router-link to="/" @click.native="scrollToTopFot">Home</router-link>
+                    <router-link to="/about" @click.native="scrollToTopFot">About Us</router-link>
                     <div class="block">
-                        <router-link to="/team">Our Team</router-link>
-                        <router-link to="/"><span>Events</span></router-link>
+                        <router-link to="/team" @click.native="scrollToTopFot">Our Team</router-link>
+                        <router-link to="/" @click.native="scrollToTopFot"><span>Events</span></router-link>
                     </div>
                     <div class="block">
-                        <router-link to="/programs">Our Programs</router-link>
-                        <router-link to="/"><span>Juniour Mentorship</span></router-link>
-                        <router-link to="/"><span>Training capms</span></router-link>
+                        <router-link to="/programs" @click.native="scrollToTopFot">Our Programs</router-link>
+                        <router-link to="/" @click.native="scrollToTopFot"><span>Juniour Mentorship</span></router-link>
+                        <router-link to="/" @click.native="scrollToTopFot"><span>Training capms</span></router-link>
                     </div>
-                    <router-link to="/contact">Contact</router-link>
+                    <router-link to="/contact" @click.native="scrollToTopFot">Contact</router-link>
                 </div>
             </div>
 

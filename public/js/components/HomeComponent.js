@@ -310,8 +310,6 @@ export default {
     },
     methods: {
         slide: function (e) {
-
-            console.log('lol');
             if (currentSlide != members[members.length - 1]) {
                 offset -= slideWidth + margin;
                 gsap.to(slider, { x: offset, rotation: 0.001, ease: Power1.easeInOuteaseInOut, duration: 0.5 });
@@ -319,9 +317,13 @@ export default {
                 gsap.to(currentSlide, { opacity: .5 });
                 currentSlide = members[i];
                 gsap.to(currentSlide, { opacity: 1 });
+
+                gsap.to(".btn-left", { display: 'block' });
+            } if (currentSlide == members[members.length - 1]) {
+                gsap.to(".btn-right", { display: 'none', duration: 0.01 });
             }
         },
-        slideNext: function () {
+        slideNext: function (e) {
 
             if (currentSlide != members[0]) {
                 offset += slideWidth + margin;
@@ -330,6 +332,10 @@ export default {
                 gsap.to(currentSlide, { opacity: .5 });
                 currentSlide = members[i];
                 gsap.to(currentSlide, { opacity: 1 });
+
+                gsap.to(".btn-right", { display: 'block' });
+            } if (currentSlide == members[0]) {
+                gsap.to(".btn-left", { display: 'none', duration: 0.01 });
             }
         },
 

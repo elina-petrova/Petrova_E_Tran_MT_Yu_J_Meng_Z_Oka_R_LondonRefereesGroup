@@ -1,4 +1,3 @@
-<!-- for any helper functions for login/log out -->
 <?php
 function login($username, $password, $ip) {
 

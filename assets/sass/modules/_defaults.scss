@@ -3,9 +3,25 @@ $default-padding: 6rem;
 .hidden{
     display: none;
 }
+
 .cms{
-    background-image: $main-bg-color;
-    font-family: $default-font-family !important;
+    background-color: $black;
+    // background-image: $main-bg-color;
+    font-family: SF Sports Night NS;
+    
+    p{
+        font-family: monotype-grotesque,sans-serif !important;
+    }
+    a {
+        font-family: monotype-grotesque,sans-serif;
+    }
+    button{
+        font-family: monotype-grotesque,sans-serif;
+    }
+
+    input{
+        font-family: monotype-grotesque,sans-serif;
+    }
 }
 
 *{

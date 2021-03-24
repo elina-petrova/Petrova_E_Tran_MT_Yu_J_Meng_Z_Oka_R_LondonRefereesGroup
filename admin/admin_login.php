@@ -3,7 +3,7 @@ require_once '../load.php';
 
 $ip = $_SERVER['REMOTE_ADDR'];//"REMOTE_ADDR" => The IP address from which the user is viewing the current page.
 //we want get the value $ip, and add it in login() as the third parameter
-
+$username = $password = '';
 //gain username and password, empty check
 if(isset($_POST['submit'])){
     $username = trim($_POST['username']);
@@ -14,25 +14,12 @@ if(isset($_POST['submit'])){
         $result = login($username, $password, $ip);//allow login, login function in login.php
         $message = $result;
     }else{
-        redirect_to('admin_login.php');
+        //redirect_to('admin_login.php');
         // echo "<br />\n";
-        // $message = 'Plesase fill out the request field';
+         $message = '* Plesase fill out the request field';
     }
 }
 
-//Account complete lockout after 3 failed login attempts.
-//   $_SESSION['login_attempts'] = isset($_SESSION['login_attempts']) ? ($_SESSION['login_attempts'] + 1) : 0;
-//   // do checking on number of attempts
-//   if ($_SESSION['login_attempts'] > 5)
-//   {
-//     echo "Login failure: Maximum login attempts was exceeded !";
-//     echo "<br />\n"; 
-//     echo " * Your IP is locked by server due to repeatedly fails logins. If you have any questions, please contact administrator.";
-//     echo "<br />\n"; 
-//     //echo "Please wait 30 seconds...";
-    
-//     die();
-//   }
 
 
 //if user already log in, redirect user to welcome.php, dont allow login in user access admin_login.php again
@@ -63,16 +50,17 @@ if(isset($_SESSION['user_id'])){
                 <h3>LOGIN TO YOUR ACCOUNT</h3>
                 
                 <div class="login_form">
+                 <?php echo !empty($message)?$message:'';?>
                     <form action="admin_login.php" method="post">
                     <!-- <label for="username">Username:</label> -->
-                    <input id="username" type="text" name="username" value="" placeholder="USERNAME: admin">
+                    <input id="username" type="text" name="username" value="<?= $username;?>" placeholder="USERNAME: admin">
                     
                     <!-- <label for="password">Password:</label> -->
-                    <input id="password" type="text" name="password" value="" placeholder="PASSWORD: admin123">
+                    <input id="password" type="text" name="password" value="<?= $password;?>" placeholder="PASSWORD: admin123">
                     
                     <button type="submit" name="submit">LOGIN</button>
                     </form>
-                    <?php echo !empty($message)?$message:'';?>
+                    
                     <a href="../index.html">BACK</a>
                 </div>
             </div>

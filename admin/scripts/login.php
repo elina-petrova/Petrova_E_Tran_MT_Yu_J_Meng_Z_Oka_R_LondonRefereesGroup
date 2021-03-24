@@ -21,7 +21,7 @@ function login($username, $password, $ip) {
        //if found user exist in user database, get him in!
 
        if ($found_user['user_status'] ==='locked') {
-        return "You account has locked, please contact admin";
+        return "* You account has locked, please contact admin";
         redirect_to('admin_login.php');
         exit;
     }
@@ -41,7 +41,7 @@ function login($username, $password, $ip) {
             //     echo strtotime($found_user['user_date']).PHP_EOL;
             //     echo time().PHP_EOL;
             //     exit;
-            $new_user_login_time_limits = 2 * 60; 
+            $new_user_login_time_limits = 5* 60; 
             if ( $diff  > $new_user_login_time_limits ) {
                   // it been more than 2 minutes
                 if ($found_user['user_status'] != 'locked') {

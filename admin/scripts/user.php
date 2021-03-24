@@ -4,9 +4,9 @@
 //drop down menu
 function getUserLevelMap(){
     return array(
-        '0' => 'Member',
-        '1' => 'Admin',
-        '2' => 'Super Admin',
+        '0' => 'MEMBER',
+        '1' => 'ADMIN',
+        '2' => 'SUPER ADMIN',
 
     );
 }
@@ -82,19 +82,33 @@ function getSingleUser($user_id){
     }
 }
 
+function getAllUsers(){
+    $pdo = Database::getInstance() -> getConnection();
+
+    $get_all_user_query = 'SELECT * FROM tbl_users ';//SQL placeholder to aviod SQL injection
+    $users = $pdo ->query($get_all_user_query);
+
+    if($users){
+         return $users;
+    }else{
+        return false;
+    }
+    
+}
 
 
 
 
 //get all users(not include own account)
-function getAllUsers($user_id){
+function getOtherUsers($user_id){
     $pdo = Database::getInstance() -> getConnection();
 
-    $get_all_user_query = 'SELECT * FROM tbl_users where user_id != :id';//SQL placeholder to aviod SQL injection
+    $get_all_user_query = 'SELECT * FROM tbl_users where user_id != :id AND user_status != :user_status';//SQL placeholder to aviod SQL injection
     $users = $pdo ->prepare($get_all_user_query);
     $get_all_user_result = $users -> execute(
         array(
-            ':id' => $user_id
+            ':id' => $user_id,
+            ':user_status'=>'locked'
         )
         );
 
@@ -104,6 +118,24 @@ function getAllUsers($user_id){
         return false;
     }
 
+}
+
+
+function deleteUser($user_id){
+    $pdo = Database::getInstance() -> getConnection();
+
+    $delete_user_query = 'DELETE FROM tbl_user WHERE user_id = :id ';//SQL placeholder to aviod SQL injection
+    $delete_user_set = $pdo ->prepare($delete_user_query);
+    $delete_user_result = $delete_user_set -> execute(
+        array(
+            ':id' => $user_id
+        )
+        );
+    if($delete_user_result && $delete_user_set -> rowCount()>0){
+        redirect_to('admin_deleteuser.php');
+    }else{
+        return false;
+    }
 }
 
 

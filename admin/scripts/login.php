@@ -1,3 +1,4 @@
+
 <?php
 function login($username, $password, $ip) {
 
@@ -19,13 +20,51 @@ function login($username, $password, $ip) {
     if($found_user = $user_set -> fetch(PDO::FETCH_ASSOC)){//PDO::FETCH_ASSOC tells PDO to return the result as an associative array.
        //if found user exist in user database, get him in!
 
+       if ($found_user['user_status'] ==='locked') {
+        return "You account has locked, please contact admin";
+        redirect_to('admin_login.php');
+        exit;
+    }
+
         $found_user_id = $found_user['user_id'];//get user id
+
+       
+        //Newly created user, not logged in two minutes, user locked
+        if ( $found_user['login_times'] == 0) {
+            date_default_timezone_set('America/New_York');
+
+            //simply compare two integer timestamp values...
+             $diff = time() - strtotime($found_user['user_date']);
+            //$diff = strtotime($found_user['user_date']) - strtotime('now');
+           
+            // {    echo $diff.PHP_EOL;
+            //     echo strtotime($found_user['user_date']).PHP_EOL;
+            //     echo time().PHP_EOL;
+            //     exit;
+            $new_user_login_time_limits = 2 * 60; 
+            if ( $diff  > $new_user_login_time_limits ) {
+                  // it been more than 2 minutes
+                if ($found_user['user_status'] != 'locked') {
+                    $update_user_query = 'UPDATE tbl_users SET user_status = :user_status WHERE user_id = :user_id';
+                    $update_user_set = $pdo -> prepare($update_user_query);
+                    $update_user_set -> execute(
+                        array(
+                            ':user_status'=>'locked',
+                            ':user_id' => $found_user_id
+                        )
+                    );
+                }
+                redirect_to('login_fail.php');
+                exit;
+            }
+        }
+
+
+
         //write the username and userID into session
         $_SESSION['user_id'] = $found_user_id;
         $_SESSION['user_name'] = $found_user['user_name'];
         $_SESSION['user_level'] = $found_user['user_level'];//show user level
-        $_SESSION['login_times'] = $found_user['login_times']+1;
-      
 
         //update the user IP by the curren logged in one
         $update_user_query = 'UPDATE tbl_users SET user_ip = :user_ip WHERE user_id = :user_id';
@@ -50,7 +89,8 @@ function login($username, $password, $ip) {
         );
         $_SESSION['last_login'] = $found_user['last_login'];//write user_lastlogintime in session
 
-       
+        $_SESSION['login_times'] = $found_user['login_times']+1;
+
         //update the number of successfully login
         $update_user_query = 'UPDATE tbl_users SET login_times=:login_times WHERE user_id=:user_id';
         $update_user_set = $pdo->prepare($update_user_query);
@@ -60,7 +100,12 @@ function login($username, $password, $ip) {
                 ':login_times'=>$_SESSION['login_times']
                 )
         );
-        
+
+        //first time login redirect to edit user page
+        if($_SESSION['login_times'] == 1){
+            redirect_to('admin_edituser.php');
+        }
+       
        ##TODO : debug only, will change here
        //return 'Hello, ' . $username . '!  <br />  Your IP address (using $_SERVER[\'REMOTE_ADDR\']) is ' . $ip . '<br /><br />';
                
@@ -82,6 +127,7 @@ function confirm_logged_in(){
           redirect_to('admin_login.php');
     }
 }
+
 
 
 //if user log out, redirect user to admin_login.php

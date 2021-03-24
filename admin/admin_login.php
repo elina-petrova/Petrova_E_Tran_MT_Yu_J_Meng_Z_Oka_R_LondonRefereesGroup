@@ -59,8 +59,9 @@ if(isset($_SESSION['user_id'])){
             </div>
 
             <div class="login_form_area">
-                <?php echo !empty($message)?$message:'';?>
+               
                 <h3>LOGIN TO YOUR ACCOUNT</h3>
+                
                 <div class="login_form">
                     <form action="admin_login.php" method="post">
                     <!-- <label for="username">Username:</label> -->
@@ -70,9 +71,9 @@ if(isset($_SESSION['user_id'])){
                     <input id="password" type="text" name="password" value="" placeholder="PASSWORD: admin123">
                     
                     <button type="submit" name="submit">LOGIN</button>
-                    <!-- <h4>* Login Attempt: <?php echo $_SESSION['login_attempts']; ?> </h4> -->
-                        <!-- <h5>Account will complete lockout after you 3 failed login attempts, please be careful ！！！</h5> -->
                     </form>
+                    <?php echo !empty($message)?$message:'';?>
+                    <a href="../index.html">BACK</a>
                 </div>
             </div>
     </section>

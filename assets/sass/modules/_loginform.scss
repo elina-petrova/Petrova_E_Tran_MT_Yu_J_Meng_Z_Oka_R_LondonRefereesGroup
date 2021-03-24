@@ -37,7 +37,14 @@
     }
 
     .login_form{
-        margin: 5% 10%;
+        margin:  10%;
+
+        a{
+            text-align: center;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
     }
 
     form{
@@ -73,6 +80,41 @@
         button:hover{
             text-decoration: underline;
         }
+        
+        
 
+    }
+}
+
+.login_fail{
+    
+    margin: 10%;
+    color:$white;
+    h2{
+        font-size: 25px;
+        
+    }
+    p{
+        font-size: 15px;
+        padding: 1% 0;
+        font-family: monotype-grotesque, sans-serif;
+    }
+
+    a{
+        text-decoration: none;
+        display: inline-block;
+        border:2px double $red;
+        color: $black;
+        background-color: $red;
+        text-align: center;
+        font-size: 17px;
+        padding: 10px 30px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 1% 0;
+    }
+
+    a:hover{
+        text-decoration: underline;
     }
 }

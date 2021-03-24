@@ -8,4 +8,15 @@ function redirect_to($location=null){
      }
 }
 
+//only admin have access to this page
+function admin_access_only(){
+    if($_SESSION['user_level'] != 2){
+          redirect_to('admin_edituser.php');
+    }
+}
 
+function new_login_user_prevent(){
+    if($_SESSION['login_times'] <=1){
+          redirect_to('admin_edituser.php');
+    }
+}

@@ -2,9 +2,11 @@
     width: 60%;
     height: auto;
     background-color: $black;
+    border: 3px solid $red;
     display: flex;
     flex-direction: row;
-    margin: 5% auto;
+    margin: 3% auto;
+    font-family: SF Sports Night NS;
 }
 
 .logo_area{
@@ -13,13 +15,12 @@
     height: auto;
     text-align: center;
     .logo{
-        width: 200px;
-        margin: 17% auto;
-        
+        width: 230px;
+        margin: 20% auto;
     }
     h2{
         font-size: 28px;
-        margin: 1%;
+      
     }
 }
 
@@ -37,10 +38,12 @@
     }
 
     .login_form{
+        text-align: center;
+      
         margin:  10%;
-
         a{
-            text-align: center;
+            width: 10px;
+            font-size: 13px;
         }
         a:hover{
             text-decoration: underline;
@@ -52,14 +55,15 @@
         flex-direction: column;
         input[type=text]{
             text-decoration: none;
-            border: 5px double $white;
+            border: 2px double $red;
             color: black;
             font-size: 13px;
             padding: 5px 20px;
-            height: 20px;
+            height: 30px;
             margin-top: 2%;
             transition: all 0.5s;
             cursor: pointer;
+            font-family:  monotype-grotesque,sans-serif;;
             
         }
 
@@ -74,11 +78,12 @@
             padding: 5px 10px;
             transition: all 0.5s;
             cursor: pointer;
-            margin: 5% 0;
+            margin: 2% 0;
         }
     
         button:hover{
-            text-decoration: underline;
+            color: $white;
+            
         }
         
         

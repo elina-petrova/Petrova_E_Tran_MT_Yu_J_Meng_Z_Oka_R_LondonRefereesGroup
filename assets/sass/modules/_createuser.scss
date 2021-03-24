@@ -12,13 +12,16 @@
         text-align: center;
         padding: 2%;
     }
-
+    
+   
     
 }
 
 .create_user_form{
     
-    justify-content:space-around;
+    
+    display: flex;
+    flex-direction: column;
 
     input[type=text]{
         text-decoration: none;
@@ -26,7 +29,7 @@
         color: black;
         font-size: 13px;
         padding: 5px 20px;
-        height: 20px;
+        height: 30px;
         margin: 2%;
         transition: all 0.5s;
         cursor: pointer;
@@ -38,7 +41,7 @@
         color: black;
         font-size: 13px;
         padding: 5px 20px;
-        height: 20px;
+        height: 30px;
         margin: 2%;
         transition: all 0.5s;
         cursor: pointer;

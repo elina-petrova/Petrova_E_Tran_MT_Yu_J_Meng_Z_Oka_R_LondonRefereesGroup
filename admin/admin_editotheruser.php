@@ -9,7 +9,7 @@ admin_access_only();
 
 $id = $_SESSION['user_id'];//define in login.php
 
-$users = getAllUsers($id);
+$users = getOtherUsers($id);
 
 if(!$users){
     $messager = 'Fail to get user list';

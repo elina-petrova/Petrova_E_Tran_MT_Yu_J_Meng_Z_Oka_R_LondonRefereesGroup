@@ -1,28 +1,43 @@
 <?php
 require_once '../load.php';
 
-//make sure this page only access to 
 confirm_logged_in();
 admin_access_only();
 
-$name= $subject=$file='';
+$name= $subject=$file= ' ';
+
+
+$user_id =  $_SESSION['user_id'];
+
+// $username = getUsername($user_id);
+// if(!$username){
+//     $messager = 'Fail to get user list';
+// }
 
 if(isset($_POST['submit'])){
-    $name = trim($_POST['name']);
-    $subject = trim($_POST['subject']); //The trim() function removes whitespace and other predefined characters from both sides of a string.
    
 
-    if(!empty($name) && !empty($subject) && !empty($_FILES)){//if username and password both not empty
-        $data = array(
-            'file' => $_FILES['file'],
-            'name' => trim($_POST['name']),
-            'subject' => trim($_POST['subject']),
-        );
-    
-        $message = addEvent($data);
+    $name = trim($_POST['name']);
+    $subject = trim($_POST['subject']);
+    $file = $_FILES['file'];
+
+    if(!empty($name) && !empty($subject) ){
+
+        if(empty($file)){
+            $message = "File is required";
+        }else{
+            $data = array(
+                'file' => $_FILES['file'],
+                'name' => trim($_POST['name']),
+                'subject' => trim($_POST['subject']),
+                'user' => $user_id
+            );
+        
+            $message = addEvent($data);
+
+        }
+            
     }else{
-        //redirect_to('admin_login.php');
-        // echo "<br />\n";
          $message = '* Plesase fill out the request field';
     }
 }

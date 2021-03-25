@@ -33,19 +33,42 @@ function deleteFile($file_id){
 }
 
 
+// function getUsername($user_id){
+//     // echo 'you are try to fetch user :'.$user_id;
+//     $pdo = Database::getInstance() -> getConnection();
+
+//     $get_username_query = 'SELECT user_name FROM tbl_users WHERE user_id = :id';//SQL placeholder to aviod SQL injection
+//     $username = $pdo ->prepare($get_username_query);
+//     $get_username_result = $username -> execute(
+//         array(
+//             ':id' => $user_id
+//         )
+//         );
+
+//     if($username){
+//          return $username;
+//     }else{
+//         return false;
+//     }
+  
+// }
+
+
 function addEvent($event){
     try{
 
         // return 'you are about to create a new movie!'.PHP_EOL.var_export($movie, true);
         # 1. connect to database
        $pdo = Database::getInstance() -> getConnection();
-
-      
-
+    
+        
+         
+       
+       
         # 2. validate the file upload
-        $file = $event['file'];//get movie cover
+        $file = $event['file'];
         $upload_file = pathinfo($file['name']);//return information about a path using an associative array or a string
-        $accepted_types = array('pdf', 'jpg', 'jpe', 'jpeg', 'png', 'docx');//define accepted file types
+        $accepted_types = array('pdf', 'dox','docx');//define accepted file types
         
        
         //if uploaded file type deesnt belong to accetped types, throw a error message and stop heres
@@ -73,9 +96,9 @@ function addEvent($event){
         if (!move_uploaded_file($file['tmp_name'], $target_path)) {
            throw new Exception('Failed to move uploaded file, check permission!');
        }
-          
+        
 
-       
+
        $currentDateTime = date('Y-m-d H:i:s');
         # 4. inset into database(tbl_movies) 
         $insert_event_query    = 'INSERT INTO tbl_events(events_name, events_subject, events_creator, last_executed, events_file)';
@@ -85,7 +108,7 @@ function addEvent($event){
             array(
                ':name'     =>$event['name'],
                ':subject'     =>$event['subject'],
-               ':creator'      => 'admin',
+               ':creator'      => $event['user'],
                ':last_executed'   => $currentDateTime,
                ':file' => $generated_filename
                  )

@@ -5,13 +5,14 @@ require_once '../load.php';
 confirm_logged_in();
 admin_access_only();
 
-$name= $subject='';
+$name= $subject=$file='';
 
 if(isset($_POST['submit'])){
     $name = trim($_POST['name']);
     $subject = trim($_POST['subject']); //The trim() function removes whitespace and other predefined characters from both sides of a string.
-    
-    if(!empty($name) && !empty($subject) && !empty($file)){//if username and password both not empty
+   
+
+    if(!empty($name) && !empty($subject) && !empty($_FILES)){//if username and password both not empty
         $data = array(
             'file' => $_FILES['file'],
             'name' => trim($_POST['name']),
@@ -50,7 +51,7 @@ if(isset($_POST['submit'])){
         <input type="text" name="subject"  id="subject" value="<?= $subject;?>"><br><br>
 
 
-        <label for="file">File:</label><br>
+        <label for="file">Choose a file to upload:</label><br>
         <input type="file" name="file"  id="file" ><br><br>
 
 

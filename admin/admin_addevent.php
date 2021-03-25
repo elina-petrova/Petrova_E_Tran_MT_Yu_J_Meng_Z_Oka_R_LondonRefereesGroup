@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
     $name = trim($_POST['name']);
     $subject = trim($_POST['subject']); //The trim() function removes whitespace and other predefined characters from both sides of a string.
     
-    if(!empty($name) && !empty($subject)){//if username and password both not empty
+    if(!empty($name) && !empty($subject) && !empty($file)){//if username and password both not empty
         $data = array(
             'file' => $_FILES['file'],
             'name' => trim($_POST['name']),
@@ -27,10 +27,6 @@ if(isset($_POST['submit'])){
 }
 
 
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +37,7 @@ if(isset($_POST['submit'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Event</title>
 </head>
-<body>
+<body class="cms">
     <h2>Add Event</h2>
     <?php echo !empty($message)?$message:'';?> <!--if $message isnt empty, print $message info-->
      

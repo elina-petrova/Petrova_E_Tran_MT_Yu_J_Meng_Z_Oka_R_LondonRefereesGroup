@@ -1,27 +1,23 @@
 .login_area{
-    width: 60%;
+   
     height: auto;
     background-color: $black;
-    border: 3px solid $red;
     display: flex;
     flex-direction: row;
-    margin: 3% auto;
+   
     font-family: SF Sports Night NS;
 }
 
 .logo_area{
+    width: 30%;
     background-color: $red;
-    width: 50%;
     height: auto;
     text-align: center;
     .logo{
         width: 230px;
         margin: 20% auto;
     }
-    h2{
-        font-size: 28px;
-      
-    }
+  
 }
 
 
@@ -30,7 +26,7 @@
     height: auto;
     background-color: $black;
     color: $white;
-    margin: 20% 0;
+    margin: 10% 0;
     h3{
         font-size: 25px;
         text-align: center;
@@ -39,8 +35,7 @@
 
     .login_form{
         text-align: center;
-      
-        margin:  10%;
+        margin:  17%;
         a{
             width: 10px;
             font-size: 13px;

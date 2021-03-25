@@ -2,13 +2,13 @@
 require_once '../load.php';
 //make sure this page only access to 
 confirm_logged_in(true);
-
+admin_access_only();
 
 $users = getAllUsers();
 
 
 if(!$users){
-    $messager = 'Fail to get user list';
+    $message = 'Fail to get user list';
 }
 
 
@@ -34,12 +34,12 @@ if(isset($_GET['id'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delete User</title>
 </head>
+
 <body class="cms">
     <h2>Delete User</h2>
     <?php echo !empty($message)?$message:'';?>
     
         <table>
-
             <thead>
              <tr>
                 <th>User ID</th>

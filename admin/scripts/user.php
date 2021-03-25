@@ -124,7 +124,7 @@ function getOtherUsers($user_id){
 function deleteUser($user_id){
     $pdo = Database::getInstance() -> getConnection();
 
-    $delete_user_query = 'DELETE FROM tbl_user WHERE user_id = :id ';//SQL placeholder to aviod SQL injection
+    $delete_user_query = 'DELETE FROM tbl_users WHERE user_id = :id ';//SQL placeholder to aviod SQL injection
     $delete_user_set = $pdo ->prepare($delete_user_query);
     $delete_user_result = $delete_user_set -> execute(
         array(

@@ -84,7 +84,10 @@ if(isset($_POST['submit'])){
                             
                             <div class="edit_user_buttons">
                             <button  class="subimt-createuser" type="submit" name="submit">SUBMIT</button>
+                            
+                            <?php if($_SESSION['login_times'] > 1):?>
                             <a href="index.php">BACK</a>
+                            <?php endif;?>
                             </div>
 
                         <?php endwhile;?>

@@ -3,7 +3,7 @@ require_once '../load.php';
 
 //make sure this page only access to 
 confirm_logged_in();
-
+admin_access_only();
 
 $results = [];
 $user_fname = '';

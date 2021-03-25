@@ -41,8 +41,7 @@ if(isset($_SESSION['user_id'])){
     <section class="login_area">
             <div class="logo_area">
                 <img class="logo" src="../public/images/LRG_logo.svg" alt="LRG_logo">
-                <h2>Welcome login</h2>
-                <h2>London Referees Group </h2>
+               
             </div>
 
             <div class="login_form_area">

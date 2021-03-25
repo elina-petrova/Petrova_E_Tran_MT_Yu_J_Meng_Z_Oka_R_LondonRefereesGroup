@@ -67,7 +67,7 @@ if(isset($_GET['id'])){
             <thead>
              <tr>
                 <th>ID</th>
-                <th>Name</th>
+                <th>Event Name</th>
                 <th>Subject</th>
                 <th>Createor</th>
                 <th>last_executed</th>

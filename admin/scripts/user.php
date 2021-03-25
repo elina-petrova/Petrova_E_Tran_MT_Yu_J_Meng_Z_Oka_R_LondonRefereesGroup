@@ -5,8 +5,8 @@
 function getUserLevelMap(){
     return array(
         '0' => 'MEMBER',
-        '1' => 'ADMIN',
-        '2' => 'SUPER ADMIN',
+        '1' => 'SUPERVISORS',
+        '2' => 'SUPERADMIN',
 
     );
 }
@@ -81,6 +81,8 @@ function getSingleUser($user_id){
         return false;
     }
 }
+
+
 
 function getAllUsers(){
     $pdo = Database::getInstance() -> getConnection();

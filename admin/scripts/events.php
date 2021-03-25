@@ -33,12 +33,14 @@ function deleteFile($file_id){
 }
 
 
-function  addEvent($event){
+function addEvent($event){
     try{
 
         // return 'you are about to create a new movie!'.PHP_EOL.var_export($movie, true);
         # 1. connect to database
        $pdo = Database::getInstance() -> getConnection();
+
+      
 
         # 2. validate the file upload
         $file = $event['file'];//get movie cover
@@ -52,15 +54,20 @@ function  addEvent($event){
                //in try block, if throw a new exception,  code gonna stop here and jump to catch section
         }
 
+        
 
         # 3. move the uploaded file around (move the file from tmp path to the /images
         $file_path = '../public/files/';//destination: where we add the cover file
         $generated_name  = $upload_file['filename'] ;
         $generated_filename  = $generated_name . '.' . $upload_file['extension'];
         $target_path  = $file_path . $generated_filename ;
-         
-         //echo $target_path;
-        //exit;
+        //  echo $generated_filename ;
+        //  exit;
+        if(isFilenameExists( $generated_filename )){
+            return 'Filename already exist!';
+            exit;
+        }
+        
 
         # if move cover to image folder fail
         if (!move_uploaded_file($file['tmp_name'], $target_path)) {
@@ -95,3 +102,18 @@ function  addEvent($event){
 
    }
 }
+
+function isFilenameExists($events_file){//true=exist, stop
+    $pdo = Database::getInstance() -> getConnection();
+
+    $file_exists_query = 'SELECT COUNT(*) FROM tbl_events WHERE events_file = :events_file';
+    $file_exists_set = $pdo ->prepare($file_exists_query);
+    $file_exists_result = $file_exists_set -> execute(
+        array(
+          ':events_file'=>$events_file
+        )
+    );
+
+    return !$file_exists_result || $file_exists_set->fetchColumn()>0;
+                                  // if this username more than 0, mean this user already exist
+} 

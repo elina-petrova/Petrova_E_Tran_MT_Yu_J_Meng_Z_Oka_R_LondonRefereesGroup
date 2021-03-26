@@ -16,11 +16,12 @@ confirm_logged_in();//only login in user can see the index.php page
 </head>
 <body class="cms">
     <section class="create_success_area">
+    
         <h2>Hi, <?php echo $_SESSION['user_name'];?>! You have successfully create a new user. </h2>
         <br>
         <a href="index.php">Back</a><br>
         <a href="admin_createuser.php">Create another User</a><br>
-        <a href="admin_logout.php">Sign Out</a>
+        <a href="admin_logout.php">SIGN OUT</a>
     </section>
 </body>
 </html>

@@ -1,29 +1,30 @@
+
 .create_success_area{
-    margin-top: 5%;
+    margin-top: 10%;
     text-align: center;
     h2{
         font-size: 30px;
         color: $white;
-        
+        width: 70%;
+        margin: 5% auto;
     }
-
     a{
         text-decoration: none;
         display: inline-block;
-        border:2px double $white;
-        color: $black;
-        background-color: $white;
+        border:3px solid $white;
+        color: $white;
+        background-color: $black;
         text-align: center;
-        width: 15%;
         font-size: 15px;
-        padding: 5px 10px;
+        padding: 10px ;
         transition: all 0.5s;
         cursor: pointer;
-        margin: 1% 5%;
+        width: 20%;
+        margin: 1% auto;
     }
 
     a:hover{
-        text-decoration: underline;
-        color: $red;
+        color: $black;
+        background-color: $white;
     }
 }

@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
     }else{
         //redirect_to('admin_login.php');
         // echo "<br />\n";
-         $message = '* Plesase fill out the request field';
+         $message = '* Please fill out the request field';
     }
 }
 
@@ -35,7 +35,7 @@ if(isset($_SESSION['user_id'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../public/css/main.css">
     <link rel="stylesheet" type="text/css"  href="../public/css/reset.css">
-    <title>Welcome to the admin panel</title>
+    <title>Login</title>
 </head>
 <body class="cms">
     <section class="login_area">
@@ -46,8 +46,8 @@ if(isset($_SESSION['user_id'])){
 
             <div class="login_form_area">
                
-                <h3>LOGIN TO YOUR ACCOUNT</h3>
-                
+                <h3>Welcome login</h3>
+                <h3>London Referees Group </h3>
                 <div class="login_form">
                  <?php echo !empty($message)?$message:'';?>
                     <form action="admin_login.php" method="post">
@@ -57,10 +57,10 @@ if(isset($_SESSION['user_id'])){
                     <!-- <label for="password">Password:</label> -->
                     <input id="password" type="text" name="password" value="<?= $password;?>" placeholder="PASSWORD: admin123">
                     
-                    <button type="submit" name="submit">LOGIN</button>
+                    <button type="submit" name="submit">LOGIN</button>  <a href="../index.html">BACK</a>
                     </form>
                     
-                    <a href="../index.html">BACK</a>
+                   
                 </div>
             </div>
     </section>

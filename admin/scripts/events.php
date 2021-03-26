@@ -60,15 +60,11 @@ function addEvent($event){
         // return 'you are about to create a new movie!'.PHP_EOL.var_export($movie, true);
         # 1. connect to database
        $pdo = Database::getInstance() -> getConnection();
-    
-        
-         
-       
-       
+   
         # 2. validate the file upload
         $file = $event['file'];
         $upload_file = pathinfo($file['name']);//return information about a path using an associative array or a string
-        $accepted_types = array('pdf', 'dox','docx');//define accepted file types
+        $accepted_types = array('pdf','dox','docx','jpg','jpeg','png');//define accepted file types
         
        
         //if uploaded file type deesnt belong to accetped types, throw a error message and stop heres

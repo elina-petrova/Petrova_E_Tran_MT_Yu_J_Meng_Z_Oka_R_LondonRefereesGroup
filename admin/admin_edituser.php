@@ -35,11 +35,11 @@ if(isset($_POST['submit'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../public/css/main.css">
     <link rel="stylesheet" type="text/css"  href="../public/css/reset.css">
-    <title>Edit User</title>
+    <title>Edit Your Account</title>
 </head>
 <body class="cms">
     <section class="edit_user_area">
-        <h2>Edit User</h2>
+        <h2>Edit Your Account</h2>
         <div class="edit_user_form">
             <?php echo !empty($message)?$message:'';?>
                 <?php if(!empty($current_user)):?>

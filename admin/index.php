@@ -60,16 +60,16 @@ if(isset($_GET['id'])){
 
         </div>
         
-        <div class="dashboard_area">
-            <h2>dashboard area</h2>
+        <div class="event_area">
+            <h2 class="hidden">event area</h2>
             <?php echo !empty($message)?$message:'';?>
             <table>
             <thead>
              <tr>
-                <th>ID</th>
+                <th>Event ID</th>
                 <th>Event Name</th>
                 <th>Subject</th>
-                <th>Createor</th>
+                <th>Creator</th>
                 <th>last_executed</th>
                 <th>Actions</th>
              </tr>
@@ -84,11 +84,15 @@ if(isset($_GET['id'])){
                     <td><?php echo $single_file['events_creator'];?></td>
                     <td><?php echo $single_file['last_executed'];?></td>
                     <?php if($_SESSION['user_level'] <2):?>
-                    <td><a href="../public/files/<?php echo $single_file['events_file'];?>">Download File</a> </td>
+                    <td><a href="../public/files/<?php echo $single_file['events_file'];?>">CHECK FILE</a> </td>
                      <?php endif;?>
 
                     <?php if($_SESSION['user_level'] ==2):?>
-                    <td><a href="../public/files/<?php echo $single_file['events_file'];?>">Download File</a> <a href="index.php?id=<?php echo $single_file['events_id'];?>">Delete</a></td>
+                    <td>
+                        <a href="../public/files/<?php echo $single_file['events_file'];?>">CHECK FILE</a> 
+                        <a href="../public/files/<?php echo $single_file['events_file'];?>" download="">DOWNLOAD FILE</a> 
+                        <a href="index.php?id=<?php echo $single_file['events_id'];?>">DELETE EVENT</a>
+                    </td>
                      <?php endif;?>
                    
                   </tr>

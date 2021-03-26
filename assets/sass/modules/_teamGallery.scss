@@ -1,4 +1,3 @@
-
 .team-gal-section{
     position: relative;
 }
@@ -41,6 +40,9 @@
     z-index: 11;
 }
 
+.gallery_button.btn-left{
+    display: block;
+}
 .team-gal-next{
     left: 100%;
     z-index:8;

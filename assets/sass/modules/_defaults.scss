@@ -5,6 +5,50 @@ $default-padding: 6rem;
 }
 
 .cms{
+    
+    .logo{
+        width: 200px;
+    }
+
+    button{
+        text-decoration: none;
+        display: inline-block;
+        border:3px solid $white;
+        color: $white;
+        background-color: $black;
+        text-align: center;
+        font-size: 15px;
+        padding: 5px ;
+        transition: all 0.5s;
+        cursor: pointer;
+        width: 150px;
+        margin: 1% auto;
+    }
+
+    button:hover{
+        color: $black;
+        background-color: $white;
+    }
+
+    a{
+        text-decoration: none;
+        display: inline-block;
+        border:3px solid $white;
+        color: $white;
+        background-color: $black;
+        text-align: center;
+        font-size: 15px;
+        padding: 6px  ;
+        transition: all 0.5s;
+        cursor: pointer;
+        width: 150px;
+        margin: 1% auto;
+    }
+
+    a:hover{
+        color: $black;
+        background-color: $white;
+    }
     background-color: $black;
     // background-image: $main-bg-color;
     font-family: SF Sports Night NS;

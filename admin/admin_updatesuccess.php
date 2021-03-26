@@ -12,15 +12,14 @@ confirm_logged_in();//only login in user can see the index.php page
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../public/css/main.css">
     <link rel="stylesheet" type="text/css"  href="../public/css/reset.css">
-    <title>Edit Others Successfully</title>
+    <title>Edit Users</title>
 </head>
 <body class= "cms">
     <section class="create_success_area">
         <h2>Hi, <?php echo $_SESSION['user_name'];?>! You have successfully modify the user information. </h2>
-        <br>
-        <a href="admin_editotheruser.php">Edit Another User</a><br>
-        <a href="index.php">Back</a><br>
-        <a href="admin_logout.php">Sign Out</a>
+        <a href="admin_editotheruser.php">EDIT ANOTHER USER</a><br>
+        <a href="index.php">BACK</a><br>
+        <a href="admin_logout.php">SIGN OUT</a>
     </section>
 </body>
 </html>

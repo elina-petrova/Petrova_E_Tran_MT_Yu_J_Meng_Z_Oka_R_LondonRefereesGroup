@@ -36,6 +36,7 @@ if(isset($_GET['id'])){
 </head>
 
 <body class="cms">
+    
     <h2>Delete User</h2>
     <?php echo !empty($message)?$message:'';?>
     

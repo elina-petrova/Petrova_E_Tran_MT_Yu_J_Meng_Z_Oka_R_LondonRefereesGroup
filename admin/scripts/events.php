@@ -33,25 +33,7 @@ function deleteFile($file_id){
 }
 
 
-// function getUsername($user_id){
-//     // echo 'you are try to fetch user :'.$user_id;
-//     $pdo = Database::getInstance() -> getConnection();
 
-//     $get_username_query = 'SELECT user_name FROM tbl_users WHERE user_id = :id';//SQL placeholder to aviod SQL injection
-//     $username = $pdo ->prepare($get_username_query);
-//     $get_username_result = $username -> execute(
-//         array(
-//             ':id' => $user_id
-//         )
-//         );
-
-//     if($username){
-//          return $username;
-//     }else{
-//         return false;
-//     }
-  
-// }
 
 
 function addEvent($event){
@@ -94,7 +76,7 @@ function addEvent($event){
        }
         
 
-
+       $username = $_SESSION['user_name'];
        $currentDateTime = date('Y-m-d H:i:s');
         # 4. inset into database(tbl_movies) 
         $insert_event_query    = 'INSERT INTO tbl_events(events_name, events_subject, events_creator, last_executed, events_file)';
@@ -104,7 +86,7 @@ function addEvent($event){
             array(
                ':name'     =>$event['name'],
                ':subject'     =>$event['subject'],
-               ':creator'      => $event['user'],
+               ':creator'      => $username,
                ':last_executed'   => $currentDateTime,
                ':file' => $generated_filename
                  )

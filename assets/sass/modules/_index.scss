@@ -6,8 +6,24 @@
     .dashboard_area{
         font-family: monotype-grotesque, sans-serif;
         margin-top: 3%;
-        th td {
-            margin: 2%;
+        table, th, td {
+            border: 1px solid $white;
+          }
+
+        table{
+            width: 70% auto;
+            border: $white;
+            text-align: center;
+        }
+        th {
+            padding: 1% 3% ;
+            width: 250px;
+        }
+
+        td{
+            padding:  1% 3%;
+            width: 250px;
+            
         }
         h2{
             text-align: center;
@@ -42,20 +58,21 @@
     a{
         text-decoration: none;
         display: inline-block;
-        border:2px double $black;
-        color: $black;
-        background-color: $red;
+        border:2px double $white;
+        color: $white;
+        background-color: $black;
         text-align: center;
         width: auto;
         font-size: 15px;
-        padding: 5px;
+        padding: 10px 20px;
         transition: all 0.5s;
         cursor: pointer;
         margin: 1% ;
     }
 
     a:hover{
-        text-decoration: underline;
+        color: $black;
+        background-color: $white;
      
     }
 }

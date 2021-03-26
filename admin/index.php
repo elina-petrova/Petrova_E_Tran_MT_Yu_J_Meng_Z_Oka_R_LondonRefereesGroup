@@ -84,7 +84,11 @@ if(isset($_GET['id'])){
                     <td><?php echo $single_file['events_creator'];?></td>
                     <td><?php echo $single_file['last_executed'];?></td>
                     <?php if($_SESSION['user_level'] <2):?>
-                    <td><a href="../public/files/<?php echo $single_file['events_file'];?>">CHECK FILE</a> </td>
+                    <td>
+                        <a href="../public/files/<?php echo $single_file['events_file'];?>">CHECK FILE</a> 
+                        <a href="../public/files/<?php echo $single_file['events_file'];?>" download="">DOWNLOAD FILE</a> 
+                    </td>
+                    
                      <?php endif;?>
 
                     <?php if($_SESSION['user_level'] ==2):?>

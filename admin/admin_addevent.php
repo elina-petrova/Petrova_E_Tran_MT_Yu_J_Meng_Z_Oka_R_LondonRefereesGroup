@@ -15,7 +15,6 @@ $user_id =  $_SESSION['user_id'];
 // }
 
 if(isset($_POST['submit'])){
-   
 
     $name = trim($_POST['name']);
     $subject = trim($_POST['subject']);

@@ -61,12 +61,12 @@ if(isset($_GET['id'])){
         </div>
         
         <div class="dashboard_area">
-            <h2>dashboard area</h2>
+            <h2 class="hidden">dashboard area</h2>
             <?php echo !empty($message)?$message:'';?>
             <table>
             <thead>
              <tr>
-                <th>ID</th>
+                <th>Event ID</th>
                 <th>Event Name</th>
                 <th>Subject</th>
                 <th>Createor</th>
@@ -88,7 +88,8 @@ if(isset($_GET['id'])){
                      <?php endif;?>
 
                     <?php if($_SESSION['user_level'] ==2):?>
-                    <td><a href="../public/files/<?php echo $single_file['events_file'];?>">Download File</a> <a href="index.php?id=<?php echo $single_file['events_id'];?>">Delete</a></td>
+                    <td><a href="../public/files/<?php echo $single_file['events_file'];?>">Download File</a>
+                       <a href="index.php?id=<?php echo $single_file['events_id'];?>">Delete</a></td>
                      <?php endif;?>
                    
                   </tr>

@@ -39,6 +39,7 @@ if(isset($_SESSION['user_id'])){
 </head>
 <body class="cms">
     <section class="login_area">
+    
             <div class="logo_area">
                 <img class="logo" src="../public/images/LRG_logo.svg" alt="LRG_logo">
                

@@ -237,6 +237,7 @@ and the competence of these individuals.
       currentBigImage: "",
       currentTitle: "",
       currentDate: "",
+      bottomSlides: [],
     }
 
   },
@@ -244,7 +245,7 @@ and the competence of these individuals.
     nextSlide = document.querySelector(".team-gal-next");
     curSlide = document.querySelector(".team-gal-current");
     prevSlide = document.querySelector(".team-gal-prev");
-    bottomSlides = document.querySelectorAll(".bot-gal");
+    this.bottomSlides = document.querySelectorAll(".bot-gal");
     this.currentBigImage = Object.values(this.teamGalleryImages[0])[1];
     this.currentTitle = Object.values(this.teamGalleryImages[0])[2];
     this.currentDate = Object.values(this.teamGalleryImages[0])[3];
@@ -285,7 +286,7 @@ and the competence of these individuals.
 
       var cur_class;
       var cur_class_id;
-      bottomSlides.forEach(bot_slide => {
+      this.bottomSlides.forEach(bot_slide => {
         cur_class = bot_slide.classList[1];
         cur_class_id = this.bottomSlidesClassList.indexOf(cur_class);
         if (cur_class_id != 0) {
@@ -332,7 +333,7 @@ and the competence of these individuals.
 
       var cur_class;
       var cur_class_id;
-      bottomSlides.forEach(bot_slide => {
+      this.bottomSlides.forEach(bot_slide => {
         cur_class = bot_slide.classList[1];
         cur_class_id = this.bottomSlidesClassList.indexOf(cur_class);
         if (cur_class_id != 6) {

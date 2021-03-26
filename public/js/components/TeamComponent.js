@@ -51,8 +51,8 @@ and the competence of these individuals.
 <img src="public/images/members.jpg" alt="Referee Picture">
 <img class="member-colored" src="public/images/member-clr.jpeg" alt="Referee Picture">
 <div class="mmbInfo">
-<h3>John Doe</h3>
-<p>Official Referee</p>
+<h3>Carl Vink</h3>
+<p>President</p>
 </div>
 </div>
 
@@ -60,8 +60,8 @@ and the competence of these individuals.
 <img src="public/images/members2.jpg" alt="Referee Picture">
 <img class="member-colored" src="public/images/member-clr.jpeg" alt="Referee Picture">
 <div class="mmbInfo">
-<h3>John Doe</h3>
-<p>Official Referee</p>
+<h3>Joe Masse</h3>
+<p>Vice	President</p>
 </div>
 </div>
 
@@ -69,8 +69,8 @@ and the competence of these individuals.
 <img src="public/images/members3.jpg" alt="Referee Picture">
 <img class="member-colored" src="public/images/member-clr.jpeg" alt="Referee Picture">
 <div class="mmbInfo">
-<h3>John Doe</h3>
-<p>Official Referee</p>
+<h3>John Bray</h3>
+<p>Secretary</p>
 </div>
 </div>
 
@@ -78,8 +78,8 @@ and the competence of these individuals.
 <img src="public/images/members.jpg" alt="Referee Picture">
 <img class="member-colored" src="public/images/member-clr.jpeg" alt="Referee Picture">
 <div class="mmbInfo">
-<h3>John Doe</h3>
-<p>Official Referee</p>
+<h3>Rob Neable</h3>
+<p>Treasurer</p>
 </div>
 </div>
 
@@ -87,8 +87,8 @@ and the competence of these individuals.
 <img src="public/images/members2.jpg" alt="Referee Picture">
 <img class="member-colored" src="public/images/member-clr.jpeg" alt="Referee Picture">
 <div class="mmbInfo">
-<h3>John Doe</h3>
-<p>Official Referee</p>
+<h3>Bob Wright</h3>
+<p>RIC</p>
 </div>
 </div>
 
@@ -96,8 +96,8 @@ and the competence of these individuals.
 <img src="public/images/members3.jpg" alt="Referee Picture">
 <img class="member-colored" src="public/images/member-clr.jpeg" alt="Referee Picture">
 <div class="mmbInfo">
-<h3>John Doe</h3>
-<p>Official Referee</p>
+<h3>Paul Raes</h3>
+<p>Rep	1</p>
 </div>
 </div>
 
@@ -105,8 +105,8 @@ and the competence of these individuals.
 <img src="public/images/members.jpg" alt="Referee Picture">
 <img class="member-colored" src="public/images/member-clr.jpeg" alt="Referee Picture">
 <div class="mmbInfo">
-<h3>John Doe</h3>
-<p>Official Referee</p>
+<h3>Mel	Alexander</h3>
+<p>Rep 2</p>
 </div>
 </div>
 
@@ -114,8 +114,8 @@ and the competence of these individuals.
 <img src="public/images/members2.jpg" alt="Referee Picture">
 <img class="member-colored" src="public/images/member-clr.jpeg" alt="Referee Picture">
 <div class="mmbInfo">
-<h3>John Doe</h3>
-<p>Official Referee</p>
+<h3>Marc Giroux</h3>
+<p>Assignor	1</p>
 </div>
 </div>
 
@@ -123,8 +123,8 @@ and the competence of these individuals.
 <img src="public/images/members3.jpg" alt="Referee Picture">
 <img class="member-colored" src="public/images/member-clr.jpeg" alt="Referee Picture">
 <div class="mmbInfo">
-<h3>John Doe</h3>
-<p>Official Referee</p>
+<h3>Jamie Dewar</h3>
+<p>Assignor	2</p>
 </div>
 </div>
 
@@ -132,8 +132,8 @@ and the competence of these individuals.
 <img src="public/images/members.jpg" alt="Referee Picture">
 
 <div class="mmbInfo">
-<h3>John Doe</h3>
-<p>Official Referee</p>
+<h3>Paul Schofield</h3>
+<p>Scheduler</p>
 </div>
 </div>
 

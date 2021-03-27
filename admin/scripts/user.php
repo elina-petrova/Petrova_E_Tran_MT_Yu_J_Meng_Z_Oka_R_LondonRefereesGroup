@@ -105,12 +105,11 @@ function getAllUsers(){
 function getOtherUsers($user_id){
     $pdo = Database::getInstance() -> getConnection();
 
-    $get_all_user_query = 'SELECT * FROM tbl_users where user_id != :id AND user_status != :user_status';//SQL placeholder to aviod SQL injection
+    $get_all_user_query = 'SELECT * FROM tbl_users where user_id != :id ';//SQL placeholder to aviod SQL injection
     $users = $pdo ->prepare($get_all_user_query);
     $get_all_user_result = $users -> execute(
         array(
-            ':id' => $user_id,
-            ':user_status'=>'locked'
+            ':id' => $user_id 
         )
         );
 

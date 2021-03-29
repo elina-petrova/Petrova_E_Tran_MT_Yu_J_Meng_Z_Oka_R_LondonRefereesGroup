@@ -1,0 +1,33 @@
+.event_area{
+    font-family: monotype-grotesque, sans-serif;
+    margin-top: 3%;
+    table, th, td {
+        border: 1px solid $white;
+      }
+
+    table{
+        width: 70% auto;
+        border: $white;
+        text-align: center;
+    }
+    th {
+        padding: 1% ;
+        width: 250px;
+    }
+
+    td{
+        padding:  1%;
+        width: 250px;
+        a{
+            margin: 2%;
+        }
+    }
+
+    h2{
+        text-align: center;
+        font-size: 30px;
+        
+    }
+
+    
+}

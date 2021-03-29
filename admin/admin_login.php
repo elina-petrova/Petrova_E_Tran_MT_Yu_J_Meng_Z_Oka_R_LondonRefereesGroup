@@ -40,24 +40,24 @@ if(isset($_SESSION['user_id'])){
 <body class="cms">
     <section class="login_area">
             <div class="logo_area">
-                <img class="logo" src="../public/images/LRG_logo.svg" alt="LRG_logo">
+            <a href="../index.html">BACK</a>
+                <img class="logo" src="../public/images/LRG_logo_v2.svg" alt="LRG_logo">
                
             </div>
 
             <div class="login_form_area">
                
                 <h3>Welcome login</h3>
-                <h3>London Referees Group </h3>
                 <div class="login_form">
                  <?php echo !empty($message)?$message:'';?>
                     <form action="admin_login.php" method="post">
-                    <!-- <label for="username">Username:</label> -->
-                    <input id="username" type="text" name="username" value="<?= $username;?>" placeholder="USERNAME">
+                    <label for="username">Username*:</label>
+                    <input id="username" type="text" name="username" value="<?= $username;?>" placeholder="">
                     
-                    <!-- <label for="password">Password:</label> -->
-                    <input id="password" type="text" name="password" value="<?= $password;?>" placeholder="PASSWORD">
+                    <label for="password">Password*:</label>
+                    <input id="password" type="text" name="password" value="<?= $password;?>" placeholder="">
                     
-                    <button type="submit" name="submit">LOGIN</button>  <a href="../index.html">BACK</a>
+                    <button type="submit" name="submit">LOGIN</button>  
                     </form>
                     
                    

@@ -52,10 +52,10 @@ if(isset($_SESSION['user_id'])){
                  <?php echo !empty($message)?$message:'';?>
                     <form action="admin_login.php" method="post">
                     <!-- <label for="username">Username:</label> -->
-                    <input id="username" type="text" name="username" value="<?= $username;?>" placeholder="USERNAME: admin">
+                    <input id="username" type="text" name="username" value="<?= $username;?>" placeholder="USERNAME">
                     
                     <!-- <label for="password">Password:</label> -->
-                    <input id="password" type="text" name="password" value="<?= $password;?>" placeholder="PASSWORD: admin123">
+                    <input id="password" type="text" name="password" value="<?= $password;?>" placeholder="PASSWORD">
                     
                     <button type="submit" name="submit">LOGIN</button>  <a href="../index.html">BACK</a>
                     </form>

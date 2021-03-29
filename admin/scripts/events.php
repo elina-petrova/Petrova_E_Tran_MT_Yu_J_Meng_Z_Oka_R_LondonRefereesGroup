@@ -94,7 +94,7 @@ function addEvent($event){
             
 
             # 5. if all of above, redirect user to index.php
-            redirect_to('index.php');
+            redirect_to('admin_addfile.php');
 
    }catch(Exception $e){//section throw will be the section catch
        # Return the erro message -> Wrong file type !

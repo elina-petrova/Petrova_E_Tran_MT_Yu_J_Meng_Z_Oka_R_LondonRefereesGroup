@@ -4,10 +4,25 @@ require_once '../load.php';
 confirm_logged_in();
 admin_access_only();
 
-$name= $subject=$file= ' ';
-
+$name= $subject= ' ';
 
 $user_id =  $_SESSION['user_id'];
+
+$files= getAllFlies();
+
+if(!$files){
+    $messager = 'Fail to get user list';
+}
+
+if(isset($_GET['id'])){
+    $delete_file_id = $_GET['id'];
+ 
+     $delete_file_id = deleteFile($delete_file_id);
+ 
+     if(!$delete_file_id){
+         $message = 'Fail to delete event';
+     }
+ }
 
 // $username = getUsername($user_id);
 // if(!$username){
@@ -75,6 +90,54 @@ if(isset($_POST['submit'])){
         <a href="index.php">Back</a>
 
      </form>
+
+
+     <div class="event_area">
+   
+   <h2 class="hidden">event area</h2>
+   <?php echo !empty($message)?$message:'';?>
+   <table>
+   <thead>
+    <tr>
+      
+       <th>Event Name</th>
+       <th>Subject</th>
+       <th>Creator</th>
+       <th>Last Executed</th>
+       <th>Actions</th>
+    </tr>
+   </thead>
+
+   <tbody>
+       <?php while($single_file = $files -> fetch(PDO::FETCH_ASSOC)): ?>
+         <tr>
+           
+           <td><?php echo $single_file['events_name'];?></td>
+           <td><?php echo $single_file['events_subject'];?></td>
+           <td><?php echo $single_file['events_creator'];?></td>
+           <td><?php echo $single_file['last_executed'];?></td>
+           <?php if($_SESSION['user_level'] <2):?>
+           <td>
+               <a href="../public/files/<?php echo $single_file['events_file'];?>">CHECK FILE</a> 
+               <a href="../public/files/<?php echo $single_file['events_file'];?>" download="">DOWNLOAD FILE</a> 
+           </td>
+           
+            <?php endif;?>
+
+           <?php if($_SESSION['user_level'] ==2):?>
+           <td>
+               <a href="../public/files/<?php echo $single_file['events_file'];?>">CHECK FILE</a> 
+               <a href="../public/files/<?php echo $single_file['events_file'];?>" download="">DOWNLOAD FILE</a> 
+               <a href="index.php?id=<?php echo $single_file['events_id'];?>">DELETE FILE</a>
+           </td>
+            <?php endif;?>
+          
+         </tr>
+       <?php endwhile;?> 
+
+</table>
+</div>
+     
     
 </body>
 </html>

@@ -4,21 +4,7 @@ confirm_logged_in();//only login in user can see the index.php page
 new_login_user_prevent();
 
 
-$files= getAllFlies();
 
-if(!$files){
-    $messager = 'Fail to get user list';
-}
-
-if(isset($_GET['id'])){
-    $delete_file_id = $_GET['id'];
- 
-     $delete_file_id = deleteFile($delete_file_id);
- 
-     if(!$delete_file_id){
-         $message = 'Fail to delete event';
-     }
- }
 
 ?>
 
@@ -33,81 +19,37 @@ if(isset($_GET['id'])){
     <title>Welcome Page</title>
 </head>
 <body class="cms">
-    <section class="index_php">
-        <div class="login_user">
-            <div class="login_info">
-                <h2>Hello, <?php echo $_SESSION['user_name'];?>! </h2>
-            </div>
+    <section class="index_area">
+        <div class="index_buttons">
 
-            <div class="login_user_buttons">
-                <?php if(!empty($_SESSION['user_level'])):?>
-                <a href="admin_createuser.php">CREATE NEW USER</a>
-                <?php endif;?>
-                 <br>
-                <a href="admin_edituser.php">EDIT MY ACCOUNT</a>
-                <br>
-                <?php if($_SESSION['user_level'] ==2):?>
-                <a href="admin_editotheruser.php">EDIT OTHERS ACCOUNT</a>
-                <a href="admin_deleteuser.php">DELETE USER</a>
-                <a href="admin_addevent.php">ADD FILE</a>
-                <?php endif;?>
-                <br>
-                <a href="admin_logout.php">SIGN OUT</a>
-            </div>
+            <?php if(!empty($_SESSION['user_level'])):?>
+            <a href="admin_createuser.php">CREATE NEW USER</a>
+            <?php endif;?>   
 
-        </div>
-        <div class="responsiveCal">
-        <iframe src="https://calendar.google.com/calendar/embed?src=c75564jom4v53otevdm5pltrb0%40group.calendar.google.com&ctz=America%2FToronto"  style="border-width:0" width="800" height="600" frameborder="0" scrolling="no">
-        </iframe>        
-        </div>
-
-        <div class="event_area">
-   
-            <h2 class="hidden">event area</h2>
-            <?php echo !empty($message)?$message:'';?>
-            <table>
-            <thead>
-             <tr>
+            <a href="admin_edituser.php">EDIT MY ACCOUNT</a>
                
-                <th>Event Name</th>
-                <th>Subject</th>
-                <th>Creator</th>
-                <th>Last Executed</th>
-                <th>Actions</th>
-             </tr>
-            </thead>
-
-            <tbody>
-                <?php while($single_file = $files -> fetch(PDO::FETCH_ASSOC)): ?>
-                  <tr>
-                    
-                    <td><?php echo $single_file['events_name'];?></td>
-                    <td><?php echo $single_file['events_subject'];?></td>
-                    <td><?php echo $single_file['events_creator'];?></td>
-                    <td><?php echo $single_file['last_executed'];?></td>
-                    <?php if($_SESSION['user_level'] <2):?>
-                    <td>
-                        <a href="../public/files/<?php echo $single_file['events_file'];?>">CHECK FILE</a> 
-                        <a href="../public/files/<?php echo $single_file['events_file'];?>" download="">DOWNLOAD FILE</a> 
-                    </td>
-                    
-                     <?php endif;?>
-
-                    <?php if($_SESSION['user_level'] ==2):?>
-                    <td>
-                        <a href="../public/files/<?php echo $single_file['events_file'];?>">CHECK FILE</a> 
-                        <a href="../public/files/<?php echo $single_file['events_file'];?>" download="">DOWNLOAD FILE</a> 
-                        <a href="index.php?id=<?php echo $single_file['events_id'];?>">DELETE FILE</a>
-                    </td>
-                     <?php endif;?>
-                   
-                  </tr>
-                <?php endwhile;?>
-            </tbody>
-        
-        </table>
+            <?php if($_SESSION['user_level'] ==2):?>
+            <a href="admin_editotheruser.php">EDIT OTHERS</a>
+            <a href="admin_deleteuser.php">DELETE USER</a>
+            <a href="admin_addfile.php">FILES</a>
+            <?php endif;?>   
         </div>
+        
+        <div class="dashboard">
+            <div class="login_user">      
+                    <h2>Hello, <?php echo $_SESSION['user_name'];?>! </h2>
+                    <a href="admin_logout.php">SIGN OUT</a>
+            </div>
+
+            <div class="responsiveCal">
+                <h2>Calendar</h2>
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FToronto&amp;src=Yzc1NTY0am9tNHY1M290ZXZkbTVwbHRyYjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23D50000" style="border:solid 1px #777" width="800" height="500" frameborder="0" scrolling="no"></iframe>        
+            </div>
+        </div>
+           
 
     </section>
 </body>
+
+
 </html>

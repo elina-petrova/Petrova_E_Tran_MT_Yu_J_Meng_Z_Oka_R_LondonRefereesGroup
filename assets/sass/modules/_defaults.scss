@@ -33,9 +33,7 @@ $default-padding: 6rem;
     a{
         text-decoration: none;
         display: inline-block;
-        border:3px solid $white;
         color: $white;
-        background-color: $black;
         text-align: center;
         font-size: 15px;
         padding: 6px  ;
@@ -46,8 +44,8 @@ $default-padding: 6rem;
     }
 
     a:hover{
-        color: $black;
-        background-color: $white;
+      text-decoration: underline;
+
     }
     background-color: $black;
     // background-image: $main-bg-color;

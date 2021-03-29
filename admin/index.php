@@ -29,6 +29,7 @@ if(isset($_GET['id'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../public/css/main.css">
     <link rel="stylesheet" type="text/css"  href="../public/css/reset.css">
+    
     <title>Welcome Page</title>
 </head>
 <body class="cms">
@@ -36,10 +37,6 @@ if(isset($_GET['id'])){
         <div class="login_user">
             <div class="login_info">
                 <h2>Hello, <?php echo $_SESSION['user_name'];?>! </h2>
-                <h3>You are : <?php echo getCurrentUserLevel();?></h3>
-                <h4>Last Login Time: <?php echo $_SESSION['last_login']; ?></h4>
-                
-                
             </div>
 
             <div class="login_user_buttons">
@@ -52,25 +49,30 @@ if(isset($_GET['id'])){
                 <?php if($_SESSION['user_level'] ==2):?>
                 <a href="admin_editotheruser.php">EDIT OTHERS ACCOUNT</a>
                 <a href="admin_deleteuser.php">DELETE USER</a>
-                <a href="admin_addevent.php">ADD EVENT</a>
+                <a href="admin_addevent.php">ADD FILE</a>
                 <?php endif;?>
                 <br>
                 <a href="admin_logout.php">SIGN OUT</a>
             </div>
 
         </div>
-        
+        <div class="responsiveCal">
+        <iframe src="https://calendar.google.com/calendar/embed?src=c75564jom4v53otevdm5pltrb0%40group.calendar.google.com&ctz=America%2FToronto"  style="border-width:0" width="800" height="600" frameborder="0" scrolling="no">
+        </iframe>        
+        </div>
+
         <div class="event_area">
+   
             <h2 class="hidden">event area</h2>
             <?php echo !empty($message)?$message:'';?>
             <table>
             <thead>
              <tr>
-                <th>Event ID</th>
+               
                 <th>Event Name</th>
                 <th>Subject</th>
                 <th>Creator</th>
-                <th>last_executed</th>
+                <th>Last Executed</th>
                 <th>Actions</th>
              </tr>
             </thead>
@@ -78,7 +80,7 @@ if(isset($_GET['id'])){
             <tbody>
                 <?php while($single_file = $files -> fetch(PDO::FETCH_ASSOC)): ?>
                   <tr>
-                    <td><?php echo $single_file['events_id'];?></td>
+                    
                     <td><?php echo $single_file['events_name'];?></td>
                     <td><?php echo $single_file['events_subject'];?></td>
                     <td><?php echo $single_file['events_creator'];?></td>
@@ -95,7 +97,7 @@ if(isset($_GET['id'])){
                     <td>
                         <a href="../public/files/<?php echo $single_file['events_file'];?>">CHECK FILE</a> 
                         <a href="../public/files/<?php echo $single_file['events_file'];?>" download="">DOWNLOAD FILE</a> 
-                        <a href="index.php?id=<?php echo $single_file['events_id'];?>">DELETE EVENT</a>
+                        <a href="index.php?id=<?php echo $single_file['events_id'];?>">DELETE FILE</a>
                     </td>
                      <?php endif;?>
                    

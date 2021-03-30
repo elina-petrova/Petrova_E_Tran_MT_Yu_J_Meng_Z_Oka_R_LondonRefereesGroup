@@ -17,18 +17,16 @@
     
 }
 
-
-
 .create_user_form{
     display: flex;
     flex-direction: column;
     margin-top: 5%;
-    margin-left: 2%;
+    width: 60%;
 
     h2{
         font-size: 30px;
         text-align: center;
-        margin:5%;
+        margin:3%;
     }
 
    
@@ -39,6 +37,21 @@
 }
 
 
+
+
+@media (min-width:900px){
+    .create_user_form{
+        margin-left: 2%;
+        width: 35%;
+
+        h2{
+            font-size: 30px;
+        }
+    
+       
+
+    }
+}
     
     
    

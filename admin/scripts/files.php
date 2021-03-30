@@ -26,9 +26,9 @@ function deleteFile($file_id){
         )
         );
     if($delete_file_result && $delete_file_set -> rowCount()>0){
-        redirect_to('index.php');
+        redirect_to('admin_file.php');
     }else{
-        return false;
+        return 'fail';
     }
 }
 
@@ -94,7 +94,7 @@ function addEvent($event){
             
 
             # 5. if all of above, redirect user to index.php
-            redirect_to('admin_addfile.php');
+            redirect_to('admin_file.php');
 
    }catch(Exception $e){//section throw will be the section catch
        # Return the erro message -> Wrong file type !

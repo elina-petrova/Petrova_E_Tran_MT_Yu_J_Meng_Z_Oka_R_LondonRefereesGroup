@@ -39,38 +39,45 @@ if(isset($_POST['submit'])){
 </head>
 <body class="cms">
     <section class="edit_user_area">
-        <h2>Edit Your Account</h2>
+      <div class="red_side_nav">
+          <?php if($_SESSION['login_times'] > 1):?>
+            <a href="index.php">BACK</a>
+          <?php endif;?>
+      </div>
+
+        
         <div class="edit_user_form">
+        <h2>Edit My Account</h2>
             <?php echo !empty($message)?$message:'';?>
                 <?php if(!empty($current_user)):?>
                     <form action="admin_edituser.php" method="post">
                         <?php while($user_info = $current_user -> fetch(PDO::FETCH_ASSOC)):?><!--user_info: table columns name-->
-                            <div class="edituser_label_input">
+                            
                             <label for="user_name">User Name:</label>
                             <input type="text" name="username"  id="user_name"  value="<?php echo $user_info['user_name']; ?>">
-                            </div>
                             
-                            <div class="edituser_label_input">
+                            
+                            
                             <label for="first_name">First Name:</label>
                             <input type="text" name="fname"  id="first_name"  value="<?php echo $user_info['user_fname']; ?>"> 
-                            </div>
+                            
 
-                            <div class="edituser_label_input">
+                            
                             <label for="last_name">Last Name:</label>
                             <input type="text" name="lname"  id="last_name"  value="<?php echo $user_info['user_lname']; ?>">
-                            </div>
+                            
 
-                            <div class="edituser_label_input">
+                            
                             <label for="password">Password:</label>
                             <input type="text" name="password"  id="password"  value="<?php echo $user_info['user_password']; ?>">
-                            </div>
+                            
                          
-                            <div class="edituser_label_input">
+                            
                             <label for="email">User Email:</label>
                             <input type="email" name="email"  id="email"  value="<?php echo $user_info['user_email']; ?>">
-                            </div>
+                            
 
-                            <div class="edituser_label_input">
+                            
                             <?php if(isCurrentUserAdminAbove()):?>
                                 <label for="user_level">User Level:</label>
                                 <select  name="user_level"  id="user_level" >
@@ -80,16 +87,11 @@ if(isset($_POST['submit'])){
                                     <?php endforeach;?>
                                 </select>
                             <?php endif;?>
-                            </div>
                             
-                            <div class="edit_user_buttons">
+                            
+                            
                             <button  class="subimt-createuser" type="submit" name="submit">SUBMIT</button>
-                            
-                            <?php if($_SESSION['login_times'] > 1):?>
-                            <a href="index.php">BACK</a>
-                            <?php endif;?>
-                            </div>
-
+                        
                         <?php endwhile;?>
                     </form>
                 <?php endif;?>

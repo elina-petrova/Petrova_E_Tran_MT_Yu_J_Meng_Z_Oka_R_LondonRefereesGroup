@@ -14,4 +14,4 @@ require_once ADMIN_SCRIPT_PATH.'/login.php';
 require_once ADMIN_SCRIPT_PATH.'/functions.php';
 require_once ADMIN_SCRIPT_PATH.'/user.php';
 require_once ADMIN_SCRIPT_PATH.'/password.php';
-require_once ADMIN_SCRIPT_PATH.'/events.php';
+require_once ADMIN_SCRIPT_PATH.'/files.php';

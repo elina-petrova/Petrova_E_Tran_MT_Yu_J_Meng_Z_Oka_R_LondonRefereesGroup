@@ -1,0 +1,54 @@
+.delete_user_area{
+    display: flex;
+    flex-direction: row;
+    color: $white;
+
+    .delete_user{
+        display: flex;
+        flex-direction: column;
+    }
+
+    h2{
+        font-size: 30px;
+        text-align: center;
+        padding: 6%;
+    }
+    p{
+        text-align: center;
+    }
+
+    a{
+        font-size: 16px;
+        padding: 20px;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    
+    
+    table, th, td {
+        font-family: monotype-grotesque,sans-serif; 
+        border: 2px solid $white;
+      }
+
+    table{
+        margin: 2%;
+        width: 75% auto;
+        border: $white;
+        text-align: center;
+        
+    }
+
+    th {
+        width: 190px;
+        font-size: 20px;
+        height: 20px;
+        padding: 10px;
+    }
+    
+    td{
+        padding: 10px;
+    }
+
+
+}

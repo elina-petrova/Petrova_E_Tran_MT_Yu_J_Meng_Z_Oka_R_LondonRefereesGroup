@@ -32,39 +32,49 @@ if(isset($_GET['id'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../public/css/main.css">
+    <link rel="stylesheet" type="text/css"  href="../public/css/reset.css">
     <title>Delete User</title>
 </head>
 
 <body class="cms">
-    
-    <h2>Delete User</h2>
-    <?php echo !empty($message)?$message:'';?>
-    
-        <table>
-            <thead>
-             <tr>
-                <th>User ID</th>
-                <th>User Name</th>
-                <th>User Lastname</th>
-                <th>User Email</th>
-                <th>Delete</th>
-             </tr>
-            </thead>
 
-            <tbody>
-            <?php while($single_user = $users  -> fetch(PDO::FETCH_ASSOC)):?>
-                  <tr>
-                    <td><?php echo $single_user['user_id'];?></td>
-                    <td><?php echo $single_user['user_name'];?></td>
-                    <td><?php echo $single_user['user_lname'];?></td>
-                    <td><?php echo $single_user['user_email'];?></td>
-                    <td><a href="admin_deleteuser.php?id=<?php echo $single_user['user_id'];?>">Delete</a></td>
-                  </tr>
-                <?php endwhile;?>
-            </tbody>
-        
-        </table>
+<section class="delete_user_area">
+
+    <div class="red_side_nav">
+      <a href="index.php">BACK</a>
+    </div>
+    
+    <div class="delete_user">
+        <h2>Delete User</h2>
+        <?php echo !empty($message)?$message:'';?>
+         <p>* Please double check the user information you want to delete *</p>
+            <table>
+                <thead>
+                <tr>
+                    <th>USER ID</th>
+                    <th>USERNAME</th>
+                    <th>LASTNAME</th>
+                    <th>EMAIL</th>
+                    <th>ACTION</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <?php while($single_user = $users  -> fetch(PDO::FETCH_ASSOC)):?>
+                    <tr>
+                        <td><?php echo $single_user['user_id'];?></td>
+                        <td><?php echo $single_user['user_name'];?></td>
+                        <td><?php echo $single_user['user_lname'];?></td>
+                        <td><?php echo $single_user['user_email'];?></td>
+                        <td><a href="admin_deleteuser.php?id=<?php echo $single_user['user_id'];?>">DELETE User<?php echo $single_user['user_id'];?></a></td>
+                    </tr>
+                    <?php endwhile;?>
+                </tbody>
+            
+            </table>
+        </div>
        
-                <a href="index.php">Back</a>
+</section>           
 </body>
 </html>

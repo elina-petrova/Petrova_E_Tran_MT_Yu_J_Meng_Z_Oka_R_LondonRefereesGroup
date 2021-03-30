@@ -2,7 +2,7 @@
 require_once '../load.php';
 
 confirm_logged_in();
-admin_access_only();
+
 
 $name= $subject= ' ';
 
@@ -88,21 +88,25 @@ if(isset($_POST['submit'])){
    <h2 class="hidden">event area</h2>
    <?php echo !empty($message)?$message:'';?>
 
-   <form  action="admin_file.php"  method="post"  enctype="multipart/form-data" >
-     <?php echo !empty($message)?$message:'';?>
+       <?php if($_SESSION['user_level'] ==2):?>
+                <form  action="admin_file.php"  method="post"  enctype="multipart/form-data" >
+                <?php echo !empty($message)?$message:'';?>
 
-         <label for="name">File Name:</label>
-         <input type="text" name="name"  id="name" value="<?= $name;?>">
+                    <label for="name">File Name:</label>
+                    <input type="text" name="name"  id="name" value="<?= $name;?>">
 
-         <label for="subject">Subject:</label>
-         <input type="text" name="subject"  id="subject" value="<?= $subject;?>">
+                    <label for="subject">Subject:</label>
+                    <input type="text" name="subject"  id="subject" value="<?= $subject;?>">
 
-         <label for="file">Choose a file to upload:</label>
-         <input type="file" name="file"  id="file" >
+                    <label for="file">Choose a file to upload:</label>
+                    <input type="file" name="file"  id="file" >
 
-         <button type="submit" name="submit">Add</button>
+                    <button type="submit" name="submit">Add</button>
 
-     </form>
+                </form>
+        <?php endif;?> 
+
+
    <table>
    <thead>
     <tr>
@@ -123,23 +127,19 @@ if(isset($_POST['submit'])){
            <td><?php echo $single_file['events_subject'];?></td>
            <td><?php echo $single_file['events_creator'];?></td>
            <td><?php echo $single_file['last_executed'];?></td>
-           <?php if($_SESSION['user_level'] <2):?>
-           <td>
-               <a href="../public/files/<?php echo $single_file['events_file'];?>">CHECK FILE</a> 
-               <a href="../public/files/<?php echo $single_file['events_file'];?>" download="">DOWNLOAD FILE</a> 
-           </td>
-           
-            <?php endif;?>
+        
 
-           <?php if($_SESSION['user_level'] ==2):?>
+           
            <td>
                <div class="file_action">
                <a href="../public/files/<?php echo $single_file['events_file'];?>">CHECK FILE</a> 
                <a href="../public/files/<?php echo $single_file['events_file'];?>" download="">DOWNLOAD FILE</a> 
+               <?php if($_SESSION['user_level'] ==2):?>
                <a href="admin_file.php?id=<?php echo $single_file['events_id'];?>">DELETE FILE</a>
+               <?php endif;?>
                </div>
            </td>
-            <?php endif;?>
+           
           
          </tr>
        <?php endwhile;?> 

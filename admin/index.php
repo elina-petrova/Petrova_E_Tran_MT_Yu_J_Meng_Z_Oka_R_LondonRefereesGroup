@@ -23,18 +23,21 @@ new_login_user_prevent();
             <?php endif;?>   
 
             <a href="admin_edituser.php">EDIT MY ACCOUNT</a>
+            
                
             <?php if($_SESSION['user_level'] ==2):?>
             <a href="admin_editotheruser.php">EDIT OTHERS</a>
             <a href="admin_deleteuser.php">DELETE USER</a>
             <a href="admin_file.php">FILES</a>
-            <?php endif;?>   
+            <?php endif;?> 
+            
+            <a href="admin_logout.php">SIGN OUT</a>
         </div>
         
         <div class="dashboard">
             <div class="login_user">      
                     <h2>Hello, <?php echo $_SESSION['user_name'];?>! </h2>
-                    <a href="admin_logout.php">SIGN OUT</a>
+                  
             </div>
 
             <div class="responsiveCal">

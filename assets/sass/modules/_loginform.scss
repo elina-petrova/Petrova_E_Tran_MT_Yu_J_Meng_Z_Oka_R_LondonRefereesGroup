@@ -24,7 +24,7 @@
 
     .logo{
         width: 55%;
-        margin-top: 15%;
+        margin-top: 5%;
         margin-bottom: 5%;
        margin-left: 30%;
        transform:  skewX(20deg);
@@ -99,9 +99,14 @@
     }
 }
 
+@media (min-width:900px){
+    .logo{
+        margin-top: 15%;
+    }
+}
 
 //login page mobile size
-@media (min-width:700px){
+@media (min-width:800px){
     .login_area{
         display: flex;
         flex-direction: row;

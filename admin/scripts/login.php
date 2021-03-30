@@ -41,7 +41,7 @@ function login($username, $password, $ip) {
             //     echo strtotime($found_user['user_date']).PHP_EOL;
             //     echo time().PHP_EOL;
             //     exit;
-            $new_user_login_time_limits = 5* 60; 
+            $new_user_login_time_limits = 24* 60* 60; 
             if ( $diff  > $new_user_login_time_limits ) {
                   // it been more than 2 minutes
                 if ($found_user['user_status'] != 'locked') {

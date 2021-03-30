@@ -23,7 +23,6 @@ new_login_user_prevent();
             <?php endif;?>   
 
             <a href="admin_edituser.php">EDIT MY ACCOUNT</a>
-            
                
             <?php if($_SESSION['user_level'] ==2):?>
             <a href="admin_editotheruser.php">EDIT OTHERS</a>

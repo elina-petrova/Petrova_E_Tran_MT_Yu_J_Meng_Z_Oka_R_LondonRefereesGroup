@@ -5,9 +5,18 @@ $default-padding: 6rem;
 }
 
 .cms{
-    
+   
     .logo{
         width: 200px;
+    }
+
+    .red_side_nav{
+        height: 750px;
+        width: 35%;
+        transform: translate(-140px, 0px)  skewX(-20deg);
+        // transform:rotate(20deg);
+        background-color: $red;
+        
     }
 
     button{
@@ -22,7 +31,7 @@ $default-padding: 6rem;
         transition: all 0.5s;
         cursor: pointer;
         width: 150px;
-        margin: 1% auto;
+        margin: 2% 0;
     }
 
     button:hover{
@@ -63,6 +72,55 @@ $default-padding: 6rem;
 
     input{
         font-family: monotype-grotesque,sans-serif;
+    }
+
+    
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    label{
+        font-size: 22px;
+        margin: 3% 0;    
+    }
+
+    input[type=text]{
+        text-decoration: none;
+        border: 5px double $white;
+        color: black;
+        font-size: 13px;
+        padding: 5px 2px;
+        height: 30px;
+        transition: all 0.5s;
+        cursor: pointer;
+
+    }
+    input[type=email]{
+        text-decoration: none;
+        border: 5px double $white;
+        color: black;
+        font-size: 13px;
+        padding: 5px 2px;
+        height: 30px;
+        transition: all 0.5s;
+        cursor: pointer;
+
+    }
+
+    select{
+        text-decoration: none;
+        border: 5px double $white;
+        color: black;
+        font-size: 13px;
+        padding: 5px 2px;
+        height: 35px;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    button{
+        margin-top: 1%;
     }
 }
 

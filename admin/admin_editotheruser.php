@@ -49,62 +49,54 @@ if (isset($_POST['edituser'])) {
 </head>
 <body class= "cms">
     <section class="edit_user_area">
-        <h2>Edit Other Users</h2>
+
+          <div class="red_side_nav">
+            <a href="index.php">BACK</a>
+          </div>
        
         <div class="edit_user_form">
+        <h2>Edit Other Users</h2>
+           
+
             <?php echo !empty($message)?$message:'';?>
 
                 <?php if(!empty($all_users)):?>
                     <?php while($user_info = $all_users -> fetch(PDO::FETCH_ASSOC)):?><!--user_info: table columns name-->
                         <form action="admin_editotheruser.php" method="post">
-
-                            <label for="user_id">Username</label>
-                            <select name="user_id" id="user_id">
-                            <option selected="">Select a user</option>
-                            <!-- Loop all users in a Dropdown Menu -->
-                                <?php foreach ($all_users as $user): ?>
-                                    <option id="<?php echo $user['user_id'] ?>" value="<?php echo $user['user_id'] ?>"><?php echo $user['user_name'] ?></option>
-                                <?php endforeach; ?>
-                            </select><br><br>
-                            <!-- "Post" to choose which ID will be edited -->
-                            <button type="submit" name="edituser">Edit this User</button><br><br>
+                            <!-- <label for="user_id">Username</label> -->
+                            <div class="select_user">
+                                <select name="user_id" id="user_id">
+                                <option selected="">SELECT A USER HERE</option>
+                                <!-- Loop all users in a Dropdown Menu -->
+                                    <?php foreach ($all_users as $user): ?>
+                                        <option id="<?php echo $user['user_id'] ?>" value="<?php echo $user['user_id'] ?>"><?php echo $user['user_name'] ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                                <!-- "Post" to choose which ID will be edited -->
+                                <button type="submit" name="edituser">EDIT THIS USER</button>
+                            </div>
 
                             <?php if (!empty($chosen_user)): ?>
                               <?php while ($user_info = $chosen_user->fetch(PDO::FETCH_ASSOC)): ?>
 
                                 <input type="hidden" name="user_id" value="<?php echo $user_info['user_id']; ?>">
                                 
-                                <div class="edituser_label_input">
                                 <label for="user_name">User Name:</label>
                                 <input type="text" name="username"  id="user_name"  value="<?php echo $user_info['user_name']; ?>">
-                                </div>
-                                <br>
-                            
-                                <div class="edituser_label_input">
+                   
                                 <label for="first_name">First Name:</label>
                                 <input type="text" name="fname"  id="first_name"  value="<?php echo $user_info['user_fname']; ?>"> 
-                                </div>
-                                <br>
-                            
-                                <div class="edituser_label_input">
+                        
                                 <label for="last_name">Last Name:</label>
                                 <input type="text" name="lname"  id="last_name"  value="<?php echo $user_info['user_lname']; ?>">
-                                </div>
-                                <br>
-                            
-                                <div class="edituser_label_input">
+                                
                                 <label for="password">Password:</label>
                                 <input type="text" name="password"  id="password"  value="<?php echo $user_info['user_password']; ?>">
-                                </div>
-                                <br>
-                            
-                                <div class="edituser_label_input">
+                               
                                 <label for="email">User Email:</label>
                                 <input type="email" name="email"  id="email"  value="<?php echo $user_info['user_email']; ?>">
-                                </div>
-                                <br>
-                            
-                                <div class="edituser_label_input">
+                                
+                                
                                     <?php if(isCurrentUserAdminAbove()):?>
                                         <label for="user_level">User Level:</label>
                                         <select  name="user_level"  id="user_level" >
@@ -113,21 +105,19 @@ if (isset($_POST['edituser'])) {
                                             <option value="<?php echo $val;?>"<?php echo $val ===(int)$user_info['user_level']?'selected':'';?>><?php echo $label;?></option>   
                                             <?php endforeach;?>
                                         </select>
+                                        <button  class="updateotheruser" type="submit" name="submit">SUBMIT</button>
                                     <?php endif;?>
-                                </div>
-                                <br>
+                                
                               <?php endwhile; ?>
                             <?php endif; ?> 
                                         
-                             <button  class="updateotheruser" type="submit" name="submit">SUBMIT</button>
+                             
                                 
                          
                             
                         </form>
                         
                     <?php endwhile;?>
-                        <a href="index.php">BACK</a>
-                        <br>   <br>
                 <?php endif;?>
         </div>
     </section>

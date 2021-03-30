@@ -6,7 +6,7 @@ function getUserLevelMap(){
     return array(
         '0' => 'MEMBER',
         '1' => 'SUPERVISORS',
-        '2' => 'SUPERADMIN',
+        '2' => 'ADMIN',
 
     );
 }

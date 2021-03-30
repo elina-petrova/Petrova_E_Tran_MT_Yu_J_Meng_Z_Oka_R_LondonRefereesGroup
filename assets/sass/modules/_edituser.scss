@@ -1,74 +1,47 @@
 .edit_user_area{
-    text-align: center;
-    background-color: none;
     color: $white;
-    margin: 5% auto;
-    border: 4px  solid $white;
-    width: 70%;
     height: auto;
-    border-radius:  20px;
- 
+    display: flex;
+    flex-direction: row;
+    a{
+        font-size: 20px;
+        padding: 20px;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+
     h2{
-        font-size: 27px;
+        font-size: 30px;
         text-align: center;
-        padding: 2%;
+        padding: 6%;
     }
 }
+
 .edit_user_form{
-    width: 80% auto;
+    width: 40%;
+    display: flex;
+        flex-direction: column;
      form{
         display: flex;
         flex-direction: column;
-        width: 80% auto;
      }
-
-     label{
-         font-size: 20px;
-     }
-    
-    input[type=text]{
-        text-decoration: none;
-        border: 5px double $white;
-        color: black;
-        font-size: 17px;
-        padding: 5px 20px;
-        height: 30px;
-        margin: 2%;
-        transition: all 0.5s;
-        cursor: pointer;
-        width: 300px;
-    }
-    input[type=email]{
-        text-decoration: none;
-        border: 5px double $white;
-        color: black;
-        font-size: 17px;
-        padding: 5px 20px;
-        height: 30px;
-        margin: 2%;
-        transition: all 0.5s;
-        cursor: pointer;
-        width: 300px;
-    }
-
-    select{
-        text-decoration: none;
-        border: 5px double $white;
-        color: black;
-        font-size: 13px;
-        padding: 5px 20px;
-        height: 40px;
-        margin: 2%;
-        transition: all 0.5s;
-        cursor: pointer;
-        width: 350px;
-    }
-
-    .edit_user_buttons{
-        display: inline;
-    }
 
     
 
 }
 
+
+.select_user{
+    display: flex;
+    flex-direction: row;
+    select{
+        width: 80%;
+    }
+    button{
+        margin-top: 0;
+        margin-left: 2%;
+        font-size: 17px;
+        width: 200px;
+    }
+}

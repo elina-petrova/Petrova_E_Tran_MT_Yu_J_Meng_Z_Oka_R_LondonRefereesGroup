@@ -20,14 +20,11 @@ if(isset($_GET['id'])){
      $delete_file_id = deleteFile($delete_file_id);
  
      if(!$delete_file_id){
-         $message = 'Fail to delete event';
+         $message = 'Fail to delete file';
      }
  }
 
-// $username = getUsername($user_id);
-// if(!$username){
-//     $messager = 'Fail to get user list';
-// }
+
 
 if(isset($_POST['submit'])){
    
@@ -66,30 +63,40 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../public/css/main.css">
+    <link rel="stylesheet" type="text/css"  href="../public/css/reset.css">
     <title>Add Event</title>
 </head>
 <body class="cms">
-    <h2>Add Event</h2>
-    <?php echo !empty($message)?$message:'';?> <!--if $message isnt empty, print $message info-->
+<section class="file_dashboard">
+
+    <div class="red_side_nav">
+      <a href="index.php">BACK</a>
+
+       <!--if $message isnt empty, print $message info-->
      
-     <form  action="admin_addevent.php"  method="post"  enctype="multipart/form-data" >
+     <form  action="admin_file.php"  method="post"  enctype="multipart/form-data" >
+     <?php echo !empty($message)?$message:'';?>
 
-        <label for="name">Event Name:</label><br>
-        <input type="text" name="name"  id="name" value="<?= $name;?>"><br><br>
+         <label for="name">File Name:</label>
+         <input type="text" name="name"  id="name" value="<?= $name;?>">
 
-        <label for="subject">Event Subject:</label><br>
-        <input type="text" name="subject"  id="subject" value="<?= $subject;?>"><br><br>
+         <label for="subject">Subject:</label>
+         <input type="text" name="subject"  id="subject" value="<?= $subject;?>">
 
+         <label for="file">Choose a file to upload:</label>
+         <input type="file" name="file"  id="file" >
 
-        <label for="file">Choose a file to upload:</label><br>
-        <input type="file" name="file"  id="file" ><br><br>
-
-
-
-        <button type="submit" name="submit">Add</button>
-        <a href="index.php">Back</a>
+         <button type="submit" name="submit">Add</button>
 
      </form>
+    </div>
+    
+
+    <div class="file_area">
+
+    <h2>Documents</h2>
+   
 
 
      <div class="event_area">
@@ -128,16 +135,17 @@ if(isset($_POST['submit'])){
            <td>
                <a href="../public/files/<?php echo $single_file['events_file'];?>">CHECK FILE</a> 
                <a href="../public/files/<?php echo $single_file['events_file'];?>" download="">DOWNLOAD FILE</a> 
-               <a href="index.php?id=<?php echo $single_file['events_id'];?>">DELETE FILE</a>
+               <a href="admin_file.php?id=<?php echo $single_file['events_id'];?>">DELETE FILE</a>
            </td>
             <?php endif;?>
           
          </tr>
        <?php endwhile;?> 
 
-</table>
-</div>
-     
+      </table>
+    </div>
+   </div>
+</section>
     
 </body>
 </html>

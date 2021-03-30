@@ -65,7 +65,7 @@ if(isset($_POST['submit'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../public/css/main.css">
     <link rel="stylesheet" type="text/css"  href="../public/css/reset.css">
-    <title>Add Event</title>
+    <title>FILES</title>
 </head>
 <body class="cms">
 <section class="file_dashboard">
@@ -75,7 +75,20 @@ if(isset($_POST['submit'])){
 
        <!--if $message isnt empty, print $message info-->
      
-     <form  action="admin_file.php"  method="post"  enctype="multipart/form-data" >
+     
+    </div>
+    
+
+    <div class="file_area">
+
+    <h2>FILES</h2>
+   
+     <div class="event_area">
+   
+   <h2 class="hidden">event area</h2>
+   <?php echo !empty($message)?$message:'';?>
+
+   <form  action="admin_file.php"  method="post"  enctype="multipart/form-data" >
      <?php echo !empty($message)?$message:'';?>
 
          <label for="name">File Name:</label>
@@ -90,27 +103,14 @@ if(isset($_POST['submit'])){
          <button type="submit" name="submit">Add</button>
 
      </form>
-    </div>
-    
-
-    <div class="file_area">
-
-    <h2>Documents</h2>
-   
-
-
-     <div class="event_area">
-   
-   <h2 class="hidden">event area</h2>
-   <?php echo !empty($message)?$message:'';?>
    <table>
    <thead>
     <tr>
-      
-       <th>Event Name</th>
+       <th>ID</th>
+       <th>File Name</th>
        <th>Subject</th>
        <th>Creator</th>
-       <th>Last Executed</th>
+       <th>Time</th>
        <th>Actions</th>
     </tr>
    </thead>
@@ -118,7 +118,7 @@ if(isset($_POST['submit'])){
    <tbody>
        <?php while($single_file = $files -> fetch(PDO::FETCH_ASSOC)): ?>
          <tr>
-           
+         <td><?php echo $single_file['events_id'];?></td>
            <td><?php echo $single_file['events_name'];?></td>
            <td><?php echo $single_file['events_subject'];?></td>
            <td><?php echo $single_file['events_creator'];?></td>
@@ -133,9 +133,11 @@ if(isset($_POST['submit'])){
 
            <?php if($_SESSION['user_level'] ==2):?>
            <td>
+               <div class="file_action">
                <a href="../public/files/<?php echo $single_file['events_file'];?>">CHECK FILE</a> 
                <a href="../public/files/<?php echo $single_file['events_file'];?>" download="">DOWNLOAD FILE</a> 
                <a href="admin_file.php?id=<?php echo $single_file['events_id'];?>">DELETE FILE</a>
+               </div>
            </td>
             <?php endif;?>
           

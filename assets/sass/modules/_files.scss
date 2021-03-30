@@ -5,15 +5,11 @@
     color: $white;
     height: 750px;
 
-    form{
-        width:60%;
-        margin-top: 5%;
-        transform: translate(140px, 0px)  skewX(20deg);
-    }
 
     .file_area{
         display: flex;
         flex-direction: column;
+        width: 95%;
 
         input[type=text]{ 
           width: 40%;
@@ -32,29 +28,25 @@
     h2{
         font-size: 30px;
         text-align: center;
-        padding: 6%;
+        margin: 4%;
     }
     p{
         text-align: center;
     }
 
-    button{
-   
-        background-color: $red;
-        margin-top: 4%;
-    }
-    button:hover{
-        background-color: $white;
-        color: $red;
-    }
+
     a{
         font-size: 16px;
         padding: 20px;
     }
+
     a:hover{
         text-decoration: underline;
     }
     
+    table{
+        width: 90%;
+    }
     
     table, th, td {
         text-align: center;
@@ -63,14 +55,20 @@
       }
 
     th {
-        width: 190px;
+        width: auto;
         font-size: 20px;
-        padding: 5px;
+        font-weight: 700;
+        z-index: 999;
+        text-transform: uppercase;
+
     }
     
     td{
-        padding: 5px;
+        font-size: 15px;
     }
 
-    
+    .file_action{
+        display: flex;
+        flex-direction: row;
+    }
 }

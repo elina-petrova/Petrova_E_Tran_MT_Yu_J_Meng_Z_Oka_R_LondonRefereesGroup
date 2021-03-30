@@ -32,6 +32,11 @@ $default-padding: 6rem;
         cursor: pointer;
         width: 150px;
         margin: 2% 0;
+        font-weight: 700;
+        z-index: 999;
+        text-transform: uppercase;
+        transition: all .3s ease-out;
+        font-family: monotype-grotesque,sans-serif;
     }
 
     button:hover{
@@ -50,6 +55,11 @@ $default-padding: 6rem;
         cursor: pointer;
         width: 150px;
         margin: 1% auto;
+        font-weight: 700;
+        z-index: 999;
+        text-transform: uppercase;
+        transition: all .3s ease-out;
+        font-family: monotype-grotesque,sans-serif;
     }
 
     a:hover{

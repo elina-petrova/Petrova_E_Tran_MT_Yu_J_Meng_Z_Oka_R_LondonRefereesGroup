@@ -1,14 +1,14 @@
 .login_area{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     font-family: SF Sports Night NS;
     height:750px;
     
 }
 
 .logo_area{
-    width: 50%;
-    transform: translate(-140px, 0px)  skewX(-20deg);
+    width: 100%;
+    transform: translate(-65px, 0px)  skewX(-20deg);
     // transform:rotate(20deg);
     background-color: $red;
     a{
@@ -23,7 +23,8 @@
 
     .logo{
         width: 55%;
-        margin-top: 18%;
+        margin-top: 15%;
+        margin-bottom: 5%;
        margin-left: 30%;
        transform:  skewX(20deg);
         // transform:  rotate(-20deg) ;

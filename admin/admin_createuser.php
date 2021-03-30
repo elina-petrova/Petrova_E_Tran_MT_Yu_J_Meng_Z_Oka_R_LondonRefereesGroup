@@ -66,7 +66,7 @@ if(isset($_POST['submit'])){
 
     $email_message .= "Please remember you have 24 hours to active your account. After 24 hours your account will be locked by system. ".PHP_EOL;
  
-    $email_message .= "Welcome login our awesome website: www.awesome.com ".PHP_EOL;
+    $email_message .= "Welcome login our awesome website: https://londonrefereesgroup.com/ ".PHP_EOL;
 
     $email_headers = "From: London Referees Group ";
     $email_headers .= "To: $user_email\r\n";

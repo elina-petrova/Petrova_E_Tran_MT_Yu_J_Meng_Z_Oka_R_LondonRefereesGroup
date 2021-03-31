@@ -26,7 +26,7 @@ function getCurrentUserLevel(){
 function createUser($user_data){
     //if user data does not have this username or username already exist
     if(empty($user_data['username'])||isUsernameExists($user_data['username'])){
-        return 'Username is invalid!';
+        return '* username is missing or already existed  *';
     }
 
 
@@ -149,7 +149,7 @@ function editUser($user_data){
 	# only check that the username is taken if it actually changed
     if ($existing_user['user_name'] != $user_data['username']) {
     		if(empty($user_data['username']) || isUsernameExists($user_data['username'])){
-        	return 'Username is invalid!!';
+        	return '* * username is missing or already existed  * *';
             }
 	}
 

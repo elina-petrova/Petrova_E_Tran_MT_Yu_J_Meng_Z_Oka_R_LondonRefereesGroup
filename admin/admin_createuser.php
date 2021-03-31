@@ -5,7 +5,7 @@ require_once '../load.php';
 confirm_logged_in();
 admin_access_only();
 
-$error='';
+
 $user_fname = '';
 $user_lname = '';
 $user_name = '';
@@ -13,7 +13,7 @@ $user_email = '';
 $user_password = '';
 
 if(isset($_POST['submit'])){
-
+     
     //user first name
     if(empty($_POST['fname'])) { 
         $fname_error = '* first name is required *'; 
@@ -27,16 +27,8 @@ if(isset($_POST['submit'])){
     } else {
         $user_lname = filter_var($_POST['lname'], FILTER_SANITIZE_STRING);
     } 
-
-    //user name
-    if(empty($_POST['username'])) { 
-        $username_error = '* username is required *'; 
-    } else{
-        $user_name = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
-    }
-
-    //user email
-    if (empty($_POST['email'])) {
+       //user email
+       if (empty($_POST['email'])) {
         $email_error ='* email is required *';
 
     } else {
@@ -44,11 +36,23 @@ if(isset($_POST['submit'])){
     }
     
 
-//Auto-generate the password for the user
+    //user name
+    if(empty($_POST['username'])) { 
+        $username_error = '* username is required *'; 
+    } else{
+        $user_name = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
+    }
+    
+    //Auto-generate the password for the user
    $user_password = genRandomString(); //password function
 
+ 
+
+
+   
 //prepare email
     $email_recipient = $user_email; //to user email
+
     $email_subject = sprintf('Hello %s, you can login London Referees Group now.', $user_fname).PHP_EOL ;
 
     $email_message = sprintf("Your username is: %s, and your email is: %s .", $user_name, $user_email).PHP_EOL;
@@ -79,7 +83,7 @@ if(isset($_POST['submit'])){
         'email' => trim($_POST['email']),
         'user_level' => trim($_POST['user_level']),
     );
-
+    
     $message = createUser($data);// create user function
 }
 
@@ -107,7 +111,7 @@ if(isset($_POST['submit'])){
       
                 <form action="admin_createuser.php" method="post">
             
-
+                <?php echo !empty($message)?$message:'';?>
                     <label for="first_name">First Name :</label> 
                     <input type="text" name="fname"  id="first_name" placeholder="<?php echo !empty( $fname_error)? $fname_error:'';?>  " value="<?= $user_fname;?>">
                    

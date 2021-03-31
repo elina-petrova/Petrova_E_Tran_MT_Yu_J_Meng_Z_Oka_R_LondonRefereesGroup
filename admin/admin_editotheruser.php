@@ -17,6 +17,7 @@ if(empty($all_users)){
 
 // when user click submit
 if(isset($_POST['submit'])){
+    
     $data = array(
         'fname'      => trim($_POST['fname']),
         'lname'      => trim($_POST['lname']),
@@ -78,6 +79,7 @@ if (isset($_POST['edituser'])) {
 
 
                             <?php if (!empty($chosen_user)): ?>
+                               
                               <?php while ($user_info = $chosen_user->fetch(PDO::FETCH_ASSOC)): ?>
 
                                 <input type="hidden" name="user_id" value="<?php echo $user_info['user_id']; ?>">

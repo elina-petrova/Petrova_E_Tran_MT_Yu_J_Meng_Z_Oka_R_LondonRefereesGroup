@@ -49,7 +49,7 @@ if(isset($_POST['submit'])){
 
 //prepare email
     $email_recipient = $user_email; //to user email
-    $email_subject = sprintf('Hello %s, you can login to your account now.', $user_fname).PHP_EOL ;
+    $email_subject = sprintf('Hello %s, you can login London Referees Group now.', $user_fname).PHP_EOL ;
 
     $email_message = sprintf("Your username is: %s, and your email is: %s .", $user_name, $user_email).PHP_EOL;
   
@@ -58,6 +58,7 @@ if(isset($_POST['submit'])){
     $email_message .= "Please remember you have 24 hours to active your account. After 24 hours your account will be locked by system. ".PHP_EOL;
  
     $email_message .= "Welcome login our awesome website: https://londonrefereesgroup.com/ ".PHP_EOL;
+    $email_message .= "If you have any issue, please contact us: lrg@londonrefereesgroup.com ".PHP_EOL;
 
     $email_headers = "From: London Referees Group ";
     $email_headers .= "To: $user_email\r\n";

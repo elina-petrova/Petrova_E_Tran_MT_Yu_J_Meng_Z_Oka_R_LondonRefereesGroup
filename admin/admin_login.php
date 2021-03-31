@@ -49,8 +49,9 @@ if(isset($_SESSION['user_id'])){
                
                 <h3>Welcome login</h3>
                 <div class="login_form">
-                 <?php echo !empty($message)?$message:'';?>
+                
                     <form action="admin_login.php" method="post">
+                    <?php echo !empty($message)?$message:'';?>
                     <label for="username">Username*:</label>
                     <input id="username" type="text" name="username" value="<?= $username;?>" placeholder="">
                     

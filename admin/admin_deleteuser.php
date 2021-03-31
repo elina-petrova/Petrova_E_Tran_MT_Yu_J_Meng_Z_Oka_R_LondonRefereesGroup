@@ -52,7 +52,7 @@ if(isset($_GET['id'])){
             <table>
                 <thead>
                 <tr>
-                    <th>USER ID</th>
+                    <th>ID</th>
                     <th>USERNAME</th>
                     <th>LASTNAME</th>
                     <th>EMAIL</th>

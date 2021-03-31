@@ -12,11 +12,19 @@ $default-padding: 6rem;
 
     .red_side_nav{
         height: 750px;
-        width: 35%;
+        width: 25%;
         transform: translate(-140px, 0px)  skewX(-20deg);
-        // transform:rotate(20deg);
         background-color: $red;
         
+    }
+    @media (min-width:900px){
+        .red_side_nav{
+            width:35%;
+            transform: translate(-140px, 0px)  skewX(-20deg);
+        }
+        a{
+            font-size: 12px;
+        }
     }
 
     button{

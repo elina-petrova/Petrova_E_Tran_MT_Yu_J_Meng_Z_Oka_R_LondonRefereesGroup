@@ -52,7 +52,7 @@
     }
     
     table{
-        width: 90%;
+        width: 80% ;
     }
     
     table, th, td {
@@ -63,7 +63,7 @@
 
     th {
         padding: 10px;
-        font-size:15px;
+        font-size:17px;
         color: $black;
         background-color: $white;
         font-weight: 700;
@@ -75,8 +75,17 @@
         padding: 1px;
     }
 
+    
+}
+
+.file_action{
+    display: flex;
+    flex-direction:column;
+}
+
+@media (min-width:900px){
     .file_action{
         display: flex;
-        flex-direction: row;
+        flex-direction:row;
     }
 }

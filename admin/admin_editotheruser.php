@@ -60,9 +60,11 @@ if (isset($_POST['edituser'])) {
            
 
             <?php echo !empty($message)?$message:'';?>
-
+              
                 <?php if(!empty($all_users)):?>
                     <?php while($user_info = $all_users -> fetch(PDO::FETCH_ASSOC)):?><!--user_info: table columns name-->
+                    
+                       
                         <form action="admin_editotheruser.php" method="post">
                             <!-- <label for="user_id">Username</label> -->
                             <div class="select_user">
@@ -76,12 +78,16 @@ if (isset($_POST['edituser'])) {
                                 <!-- "Post" to choose which ID will be edited -->
                                 <button type="submit" name="edituser">EDIT THIS USER</button>
                             </div>
-
-
+                   
+  
                             <?php if (!empty($chosen_user)): ?>
-                               
+                              
                               <?php while ($user_info = $chosen_user->fetch(PDO::FETCH_ASSOC)): ?>
-
+                              
+                              <div class="notthisuser">
+                                <a href="admin_editotheruser" >not this user?</a>
+                              </div>
+                              
                                 <input type="hidden" name="user_id" value="<?php echo $user_info['user_id']; ?>">
                                 
                                 <label for="user_name">User Name:</label>
@@ -110,7 +116,6 @@ if (isset($_POST['edituser'])) {
                                         </select>
                                         <button  class="updateotheruser" type="submit" name="submit">SUBMIT</button>
                                     <?php endif;?>
-                                
                               <?php endwhile; ?>
                             <?php endif; ?> 
             

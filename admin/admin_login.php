@@ -40,7 +40,7 @@ if(isset($_SESSION['user_id'])){
 <body class="cms">
     <section class="login_area">
             <div class="logo_area">
-            <a href="../index.html">BACK</a>
+                <a href="../index.html">BACK</a>
                 <img class="logo" src="../public/images/LRG_logo_v2.svg" alt="LRG_logo">
                
             </div>

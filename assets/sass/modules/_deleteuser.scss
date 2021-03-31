@@ -28,7 +28,7 @@
     
     table, th, td {
         font-family: monotype-grotesque,sans-serif; 
-        border: 2px solid $white;
+        border: 3px solid $white;
       }
 
     table{
@@ -40,8 +40,15 @@
     }
 
     th {
-        padding: 5px;
-        font-size: 20px;
+        padding: 10px;
+        font-size:15px;
+        color: $black;
+        background-color: $white;
+        font-weight: 700;
+    }
+
+    td{
+        padding: 1px;
     }
     
 

@@ -30,6 +30,13 @@
         text-align: center;
         margin: 4%;
     }
+
+    h3{
+        font-size: 22px;
+        text-align: center;
+        margin: 1%;
+    }
+
     p{
         text-align: center;
     }
@@ -55,16 +62,17 @@
       }
 
     th {
-        width: auto;
-        font-size: 20px;
+        padding: 10px;
+        font-size:15px;
+        color: $black;
+        background-color: $white;
         font-weight: 700;
-        z-index: 999;
-        text-transform: uppercase;
-
-    }
+        }
+    
     
     td{
         font-size: 15px;
+        padding: 1px;
     }
 
     .file_action{

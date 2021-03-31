@@ -39,8 +39,6 @@ if(isset($_POST['submit'])){
                 'subject' => trim($_POST['subject']),
                 'user' => $user_id
             );
-
-       
             $message = addNewFile($data);
             
     }else{

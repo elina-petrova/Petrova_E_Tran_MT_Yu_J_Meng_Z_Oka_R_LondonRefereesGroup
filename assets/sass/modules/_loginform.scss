@@ -9,7 +9,7 @@
 
 .logo_area{
     width: 100%;
-    transform: translate(-65px, 0px)  skewX(-20deg);
+    transform: translate(-55px, 0px)  skewX(-20deg);
     // transform:rotate(20deg);
     background-color: $red;
     a{
@@ -110,7 +110,7 @@
     .login_area{
         display: flex;
         flex-direction: row;
-        transform: translate(-80px, 0px);
+        transform: translate(-100px, 0px);
     .logo_area{
         width: 50%;
     }

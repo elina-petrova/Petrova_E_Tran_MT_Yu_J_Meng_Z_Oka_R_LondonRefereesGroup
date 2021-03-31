@@ -9,9 +9,8 @@ $name= $subject= ' ';
 $user_id =  $_SESSION['user_id'];
 
 $files= getAllFlies();
-
 if(!$files){
-    $messager = 'Fail to get file';
+    $message = 'Fail to get file';
 }
 
 if(isset($_GET['id'])){
@@ -30,7 +29,6 @@ if(isset($_POST['submit'])){
 
     $name = trim($_POST['name']);
     $subject = trim($_POST['subject']);
-
     $file = $_FILES['file'];
 
 
@@ -43,10 +41,10 @@ if(isset($_POST['submit'])){
             );
 
        
-            $message = addEvent($data);
+            $message = addNewFile($data);
             
     }else{
-         $message = '* Plesase fill out the request field *';
+         $message = '* Plesase fill all request field *';
     }
 }
 

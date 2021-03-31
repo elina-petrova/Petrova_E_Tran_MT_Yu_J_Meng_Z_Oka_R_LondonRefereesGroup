@@ -76,6 +76,7 @@ if (isset($_POST['edituser'])) {
                                 <button type="submit" name="edituser">EDIT THIS USER</button>
                             </div>
 
+
                             <?php if (!empty($chosen_user)): ?>
                               <?php while ($user_info = $chosen_user->fetch(PDO::FETCH_ASSOC)): ?>
 
@@ -110,11 +111,7 @@ if (isset($_POST['edituser'])) {
                                 
                               <?php endwhile; ?>
                             <?php endif; ?> 
-                                        
-                             
-                                
-                         
-                            
+            
                         </form>
                         
                     <?php endwhile;?>

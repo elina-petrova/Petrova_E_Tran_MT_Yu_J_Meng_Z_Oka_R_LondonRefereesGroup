@@ -36,7 +36,7 @@ function deleteFile($file_id){
 
 
 
-function addEvent($event){
+function addNewFile($event){
     try{
 
         // return 'you are about to create a new movie!'.PHP_EOL.var_export($movie, true);
@@ -52,7 +52,7 @@ function addEvent($event){
 
         //if uploaded file type deesnt belong to accetped types, throw a error message and stop heres
         if(!in_array($upload_file['extension'], $accepted_types)){
-               throw new Exception(" Wrong file type !"); 
+               throw new Exception("* Missing or invalid file type *"); 
                //in try block, if throw a new exception,  code gonna stop here and jump to catch section
         }
 

@@ -16,7 +16,6 @@ confirm_logged_in();//only login in user can see the index.php page
 </head>
 <body class= "cms">
     <section class="create_success_area">
-    <img class="logo" src="../public/images/LRG_logo.svg" alt="LRG_logo">
         <h2>Hi, <?php echo $_SESSION['user_name'];?>! You have successfully edit your account, please log out first to make change work. </h2>
         <br>
         

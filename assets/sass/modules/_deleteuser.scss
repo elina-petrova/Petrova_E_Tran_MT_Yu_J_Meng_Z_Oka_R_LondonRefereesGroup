@@ -33,22 +33,18 @@
 
     table{
         margin: 2%;
-        width: 75% auto;
+        width: 70% auto;
         border: $white;
         text-align: center;
         
     }
 
     th {
-        width: 190px;
+        padding: 5px;
         font-size: 20px;
-        height: 20px;
-        padding: 10px;
     }
     
-    td{
-        padding: 10px;
-    }
+
 
 
 }

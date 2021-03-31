@@ -48,7 +48,8 @@ function addEvent($event){
         $upload_file = pathinfo($file['name']);//return information about a path using an associative array or a string
         $accepted_types = array('pdf','dox','docx','jpg','jpeg','png');//define accepted file types
         
-       
+
+
         //if uploaded file type deesnt belong to accetped types, throw a error message and stop heres
         if(!in_array($upload_file['extension'], $accepted_types)){
                throw new Exception(" Wrong file type !"); 

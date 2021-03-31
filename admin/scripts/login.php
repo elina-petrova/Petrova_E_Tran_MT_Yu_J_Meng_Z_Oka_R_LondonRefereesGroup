@@ -21,7 +21,7 @@ function login($username, $password, $ip) {
        //if found user exist in user database, get him in!
 
        if ($found_user['user_status'] ==='locked') {
-        return "* You account has locked, please contact admin";
+        return "* You account has locked *";
         redirect_to('admin_login.php');
         exit;
     }

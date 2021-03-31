@@ -5,7 +5,7 @@ require_once '../load.php';
 confirm_logged_in();
 admin_access_only();
 
-$message = '';
+$error='';
 $user_fname = '';
 $user_lname = '';
 $user_name = '';
@@ -15,43 +15,34 @@ $user_password = '';
 if(isset($_POST['submit'])){
 
     //user first name
-
     if(empty($_POST['fname'])) { 
-        $results['message'] = 'first name is required'; 
-        echo json_encode($results);
-        // $fnameError='first name is required'; 
-        die(); 
+        $fname_error = '* first name is required *'; 
     } else {
         $user_fname = filter_var($_POST['fname'], FILTER_SANITIZE_STRING);
     } 
             
     //user last name
     if(empty($_POST['lname'])) { 
-        $results['message'] = 'last name is required'; 
-        echo json_encode($results);
-        // $fnameError='first name is required'; 
-        die(); 
+        $lname_error = '* last name is required *'; 
     } else {
         $user_lname = filter_var($_POST['lname'], FILTER_SANITIZE_STRING);
     } 
 
     //user name
     if(empty($_POST['username'])) { 
-        $results['message'] = 'username is required'; 
-        echo json_encode($results);
-        die(); 
+        $username_error = '* username is required *'; 
     } else{
         $user_name = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
     }
 
     //user email
     if (empty($_POST['email'])) {
-        $results['message'] ='email is required';
-        echo json_encode($results);
-        die();
+        $email_error ='* email is required *';
+
     } else {
         $user_email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
     }
+    
 
 //Auto-generate the password for the user
    $user_password = genRandomString(); //password function
@@ -113,21 +104,24 @@ if(isset($_POST['submit'])){
       <div class="create_user_form">
         <h2>Create New User</h2>
       
-            <?php echo !empty($message)?$message:'';?> 
-            
                 <form action="admin_createuser.php" method="post">
+            
 
-                    <label for="first_name">First Name :</label>
-                    <input type="text" name="fname"  id="first_name" placeholder=" " value="<?= $user_fname;?>">
+                    <label for="first_name">First Name :</label> 
+                    <input type="text" name="fname"  id="first_name" placeholder="<?php echo !empty( $fname_error)? $fname_error:'';?>  " value="<?= $user_fname;?>">
+                   
 
-                    <label for="last_name">Last Name :</label>
-                    <input type="text" name="lname"  id="last_name" placeholder=" " value="<?=$user_lname;?>">
+                    <label for="last_name">Last Name :</label> 
+                    <input type="text" name="lname"  id="last_name" placeholder="<?php echo !empty( $lname_error)? $lname_error:'';?> " value="<?=$user_lname;?>">
+                    
 
-                    <label for="user_name">User Name :</label>
-                    <input type="text" name="username"  id="user_name" placeholder=" " value="<?= $user_name;?>">
+                    <label for="user_name">User Name :</label>  
+                    <input type="text" name="username"  id="user_name" placeholder=" <?php echo !empty( $username_error)? $username_error:'';?> " value="<?= $user_name;?>">
+                   
 
-                    <label for="email">Email :</label>
-                    <input type="email" name="email"  id="email" placeholder=" " value="<?= $user_email;?>">
+                    <label for="email">Email :</label> 
+                    <input type="email" name="email"  id="email" placeholder=" <?php echo !empty( $email_error)? $email_error:'';?> " value="<?= $user_email;?>">
+                    
 
                     <label for="user_level">User Level :</label><br>
                     <select  name="user_level"  id="user_level" >

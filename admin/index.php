@@ -27,8 +27,8 @@ new_login_user_prevent();
             <?php if($_SESSION['user_level'] ==2):?>
             <a href="admin_editotheruser.php">EDIT OTHERS</a>
             <a href="admin_deleteuser.php">DELETE USER</a>
-            
             <?php endif;?> 
+
             <a href="admin_file.php">FILES</a>
             <a href="admin_logout.php">SIGN OUT</a>
         </div>

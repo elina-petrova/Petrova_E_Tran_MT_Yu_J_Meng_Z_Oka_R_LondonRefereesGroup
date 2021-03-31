@@ -11,7 +11,7 @@ $user_id =  $_SESSION['user_id'];
 $files= getAllFlies();
 
 if(!$files){
-    $messager = 'Fail to get user list';
+    $messager = 'Fail to get file';
 }
 
 if(isset($_GET['id'])){
@@ -27,30 +27,26 @@ if(isset($_GET['id'])){
 
 
 if(isset($_POST['submit'])){
-   
 
     $name = trim($_POST['name']);
     $subject = trim($_POST['subject']);
+
     $file = $_FILES['file'];
 
-    if(!empty($name) && !empty($subject) ){
 
-        if(empty($file)){
-            $message = "File is required";
-        }else{
+    if(!empty($name) && !empty($subject) && !empty($file)){
             $data = array(
                 'file' => $_FILES['file'],
                 'name' => trim($_POST['name']),
                 'subject' => trim($_POST['subject']),
                 'user' => $user_id
             );
-        
-            $message = addEvent($data);
 
-        }
+       
+            $message = addEvent($data);
             
     }else{
-         $message = '* Plesase fill out the request field';
+         $message = '* Plesase fill out the request field *';
     }
 }
 
@@ -86,7 +82,6 @@ if(isset($_POST['submit'])){
      <div class="event_area">
    
    <h2 class="hidden">event area</h2>
-   <?php echo !empty($message)?$message:'';?>
 
        <?php if($_SESSION['user_level'] ==2):?>
                 <form  action="admin_file.php"  method="post"  enctype="multipart/form-data" >

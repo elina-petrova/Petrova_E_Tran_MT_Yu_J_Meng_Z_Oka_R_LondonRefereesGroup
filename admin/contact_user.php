@@ -73,7 +73,7 @@ if (isset($_POST['edituser'])) {
                                   <?php endforeach; ?>
                               </select>
                               <!-- "Post" to choose which ID will be edited -->
-                              <button type="submit" name="edituser">EDIT USER</button>
+                              <button type="submit" name="edituser">SUBMIT</button>
                           </div>
                  
                  

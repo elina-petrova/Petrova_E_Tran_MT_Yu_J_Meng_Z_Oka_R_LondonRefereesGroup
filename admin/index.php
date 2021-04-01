@@ -29,7 +29,7 @@ new_login_user_prevent();
             <a href="admin_deleteuser.php">DELETE USER</a>
             <?php endif;?>
             
-            <a href="contact_user.php">CONTACT USER</a>
+            <a href="contact_user.php">CONTACT OTHER</a>
             <a href="admin_file.php">FILES</a>
             <a href="admin_logout.php">LOG OUT</a>
         </div>

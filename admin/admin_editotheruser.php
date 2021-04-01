@@ -76,7 +76,7 @@ if (isset($_POST['edituser'])) {
                                     <?php endforeach; ?>
                                 </select>
                                 <!-- "Post" to choose which ID will be edited -->
-                                <button type="submit" name="edituser">EDIT THIS USER</button>
+                                <button type="submit" name="edituser">EDIT USER</button>
                             </div>
                    
   
@@ -85,7 +85,7 @@ if (isset($_POST['edituser'])) {
                               <?php while ($user_info = $chosen_user->fetch(PDO::FETCH_ASSOC)): ?>
                               
                               <div class="notthisuser">
-                                <a href="admin_editotheruser" >not this user?</a>
+                                <a href="admin_editotheruser">NOT THIS USER?</a>
                               </div>
                               
                                 <input type="hidden" name="user_id" value="<?php echo $user_info['user_id']; ?>">

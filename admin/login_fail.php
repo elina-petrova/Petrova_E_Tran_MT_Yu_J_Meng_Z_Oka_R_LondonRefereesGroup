@@ -9,8 +9,8 @@
 </head>
 <body class= "cms">
     <section class="login_fail ">
-        <h2>Your account is locked due to expire login time. Please contact Admin to unlock your account.</h2>
-        <h3>lrg@londonrefereesgroup.com</h3>
+        <h2>Your account is locked due to expire login time.</h2>
+        <h2> You can contact Admin to unlock your account .</h2>
         <a href="http://localhost/Petrova_E_Tran_MT_Yu_J_Meng_Z_Oka_R_LondonRefereesGroup/index.html#/contact">Contact Admin</a>
       
         <a href="admin_login.php">Back</a>

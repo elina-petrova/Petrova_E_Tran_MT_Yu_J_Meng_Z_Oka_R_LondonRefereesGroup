@@ -37,6 +37,18 @@
 }
    
 
+
+
+.notthisuser{
+    a{
+        color: $red;
+        font-size: 15px;
+        padding: 0;
+        margin: 0;
+    }
+ 
+}
+
 .select_user{
     display: flex;
     flex-direction: row;
@@ -49,14 +61,4 @@
         font-size: 17px;
         width: 200px;
     }
-}
-
-.notthisuser{
-    a{
-        color: $red;
-        font-size: 15px;
-        padding: 0;
-        margin: 0;
-    }
- 
 }

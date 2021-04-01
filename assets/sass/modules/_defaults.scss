@@ -4,28 +4,15 @@ $default-padding: 6rem;
     display: none;
 }
 
+
+
 .cms{
    
     .logo{
         width: 200px;
     }
 
-    .red_side_nav{
-        height: 750px;
-        width: 25%;
-        transform: translate(-140px, 0px)  skewX(-20deg);
-        background-color: $red;
-        
-    }
-    @media (min-width:900px){
-        .red_side_nav{
-            width:35%;
-            transform: translate(-140px, 0px)  skewX(-20deg);
-        }
-        a{
-            font-size: 12px;
-        }
-    }
+    
 
     button{
         text-decoration: none;

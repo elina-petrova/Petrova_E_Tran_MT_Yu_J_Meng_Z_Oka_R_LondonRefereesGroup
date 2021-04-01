@@ -10,7 +10,7 @@
 .logo_area{
     width: 100%;
     height: 40%;
-    transform: translate(0px, -60px)  skewY(10deg);
+    transform: translate(0px, -60px)  skewY(-10deg);
     // transform:rotate(20deg);
     background-color: $red;
     display: flex;
@@ -18,8 +18,8 @@
     a{
         border: none;
         font-size: 18px;
-        margin-top: 20%;
-       transform:  skewY(-10deg);
+        margin-top: 10%;
+       transform:  skewY(10deg);
        position: fixed;
        
 
@@ -31,8 +31,8 @@
 
     .logo{
         width: 60%;
-       margin: 25%;
-       transform:  skewY(-10deg);
+       margin: 30% auto;
+       transform:  skewY(10deg);
         // transform:  rotate(-20deg) ;
     }
 
@@ -148,7 +148,7 @@
     }
     .logo{
         width: 55%;
-        margin: 30%;
+        margin: 30% auto;
        transform:  skewX(20deg);
     }
 

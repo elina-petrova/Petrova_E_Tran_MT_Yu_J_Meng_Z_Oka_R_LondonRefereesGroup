@@ -1,0 +1,22 @@
+.contact_user_area{
+    display: flex;
+    flex-direction: row;
+    color: $white;
+    
+    h2{
+        text-align: center;
+        font-size: 25px;
+        margin: 2%;
+    }
+    .contact_others{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        margin: 4% auto;
+        select{
+            width: 60%;
+        }
+        
+    }
+   
+}

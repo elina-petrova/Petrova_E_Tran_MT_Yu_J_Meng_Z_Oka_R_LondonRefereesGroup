@@ -30,7 +30,7 @@ new_login_user_prevent();
             <?php endif;?> 
 
             <a href="admin_file.php">FILES</a>
-            <a href="admin_logout.php">SIGN OUT</a>
+            <a href="admin_logout.php">LOG OUT</a>
         </div>
         
         <div class="dashboard">
@@ -40,7 +40,7 @@ new_login_user_prevent();
             </div>
 
             <div class="responsiveCal">
-                <h2>Calendar</h2>
+                <h2 class="hidden">Calendar</h2>
                 <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FToronto&amp;src=Yzc1NTY0am9tNHY1M290ZXZkbTVwbHRyYjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23D50000" style="border:solid 1px #777" width="800" height="500" frameborder="0" scrolling="no"></iframe>        
             </div>
         </div>

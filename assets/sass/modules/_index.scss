@@ -1,33 +1,32 @@
 .index_area{
     text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     color: $black;
     background-color: $white;
     height: 750px;
-    min-width: 600px;
+   min-width: 750px;
 }
 
 
+
 .index_buttons{
-    display: flex;
-    flex-direction:row;
+    width:30%;
+    transform: translate(-140px, 0px)  skewX(-20deg);
+    height: 100%;
     background-color: $black;
-    transform: translate(-20px, 0px)  skewX(-20deg);
-    height: 15%;
-    
     a{
         transform: skewX(20deg);
-        margin-top: 7%;
-        margin-bottom: 2%;
-        margin-left: 4%;
-        font-size: 14px;
-        width: 80px;
+        margin-top: 10%;
+        width: 250px;
+        font-size: 13px;
+        margin-left: 10%;
     }
 }
 
 
 .dashboard{
+    width: 100%;
     .login_user{
         display: flex;
         flex-direction: row;
@@ -37,7 +36,7 @@
             font-size: 25px;
             position: absolute;
             top:2%;
-            left: 2%;
+            right: 2%;
         }
 
     }
@@ -45,10 +44,6 @@
 
 
 .responsiveCal {
-    h2{
-        font-size: 28px;
-        margin-top: 3%;
-    }
     position: relative;
     padding-bottom: 75%;
     height: 0; 
@@ -56,46 +51,30 @@
 }
      
 .responsiveCal iframe {
-      
     position: absolute;
-    top:15%; 
+    top:20%; 
     left: 0;
     width: 100%; 
-    height: 80%;
+    height: 85%;
     }
 
+//login page mobile size
+@media (min-width:900px){
+    .index_area{
+        display: flex;
+        flex-direction:row;
 
-    @media (min-width:900px){
-        .index_area{
-            display: flex;
-            flex-direction:row;
-            .index_buttons{
-                display: flex;
-                flex-direction:column;
-                width:35%;
-                transform: translate(-140px, 0px)  skewX(-20deg);
-                height: 100%;
-                a{
-                    transform: skewX(20deg);
-                    margin-top: 8%;
-                    width: 250px;
-                    font-size: 18px;
-                    margin-left: 30%;
-                }
+        a{
+            font-size: 18px;
+            padding-top: 1%;
         }
-            .dashboard{
-            width: 60%;
-            margin: 2%;
-            .login_user{
-                h2{
-                    position: relative;
-                    right: 0;
-                }
-    
-                
-            }
+   
+    }
+    .dashboard{
+        width: 60%;
+    }
+    .responsiveCal iframe {
+        top:15%; 
         }
-    
-    }
-    }
-    
+   
+}

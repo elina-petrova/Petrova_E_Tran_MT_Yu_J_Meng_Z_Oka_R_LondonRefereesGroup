@@ -77,14 +77,12 @@ if (isset($_POST['edituser'])) {
                           </div>
                  
                  
-
+                         
                           <?php if (!empty($chosen_user)): ?>
-                            
                             <?php while ($user_info = $chosen_user->fetch(PDO::FETCH_ASSOC)): ?>
-                               <p> <?php echo $user_info['user_name'];?>'s' Email Address:   <?php echo $user_info['user_email']; ?></p>
+                            
+                               <p> <?php echo $user_info['user_name'];?>'s Email:    <?php echo $user_info['user_email']; ?></p>
                                <p><a href="mailto:<?php echo $user_info['user_email']; ?>">EMAIL <?php echo $user_info['user_name'];?> </a></p>
-            
-
                             <?php endwhile; ?>
                           <?php endif; ?> 
           

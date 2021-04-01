@@ -12,12 +12,12 @@
 
 .index_buttons{
     width:30%;
-    transform: translate(-140px, 0px)  skewX(-20deg);
+    transform: translate(-136px, 0px)  skewX(-20deg);
     height: 100%;
     background-color: $black;
     a{
         transform: skewX(20deg);
-        margin-top: 10%;
+        margin-top: 6%;
         width: 250px;
         font-size: 13px;
         margin-left: 10%;
@@ -59,16 +59,18 @@
     }
 
 //login page mobile size
-@media (min-width:900px){
+@media (min-width:1000px){
+    .index_buttons{
+        transform: translate(-136px, 0px)  skewX(-20deg);
+        a{
+            font-size: 18px;
+            padding-top: 3%;
+            margin-left: 10%;
+        }
+    }
     .index_area{
         display: flex;
         flex-direction:row;
-
-        a{
-            font-size: 18px;
-            padding-top: 1%;
-        }
-   
     }
     .dashboard{
         width: 60%;

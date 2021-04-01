@@ -45,7 +45,7 @@ if (isset($_POST['edituser'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../public/css/main.css">
     <link rel="stylesheet" type="text/css"  href="../public/css/reset.css">
-    <title>Find Others</title>
+    <title>Contact Others</title>
 </head>
 <body class= "cms">
 <section class="contact_user_area">

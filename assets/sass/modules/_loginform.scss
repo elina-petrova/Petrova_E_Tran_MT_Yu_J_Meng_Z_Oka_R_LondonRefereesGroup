@@ -18,6 +18,10 @@
         border: none;
         font-size: 18px;
        transform:  skewY(-20deg);
+       -moz-transform:  skewY(-20deg);
+       -webkit-transform:  skewY(-20deg);
+       -o-transform:  skewY(-20deg);
+       -ms-transform:  skewY(-20deg);
        margin-top: 20vh;
        position: fixed;
        
@@ -31,6 +35,10 @@
     .logo{
         width: 55%;
        transform:  skewY(-20deg);
+       -o-transform:  skewY(-20deg);
+       -moz-transform:  skewY(-20deg);
+       -webkit-transform:  skewY(-20deg);
+       -ms-transform:  skewY(-20deg);
        margin-top: 25vh;
        align-self: center;
     }
@@ -103,6 +111,10 @@
             border: 3px solid $white;
             padding: 8px 0;
             transition: all 0.5 ease;
+            -o-transition: all 0.5 ease;
+            -webkit-transition: all 0.5 ease;
+            -ms-transition: all 0.5 ease;
+            -moz-transition: all 0.5 ease;
             
         }
         
@@ -154,6 +166,10 @@
         height: auto;
        max-width: 80vw;
         transform: skewX(-20deg) translateX(-18vw);
+        -moz-transform: skewX(-20deg) translateX(-18vw);
+        -o-transform: skewX(-20deg) translateX(-18vw);
+        -webkit-transform: skewX(-20deg) translateX(-18vw);
+        -ms-transform: skewX(-20deg) translateX(-18vw);
         padding-top: 20vh;
         padding-right: 50px;
     }
@@ -164,11 +180,19 @@
         position:fixed;
        margin-top: 30vh;
        transform:  skewX(20deg);
+       -ms-transform:  skewX(20deg);
+       -moz-transform:  skewX(20deg);
+       -webkit-transform:  skewX(20deg);
+       -ms-transform:  skewX(20deg);
        align-self: center;
     }
     .logo{
         max-width: 50%;
        transform:  skewX(20deg);
+       -moz-transform:  skewX(20deg);
+       -ms-transform:  skewX(20deg);
+       -webkit-transform:  skewX(20deg);
+       -o-transform:  skewX(20deg);
        align-self: flex-end;
        padding-top: 30px;
     }

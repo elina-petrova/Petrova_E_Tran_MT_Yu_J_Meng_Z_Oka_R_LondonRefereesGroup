@@ -4,7 +4,7 @@
     }
 }
 .membershipWrap{
-    margin: 6rem 10%;
+    margin: 1rem 10%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -12,7 +12,7 @@
 .membershipText{
     width: 100%;
     align-self: center;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     p{
         color: #fff;
     }
@@ -32,6 +32,7 @@
         top: 0;
         bottom: 0;
         padding: 2rem 1rem;
+        opacity: 1;
     }
     .mmbInfo{
         bottom: 0;
@@ -39,6 +40,11 @@
         margin: 2rem 1rem;
         padding: 0 1rem;
         color: white;
+        opacity: 1;
+        p{
+                font-size: 18px;
+                padding: 0.3rem 0;
+        }
     }
 }
 .memberWrap:hover .member-colored{
@@ -47,6 +53,10 @@
 .memberWrap:hover .mmbInfo{
     opacity: 1;
 }
+
+.blackImage{
+    filter: opacity(0.5);
+}
 @media (min-width: 700px){
 .memberWrap{
     width: 30%;
@@ -54,6 +64,20 @@
 }
 }
 
+@media(min-width: 900px){
+    .membershipWrap{
+    .mmbInfo{
+    opacity: 0;
+    p{
+                font-size: 23px;
+                padding: 0.1rem 0;
+    }
+}
+.member-colored{
+    opacity: 0;
+}
+}
+}
 @media (min-width: 1200px){
     .membershipWrap{
     margin: 6rem 10%;
@@ -78,11 +102,17 @@
     }
      .mmbInfo{
          margin: 0px 0px;
-        padding: 0.5rem 2rem;
+        padding: 0.8rem 1.8rem;
 
     }
 }
     
+}
+
+@media (min-width: 600px){
+    .membershipWrap{
+    margin: 6rem 10%;
+    }
 }
 
 @media (min-width: 2000px){

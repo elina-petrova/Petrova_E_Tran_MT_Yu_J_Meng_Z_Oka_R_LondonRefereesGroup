@@ -25,13 +25,13 @@
     height: -moz-fit-content;
     height: fit-content;
     padding: 0 5%;
-    padding-top: 6rem;
+    padding-top: 2rem;
     font-family: "Grotesque MT Std";
 }
 
 .feature-text{
 line-height: 23px;
-    max-width: 250px;
+    max-width: 260px;
     font-size: 19px;
     color: #1D1B1D;
 }
@@ -54,16 +54,35 @@ line-height: 23px;
         padding-bottom: 20px;
         white-space: nowrap;
         font-weight: 700;
-        font-size: 23px;
+        font-size: 16px;
     }
 }
 
 .number{
-    font-size: 150px;
+    font-size: 110px;
     font-family: 'Grotesque MT Std';
     font-weight: bold;
     padding-right: 20px;
     top: -30px;
     position: relative;
     color: $grey;
+}
+
+
+
+@media (min-width: 580px){
+    
+    .features{
+        padding-top: $default-padding;
+    }
+    .feature h2{
+         font-size: 23px;
+    }
+    .number{
+        font-size: 150px;
+        padding-left: 0;
+    }
+    .meetTheTeamButton {
+    margin-top: $default-padding;
+}
 }

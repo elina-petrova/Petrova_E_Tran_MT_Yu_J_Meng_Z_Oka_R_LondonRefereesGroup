@@ -1,0 +1,192 @@
+#contactPage{
+    background-image: url(../images/contactus-bg_mobile.jpg), url(../images/contactus-bg.jpg);
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+    background-position: left bottom, 10% 100%;
+    
+}
+
+.contact_mobile_header_wrap{
+    align-self: flex-start;
+    padding: 0 14%;
+    
+}
+//header
+
+
+.contact_underline{
+    margin-left: -65px;
+    margin-top: -30px;
+}
+
+.contact_line{
+    width: 100%;
+}
+
+.contact_header_wrap{
+    h2{
+        font-size: 60px;
+    }
+}
+
+.underline_get{
+    margin-left: -46px;
+        margin-top: -20px;
+}
+.line_get{
+    width: 160px;
+}
+
+.line_touch{
+    margin: 0;
+    width: 250px;
+        margin-top: -10px;
+}
+
+.underline_in, .underline_touch{
+    margin-left: -20px;
+}
+.line_in{
+    margin: 0;
+    width: 90px;
+    margin-top: -1px;
+}
+
+//contact form
+.contact_form_wrap{
+    width: 100%;
+    padding: 0 10%;
+    padding-top: 10rem;
+
+    form{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    height: 35px;
+    margin-bottom: 1rem;
+    padding:.5rem 1rem;
+}
+label{
+    font-size: 16px;
+    font-weight: 800;
+    color: white;
+    padding: 1rem 0;
+    position: relative;
+}
+label::after{
+    content: "*";
+    padding: 5px;
+    color: $red;
+}
+}
+
+.contactButton{
+    width: 120px;
+}
+
+//contact Info
+
+.contactInfo{
+    width: 100%;
+    padding: 6rem 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contact_info_wrap{
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 4rem;
+}
+.contact_info_piece{
+    display: flex;
+    align-items: center;
+    padding: 1.1rem 0;
+     h3{
+        font-family: 'SfSportsNightNs', 'Fugaz One', 'Open Sans', sans-serif;
+        font-size: 14px;
+        padding: 0 1rem;
+        color: white;
+     }
+}
+.contact_info_icon{
+    img{
+    width: 34px;
+    max-width: fit-content;
+    }
+}
+.contactMap{
+    width: 100%;
+    height: 45vw;
+    iframe{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (min-width: 600px){
+     .contact_info_piece{
+        h3{
+            font-size: 18px;
+            padding: 0 2rem;
+        }
+    }
+        .contact_info_icon{
+            img{
+    width: 50px;
+            }
+}
+    .contact_form_wrap{
+        label{
+    font-size: 22px;
+    }
+    input{
+    height: 50px;
+    }
+}
+    .underline_get{
+    margin-left: -60px;
+}
+    #contactPage {
+    padding-top: 15rem;
+}
+}
+
+
+@media (min-width: 900px){
+    #contactPage{
+          background-image: url(../images/contactus-bg.jpg);
+    background-size: cover;
+    background-position: left bottom;
+    }
+     .contact_info_piece{
+        h3{
+            font-size: 23px;
+            letter-spacing: 1.2px;
+        }
+    }
+    #contactPage {
+    padding-top: 20rem;
+}
+    .contact_header_wrap{
+    h2{
+        font-size: 100px;
+    }
+}
+
+}
+
+@media (min-width: 1200px){
+    .contact_info_wrap{
+    padding-bottom: 0;
+}
+    .contactInfo{
+    flex-direction: row;
+    align-items: center;
+    }
+    .contactMap{
+    width: 50%;
+    height: 25vw;
+    }
+}

@@ -1,0 +1,142 @@
+
+.pro-hero{
+    background-image: url(../images/pro-mobile-bg.jpg);
+    background-position: 0% 100%;
+    h1{
+        white-space: normal;
+    }
+    p{
+        width: 200px;
+    }
+}
+
+.pro-hero-content{
+    margin-left: 0;
+}
+
+#training{
+    h1{
+        color: black;
+        white-space: normal;
+    }
+}
+.training_header{
+    display: flex;
+    span{
+        padding-right: 1rem;
+        padding-top: 2%;
+    }
+}
+.training_content{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+        width: 100%;
+    padding: 10%;
+}
+.trainingText{
+    width: 100%;
+    padding: 3rem 1rem;
+    border-bottom: 7px solid $red;
+}
+.trainingImg{
+    width: 100%;
+    margin-right: 3%;
+    margin-top: 5rem;
+}
+.desktopHeading{
+    display: none;
+}
+
+@media (min-width: 700px){
+.pro-hero-content{
+    margin-left: 10%;
+}
+.pro-hero{
+        background-image: url(../images/ourpro-hero.jpg);
+        p{
+        width: auto;
+    }
+}
+.mobileHeading{
+    display: none;
+}
+.desktopHeading{
+    display: flex;
+}
+.training_header{
+    padding: 0 10%;
+       h1{
+        width: min-content;
+    min-width: 100%;
+    }
+}
+}
+
+
+.pro-membership{
+    h1{
+        color: $red;
+        white-space: normal;
+            width: fit-content;
+    }
+}
+.pro-membership-text{
+    width: 60%;
+    max-width: 600px;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+
+@media (min-width: 1000px){
+    .pro-membership-text{
+        padding: 6rem 0;
+    }
+    .pro-membership{
+    h1{
+        color: $red;
+        white-space: nowrap;
+    }
+}
+    #training{
+        h1{
+            white-space: nowrap;
+        }
+    }
+
+
+    .pro-hero{
+    h1{
+        white-space: nowrap;
+    }
+}
+
+.training_content{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+        width: 100%;
+    padding: 10%;
+}
+.trainingText{
+    width: 590px;
+    padding: 3rem 1rem;
+    border-left: 7px solid $red;
+    border-bottom: none;
+}
+.trainingImg{
+    width: 500px;
+    margin-right: 3%;
+}
+.training_header{
+        align-items: center;
+        span{
+            padding-top: 0%;
+        }
+}
+
+}

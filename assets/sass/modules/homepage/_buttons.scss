@@ -9,7 +9,7 @@ border-left-width: 2px;
 
 
     height: 50px;
-    width: 180px;
+    width: 160px;
     
 
     display: flex;
@@ -22,13 +22,18 @@ border-left-width: 2px;
 
     position: relative;
 
-    a {
+    a, p {
         color: $red;
-        font-family: monotype-grotesque, sans-serif;
+        font-family: monotype-grotesque, 'Roboto', sans-serif;
         font-weight: 700;
         text-transform: uppercase;
         z-index:999;
         transition: all 0.3s ease-out;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    p{
+        color: #fff;
     }
 }
 
@@ -50,7 +55,9 @@ border-left-width: 2px;
 .button:hover a{
     color: $black;
 }
-
+.button:hover p{
+    color: $black;
+}
 .memberInfo .button:before{
     background: $red;
 }
@@ -76,34 +83,34 @@ border-left-width: 2px;
     color: #fff;
 }
 
-
-.meetTheTeamButton{
-    margin-top: $default-padding;
-}
 .goalsButton{
     border-color: #fff;
-    margin-top: 100px;
+    margin-top: 2rem;
+    a{
+        color: #fff;
+    }
+}
+.careerButton{
+     border-color: #fff;
+     margin-top: 1.5rem;
     a{
         color: #fff;
     }
 }
 
-// .memberInfo .button:hover{
-//      background-color: $red;
-//     a{
-//     color: #fff;
-//     }
-// }
-// .meetTheTeamButton:hover{
-//     background-color: $red;
-//     a{
-//     color: #fff;
-//     }
-// }
+.officials_button{
+    margin-top: 2rem;
+}
 
-// .goalsButton:hover{
-//     background-color: #fff;
-//     a{
-//     color: $red;
-//     }
-// }
+@media (min-width: 580px) {
+    .goalsButton{
+        margin-top: 100px;
+    }
+}
+
+@media (min-width: 1024px){
+        .officials_button{
+    margin-top: 0rem;
+}
+}
+

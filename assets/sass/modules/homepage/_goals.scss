@@ -1,8 +1,8 @@
 #goals{
-    background-image: url('../images/ourgoals-bg.jpg');
-    background-position: center bottom;
-    background-size: cover;
-    span{
+    // background-image: url('../images/ourgoals-bg.jpg');
+    // background-position: center bottom;
+    // background-size: cover;
+    span svg{
         color: $red;
     }
 }
@@ -11,7 +11,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-top: $default-padding;
+    padding-top: $default-padding_mobile;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -60,10 +60,20 @@
 .goalsText{
  
     color: #fff;
-    font-family: monotype-grotesque, sans-serif;
+    font-family: monotype-grotesque, 'Roboto', sans-serif;
     font-size: 20px;
-    max-width: 500px;
+    max-width: 300px;
     text-align: center;
-    padding-top:100px;
+    padding-top:20px;
 
+}
+
+@media (min-width: 580px) {
+    .goals_wrap{
+        padding-top: $default-padding;
+    }
+    .goalsText{
+            max-width: 500px;
+            padding-top: 100px;
+    }
 }

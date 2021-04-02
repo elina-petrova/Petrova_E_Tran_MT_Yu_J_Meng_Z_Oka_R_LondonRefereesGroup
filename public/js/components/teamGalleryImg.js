@@ -1,4 +1,5 @@
 export default {
+    name: 'teamGalleryImg',
     props: ['img'],
     template: `
     <div>

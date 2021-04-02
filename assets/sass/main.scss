@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Open+Sans+Condensed:wght@700&family=Open+Sans:ital,wght@1,800&family=Roboto&display=swap');
 
 @import "modules/_vars.scss";
 @import "modules/_defaults.scss";
@@ -22,8 +23,10 @@
 @import "modules/homepage/buttons";
 @import "modules/homepage/referee";
 @import "modules/homepage/goals";
+@import "modules/homepage/banner";
 @import "modules/homepage/partners";
 @import "modules/homepage/officials";
+@import "modules/homepage/careerPromo";
 
 //aboutpage 
 @import "modules/aboutpage/aboutHero";
@@ -37,3 +40,10 @@
 
 @import "modules/_mediaqueries.scss";
 
+//programs page
+@import "modules/programspage/proPosters";
+@import "modules/programspage/prohero";
+@import "modules/programspage/proContent";
+
+//contact page
+@import "modules/contactpage";

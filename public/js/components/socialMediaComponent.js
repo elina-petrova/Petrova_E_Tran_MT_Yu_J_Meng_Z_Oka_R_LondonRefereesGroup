@@ -1,5 +1,6 @@
 
 export default {
+    name: 'SocialMediaComponent',
     template: `
         <div class="Herofooter">
             <div id="socialMedia" class="show_desktop">

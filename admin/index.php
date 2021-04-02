@@ -8,7 +8,6 @@ new_login_user_prevent();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../public/css/main.css">
     <link rel="stylesheet" type="text/css"  href="../public/css/reset.css">
@@ -18,21 +17,41 @@ new_login_user_prevent();
 <body class="cms">
     <section class="index_area">
         <div class="index_buttons">
+        
 
-            <?php if (!empty($_SESSION['user_level'])):?>
-            <a href="admin_createuser.php">CREATE NEW USER</a>
-            <?php endif;?>   
+            <nav role="navigation">
+            <div id="menuToggle">
+                
+                <input type="checkbox" />
+                
+       
+                <span></span>
+                <span></span>
+                <span></span>
+                
 
-            <a href="admin_edituser.php">EDIT MY ACCOUNT</a>
-               
-            <?php if ($_SESSION['user_level'] ==2):?>
-            <a href="admin_editotheruser.php">EDIT USER</a>
-            <a href="admin_deleteuser.php">DELETE USER</a>
-            <?php endif;?>
+                <ul id="menu">
+                        <?php if (!empty($_SESSION['user_level'])):?>
+                    <a href="admin_createuser.php">CREATE NEW USER</a>
+                    <?php endif;?>   
+
+                    <a href="admin_edituser.php">EDIT MY ACCOUNT</a>
+                    
+                    <?php if ($_SESSION['user_level'] ==2):?>
+                    <a href="admin_editotheruser.php">EDIT USER</a>
+                    <a href="admin_deleteuser.php">DELETE USER</a>
+                    <?php endif;?>
+                    
+                    <a href="contact_user.php">EMAIL</a>
+                    <a href="admin_file.php">FILES</a>
+                    <a href="admin_logout.php">LOG OUT</a>
+                </ul>
+            </div>
+            </nav>
+
+
+
             
-            <a href="contact_user.php">EMAIL</a>
-            <a href="admin_file.php">FILES</a>
-            <a href="admin_logout.php">LOG OUT</a>
         </div>
         
         <div class="dashboard">

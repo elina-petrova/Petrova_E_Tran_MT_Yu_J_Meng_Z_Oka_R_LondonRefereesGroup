@@ -1,7 +1,7 @@
 <?php
 require_once '../load.php';
 
-//make sure this page only access to 
+//make sure this page only access to
 confirm_logged_in();
 //only admin have acesss to this page
 admin_access_only();
@@ -11,20 +11,19 @@ $id = $_SESSION['user_id'];//define in login.php
 
 $all_users = getOtherUsers($id);
 
-if(empty($all_users)){
-    $messager = 'Fail to get user list';
+if (empty($all_users)) {
+    $message = 'Fail to get user list';
 }
 
 // when user click submit
-if(isset($_POST['submit'])){
-    
+if (isset($_POST['submit'])) {
     $data = array(
         'fname'      => trim($_POST['fname']),
         'lname'      => trim($_POST['lname']),
         'username'   => trim($_POST['username']),
         'password'   => trim($_POST['password']),
         'email'      => trim($_POST['email']),
-        'user_level' => isCurrentUserAdminAbove()?trim($_POST['user_level']):'0', 
+        'user_level' => isCurrentUserAdminAbove()?trim($_POST['user_level']):'0',
         'id'         => trim($_POST['user_id']),//update a exist user so need id
     );
     // var_dump($data);die;
@@ -61,13 +60,13 @@ if (isset($_POST['edituser'])) {
 
             <?php echo !empty($message)?$message:'';?>
               
-                <?php if(!empty($all_users)):?>
-                    <?php while($user_info = $all_users -> fetch(PDO::FETCH_ASSOC)):?><!--user_info: table columns name-->
+                <?php if (!empty($all_users)):?>
+                    <?php while ($user_info = $all_users -> fetch(PDO::FETCH_ASSOC)):?><!--user_info: table columns name-->
                     
                        
                         <form action="admin_editotheruser.php" method="post">
                             <!-- <label for="user_id">Username</label> -->
-                            <?php  if(empty($chosen_user)):?>
+                            <?php  if (empty($chosen_user)):?>
                             <div class="select_user">
                                 <select name="user_id" id="user_id">
                                 <option selected="">SELECT A USER HERE</option>
@@ -104,11 +103,11 @@ if (isset($_POST['edituser'])) {
                                 <input type="email" name="email"  id="email"  value="<?php echo $user_info['user_email']; ?>">
                                 
                                 
-                                    <?php if(isCurrentUserAdminAbove()):?>
+                                    <?php if (isCurrentUserAdminAbove()):?>
                                         <label for="user_level">User Level:</label>
                                         <select  name="user_level"  id="user_level" >
                                             <?php  $user_level_map = getUserLevelMap();
-                                            foreach($user_level_map as $val => $label): ?>
+                                            foreach ($user_level_map as $val => $label): ?>
                                             <option value="<?php echo $val;?>"<?php echo $val ===(int)$user_info['user_level']?'selected':'';?>><?php echo $label;?></option>   
                                             <?php endforeach;?>
                                         </select>

@@ -2,24 +2,23 @@
     display: flex;
     flex-direction: column;
     font-family: SF Sports Night NS;
-    height:750px;
+    height: 100vh;
     width: 100%;
 }
 
-
 .logo_area{
-    width: 100%;
-    height: 40%;
-    transform: translate(0px, -60px)  skewY(-10deg);
-    // transform:rotate(20deg);
+    width: 100vw;
+    height: 50vh;
+    transform: skewY(20deg);
+    margin-top: -10vh;
     background-color: $red;
     display: flex;
     flex-direction: column;
     a{
         border: none;
         font-size: 18px;
-        margin-top: 10%;
-       transform:  skewY(10deg) skewX(-20deg);
+       transform:  skewY(-20deg);
+       margin-top: 20vh;
        position: fixed;
        
 
@@ -30,47 +29,48 @@
     }
 
     .logo{
-        width: 60%;
-       margin: 30% auto;
-       transform:  skewY(10deg);
-        // transform:  rotate(-20deg) ;
+        width: 55%;
+       transform:  skewY(-20deg);
+       margin-top: 25vh;
+       align-self: center;
     }
 
 }
 
 
 .login_form_area{
+    margin-top: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
     .login_form{
-        margin: 6% auto;
-        width: 60%;
+        width: 70vw;
     }
-    
-    height: auto;
-    color: $white;
-    margin: 13% 2%;
+
     h3{
         font-size: 30px;
-        padding: 5px;
-        margin: 0 auto;
-        text-align: center;
+        color: $white;
+        margin-bottom: 30px;
     }
 
 
     form{
         display: flex;
         flex-direction: column;
-        
+        color: $white;
         label{
             font-size: 17px;
-            margin: 1% 0;
+            margin-top: 5%;
+            font-family: monotype-grotesque, sans-serif;
+            font-weight: 400;
         }
 
         input[type=text]{
             text-decoration: none;
-          
             color: black;
             font-size: 15px;
-            padding: 2px 10px;
+            padding: 5px 15px;
             height: 35px;
             margin-top: 2%;
             margin-bottom: 2%;
@@ -83,25 +83,34 @@
         button{
             text-decoration: none;
             display: inline-block;
-            border: 3px solid $red;
-            color: $red;
-            background-color: $black;
+            border: 3px solid $white;
+            color: $white;
+            background-color: transparent;
             text-align: center;
-            font-size: 18px;
-            padding: 5px 0;
-            transition: all 0.5s;
+            font-size: 15px;
+            padding: 8px 0;
+            transition: all 0.5s ease;
             cursor: pointer;
-            margin: 1% 0;
-            width: 150px;
+            margin-top: 40px;
+            width: 80px;
+            align-self: flex-end;
             
         }
     
         button:hover{
-            color: $black;
-            background-color: $red;
+            color: $red;
+            background-color: $white;
+            border: 3px solid $white;
+            padding: 8px 0;
+            transition: all 0.5 ease;
             
         }
         
+        .notice{
+            color: $red;
+            background-color: none;
+            padding-left: 5px;
+        }
         
 
     }
@@ -109,9 +118,12 @@
 
 @media (min-width:550px){ 
     .logo_area{
+        margin-top: -11vh;
         .logo{
-            margin: 22% auto;
-            width:50%;
+            width: 50%;
+        }
+        a{
+            margin-top: 22vh;
         }
     }
     
@@ -119,9 +131,15 @@
 
 @media (min-width:630px){ 
     .logo_area{
+        margin-top: -20vh;
+        height: 70vh;
         .logo{
-            margin: 15% auto;
-            width: 42%;
+            width: 55%;
+            margin-top: 35vh;
+        }
+
+        a{
+            margin-top: 35vh;
         }
     }
     
@@ -132,36 +150,37 @@
     .login_area{
         display: flex;
         flex-direction: row;
-       
     .logo_area{
         height: auto;
-        width: 50%;
-        transform: translate(-140px, 0px) skewX(-20deg);
+       max-width: 80vw;
+        transform: skewX(-20deg) translateX(-18vw);
+        padding-top: 20vh;
+        padding-right: 50px;
     }
+    
     a{
         border: none;
-        font-size: 18px;
+        font-size: 25px;
         position:fixed;
-        margin: 3%;
-       transform:  skewY(0deg);
-
+       margin-top: 30vh;
+       transform:  skewX(20deg);
+       align-self: center;
     }
     .logo{
-        width: 55%;
-        margin: 30% auto;
+        max-width: 50%;
        transform:  skewX(20deg);
+       align-self: flex-end;
+       padding-top: 30px;
     }
 
     .login_form_area{
-        width: 35%;
-        margin-left: 1%;
-        margin-top: 11%;
+        margin-top: 30vh;
+        max-width: 40vw;
+        padding-right: 10vw;
         h3{
-            font-size: 35px;
+            font-size: 40px;
         }
         .login_form{
-            margin-top: 2%;
-            width: 100%;
             label{
                 font-size: 25px;
             }
@@ -175,11 +194,12 @@
 
 
 .login_fail{
-    
     margin: 10%;
     color:$white;
     h2{
         font-size: 25px;
+        font-family: monotype-grotesque, sans-serif;
+        font-weight: 400;
     }
 
 

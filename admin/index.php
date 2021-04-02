@@ -18,18 +18,18 @@ new_login_user_prevent();
     <section class="index_area">
         <div class="index_buttons">
 
-            <?php if(!empty($_SESSION['user_level'])):?>
+            <?php if (!empty($_SESSION['user_level'])):?>
             <a href="admin_createuser.php">CREATE NEW USER</a>
             <?php endif;?>   
 
             <a href="admin_edituser.php">EDIT MY ACCOUNT</a>
                
-            <?php if($_SESSION['user_level'] ==2):?>
-            <a href="admin_editotheruser.php">EDIT OTHERS</a>
+            <?php if ($_SESSION['user_level'] ==2):?>
+            <a href="admin_editotheruser.php">EDIT USER</a>
             <a href="admin_deleteuser.php">DELETE USER</a>
             <?php endif;?>
             
-            <a href="contact_user.php">CONTACT OTHER</a>
+            <a href="contact_user.php">EMAIL</a>
             <a href="admin_file.php">FILES</a>
             <a href="admin_logout.php">LOG OUT</a>
         </div>

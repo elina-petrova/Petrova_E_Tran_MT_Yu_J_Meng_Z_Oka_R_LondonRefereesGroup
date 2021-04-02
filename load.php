@@ -1,7 +1,7 @@
 <?php
-define('ABSPATH',__DIR__);//php will detect the director where is being called and save as a constant
-define('ADMIN_PATH',ABSPATH.'/admin');
-define('ADMIN_SCRIPT_PATH',ADMIN_PATH.'/scripts');
+define('ABSPATH', __DIR__);//php will detect the director where is being called and save as a constant
+define('ADMIN_PATH', ABSPATH.'/admin');
+define('ADMIN_SCRIPT_PATH', ADMIN_PATH.'/scripts');
 
 //  ini_set('display_errors',1); or change 1 to 0
 ini_set('display_errors', 0);

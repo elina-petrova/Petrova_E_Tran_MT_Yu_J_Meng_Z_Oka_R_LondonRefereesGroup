@@ -1,7 +1,7 @@
 <?php
 require_once '../load.php';
 
-//make sure this page only access to 
+//make sure this page only access to
 confirm_logged_in();
 
 
@@ -10,20 +10,19 @@ $id = $_SESSION['user_id'];//define in login.php
 
 $all_users = getOtherUsers($id);
 
-if(empty($all_users)){
-    $messager = 'Fail to get user list';
+if (empty($all_users)) {
+    $message = 'Fail to get user list';
 }
 
 // when user click submit
-if(isset($_POST['submit'])){
-    
+if (isset($_POST['submit'])) {
     $data = array(
         'fname'      => trim($_POST['fname']),
         'lname'      => trim($_POST['lname']),
         'username'   => trim($_POST['username']),
         'password'   => trim($_POST['password']),
         'email'      => trim($_POST['email']),
-        'user_level' => isCurrentUserAdminAbove()?trim($_POST['user_level']):'0', 
+        'user_level' => isCurrentUserAdminAbove()?trim($_POST['user_level']):'0',
         'id'         => trim($_POST['user_id']),//update a exist user so need id
     );
     // var_dump($data);die;
@@ -45,7 +44,7 @@ if (isset($_POST['edituser'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../public/css/main.css">
     <link rel="stylesheet" type="text/css"  href="../public/css/reset.css">
-    <title>Contact Others</title>
+    <title>EMAIL</title>
 </head>
 <body class= "cms">
 <section class="contact_user_area">
@@ -57,23 +56,23 @@ if (isset($_POST['edituser'])) {
           <div class="contact_others">
           <?php echo !empty($message)?$message:'';?>
               
-              <?php if(!empty($all_users)):?>
-                  <?php while($user_info = $all_users -> fetch(PDO::FETCH_ASSOC)):?><!--user_info: table columns name-->
-                  
-                     <h2>Contact Others</h2>
+              <?php if (!empty($all_users)):?>
+                  <?php while ($user_info = $all_users -> fetch(PDO::FETCH_ASSOC)):?><!--user_info: table columns name-->
+
+                     <h2>EMAIL</h2>
                       <form action="contact_user.php" method="post">
                           <!-- <label for="user_id">Username</label> -->
                    
                           <div class="select_user">
                               <select name="user_id" id="user_id">
-                              <option selected="">SELECT A USER HERE</option>
+                              <option>SELECT A USER HERE</option>
                               <!-- Loop all users in a Dropdown Menu -->
                                   <?php foreach ($all_users as $user): ?>
                                       <option id="<?php echo $user['user_id'] ?>" value="<?php echo $user['user_id'] ?>"><?php echo $user['user_name'] ?></option>
                                   <?php endforeach; ?>
                               </select>
                               <!-- "Post" to choose which ID will be edited -->
-                              <button type="submit" name="edituser">SUBMIT</button>
+                              <button type="submit" name="edituser">EMAIL</button>
                           </div>
                  
                  

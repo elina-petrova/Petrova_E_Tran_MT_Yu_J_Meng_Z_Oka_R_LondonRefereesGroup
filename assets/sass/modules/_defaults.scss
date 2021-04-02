@@ -1,9 +1,26 @@
+$default-padding-mobile: 4rem;
 $default-padding: 6rem;
+
+@font-face {
+  font-family: 'SfSportsNightNs';
+  src: url('../fonts/sf-sports-night.ns.ttf'); 
+}
 
 .hidden{
     display: none;
 }
 
+body::-webkit-scrollbar {
+  width: 0.7em;
+  background-color: #F5F5F5;
+}
+body::-webkit-scrollbar-track {
+	background-color: #F5F5F5;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
 
 
 .cms{
@@ -160,13 +177,13 @@ li{
 
 
 p, a{
-    font-size: 18px;
+    font-size: 16px;
     line-height: 23px;
-    font-family: monotype-grotesque, sans-serif;
+    font-family: monotype-grotesque, 'Roboto', sans-serif;
 }
 
 h3{
-    font-size: 23px;
+    font-size: 16px;
     text-transform: uppercase;
     font-weight: 700;
     line-height: 27px;
@@ -182,7 +199,7 @@ h3{
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    font-family: monotype-grotesque, sans-serif;
+    font-family: monotype-grotesque, 'Roboto', sans-serif;
 
         -ms-flex: 1;
     -webkit-box-flex: 1;
@@ -230,31 +247,53 @@ $heading-font-size: 55px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: $default-padding 0;
+    padding: $default-padding-mobile 0;
     // min-height: 100%;
     h1{
-        font-family: SF Sports Night NS;
-        font-size: 50px;
+        font-family: 'SfSportsNightNs', 'Fugaz One', 'Open Sans', sans-serif;
+        font-size: 30px;
         text-transform: uppercase;
         white-space: nowrap;
         color:#fff;
+    }
+    svg{
+        width: 27px;
+        height: 20px;
     }
 }
 
 .show_desktop{
     display:none;
 }
+.menu_opener{
+    cursor: pointer;
+}
 
-@media (min-width: 800px) {
+@media (min-width: 580px) {
+
+    h3{
+        font-size: 23px;
+    }
+    .sectionShell {
+        padding: $default-padding 0;
+    }
     .sectionShell h1{
         font-size: 55px;
     }
+    .sectionShell svg{
+        width: 43.373px;
+        height: 36.857px;
+    }
+    
+p, a{
+    font-size: 18px;
+}
 } 
 
 .Herofooter{
     position: absolute;
     top: 20vw;
-    right: 7%;
+    right: 9%;
     z-index: 999;
     ul{
         li{
@@ -281,6 +320,10 @@ ul{
         fill: #fff;
         transition: all 0.3s ease-in-out;
     }
+}
+
+.dont_display{
+   display: none;
 }
 
 

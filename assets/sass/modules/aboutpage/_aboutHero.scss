@@ -1,44 +1,59 @@
 
 
-.about-hero, .team-hero{
+.about-hero, .team-hero, .pro-hero{
     background-image: url(../images/aboutus-hero.jpg);
+    
     background-position: 70% 50%;
     background-size: cover;
+    height: 500px;
+    align-items: center;
+    max-height: 1000px;
 
     h1{
         font-size: 50px;
     }
     p{
-        width: 60%;
         padding-left: -10px;
         color: #fff;
+        position: relative;
     }
     span{
-        position: absolute;
-        bottom: -8px;
-        left: -4vw;
-        color: #C10E11;
-        font-family: Sf Sports Night Ns;
-        font-size: 60px;
+            position: absolute;
+    left: -7vw;
+    color: #c10e11;
+    font-family: 'SfSportsNightNs', 'Fugaz One', 'Open Sans', sans-serif;
+
+    top: 5px;
+    }
+    div{
+        width: 70%;
     }
 } 
-.team-hero{
-     background-image: url(../images/ourteam-hero.jpg);
-     background-position: center right;
-     background-size: cover;
-     p{
-         width: 100%;
-     }
-     span{
-         left: -4vw;
-     }
+
+
+
+.relativeAboutHeroText{
+    position: relative;
+    padding: 0;
 }
-.about-us-hero-content, .our-team-hero-content{
+.team-hero, .pro-hero{
+     background-image: url(../images/ourteam-hero.jpg);
+     background-position: 15% 40%;
+     background-size: cover;
+         padding-left: 10%;
+    padding-right: 10%;
+     p{
+         max-width: 500px;
+     }
+     div{
+        width: auto;
+    }
+}
+.about-us-hero-content, .our-team-hero-content, .pro-hero-content{
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin: 0 10%;
     div {
         display: flex;
         flex-direction: column;
@@ -46,23 +61,48 @@
     }
 }
 
+@media (min-width: 600px){
+    .about-hero, .team-hero, .pro-hero {
+    background-position: 20% 50%;
+    p{
+        width: 60%;
+    }
+    div{
+        width: auto;
+    }
+    span{
+    left: -60px;
+}
 
-@media (min-width: 1000px){
-    .about-us-hero-content, .our-team-hero-content{
+    }
+    .team-hero, .pro-hero{
+        background-position: 15% 40%;
+        p{
+            width:100%;
+        }
+    }
+.about-us-hero-content, .our-team-hero-content, .pro-hero-content{
+    margin: 0 10%;
+    }
+}
+
+
+@media (min-width: 768px){
+    .about-us-hero-content, .our-team-hero-content, .pro-hero-content{
     display: block;
      div {
         padding-right: 5rem;
         padding-left: 0;
     }
 }
-.our-team-hero-content{
-    margin-left: 47rem;
+.our-team-hero-content, .pro-hero-content{
+    margin-left: 40%;
     padding-right: 0;
-    margin-top: 5rem;
+    margin-top: 1.2rem;
 }
-    .about-hero, .team-hero {
+    .about-hero, .team-hero, .pro-hero{
     justify-content: center;
-    min-height: 90vh;
+    background-position: 70% 50%;
     h1{
         font-size: 100px;
     }
@@ -74,13 +114,13 @@
 }
 
 @media (min-width: 1200px){
-    .about-hero, .team-hero{
+    .our-team-hero-content{
+    margin-left: 60%;
+    }
+    .about-hero, .team-hero, .pro-hero{
     background-size: cover;
     background-position: 60% 100%;
     justify-content: center;
-    }
-    .team-hero{
-        background-position: 60% 100%;
-        background-size: 110%;
+    height: 100vh;
     }
 }

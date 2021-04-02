@@ -1,0 +1,63 @@
+.program-content{
+    padding: 6rem 10%;
+    padding-bottom: 12rem;
+    h1{
+        color: $red;
+    }
+}
+.program-infography{
+    padding: 8rem 0%;
+}
+
+.program-main-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    span{
+        padding-right: 1.5rem;
+    }
+    h3{
+        color: white;
+        text-transform: unset;
+        padding-top: 3rem;
+        padding-bottom: 1.5rem;
+    }
+    h1{
+        color: #fff;
+    }
+}
+.sharedRespict_wrap{
+    display: flex;
+    padding: 1rem 0;
+    p{
+        color: #fff;
+    }
+    span{
+        padding-right: 1rem;
+    }
+
+    svg{
+        width:20px;
+    }
+}
+
+
+
+
+
+@media (min-width: 1024px) {
+    .sharedRespict_wrap{
+    display: flex;
+    padding: 0.3rem 0;
+    }
+    .sharedRespict_wrap{
+    align-items: center;
+}
+}
+
+@media (min-width: 2000px) {
+    .program-content{
+    padding-left: 30%;
+    padding-right: 30%;
+}
+}

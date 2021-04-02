@@ -7,9 +7,9 @@
     }
 }
 .about-article-logo{
-    max-width: 12vw;
-    min-width: 200px;
-    margin: 2rem;
+    width: 30vw;
+    min-width: 300px;
+    margin: 3rem;
 }
 
 .about-article{
@@ -25,6 +25,12 @@
     .about-article{
         margin: 0 20%;
 }
+}
+
+@media (min-width: 700px){
+    .about-article-logo{
+    min-width: 400px;
+    }
 }
 
 @media (min-width: 1200px){

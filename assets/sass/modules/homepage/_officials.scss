@@ -37,9 +37,9 @@ transition: all 0.3s ease-in-out;
 
 .officialsGalleryWrap{
     width: 100vw;
-    padding-left: 10.5%;
+    padding-left: 10.5%; 
     position: relative;
-    padding-top: $default-padding;
+    padding-top: $default-padding_mobile;
 }
 
 .officialsGallery{
@@ -57,7 +57,7 @@ transition: all 0.3s ease-in-out;
 }
 
 .member-img-wrap{
-    height: 60vw;
+    height: 100vw;
     overflow: hidden;
     img{
         object-fit: cover;
@@ -103,8 +103,27 @@ transition: all 0.3s ease-in-out;
 .transparent{
     opacity: 0.5;
 }
+.memberName{
+    margin-top: 3rem;
+}
+
+@media (min-width: 580px) {
+    .officialsGalleryWrap{
+        padding-top: $default-padding;
+    }
+    .member-img-wrap{
+        height: 60vw;
+        img{
+            object-position: 100% 30%;
+        }
+    }
+}
+
 
 @media (min-width: 1000px) {
+    .memberName{
+    margin-top: 0rem;
+}
     .officialsGalleryWrap{
         padding-left: 15vw;
     }

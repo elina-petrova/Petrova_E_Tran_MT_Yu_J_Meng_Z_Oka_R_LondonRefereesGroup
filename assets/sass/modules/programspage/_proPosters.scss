@@ -1,0 +1,160 @@
+.pro-membership-posters{
+    padding: 3rem 10%;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+.memb_col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.membership-skills{
+    display: flex;
+    flex-direction: column;
+
+
+    font-family: 'SfSportsNightNs', 'Fugaz One', 'Open Sans', sans-serif;
+    font-size: 23px;
+    color: #fff;
+
+    h2{
+        z-index: 999;
+        position: relative;
+        white-space: nowrap;
+    }
+}
+.memb_underline, .contact_underline{
+        display: flex;
+        margin-top: -18px;
+        position: relative;
+        z-index: 22;
+}
+
+.memb_line, .contact_line{
+    z-index: 222;
+    width: 100%;
+}
+
+.right_align{
+    text-align: right;
+}
+
+.right_flex{
+    justify-content: flex-end;
+}
+
+.line_one, .line_four{
+    border-right: 13px solid transparent;
+    border-top: 20px solid #c10e11;
+}
+.line_two, .line_three{
+      border-left: 11px solid transparent;
+    border-bottom: 20px solid #c10e11;
+    margin-bottom: 7px;
+}
+
+.memb-poster{
+    width: 100%;
+}
+
+
+.skills_col_two{
+    flex-direction: column-reverse;
+} 
+
+.memb_skill, .contact_header_wrap{
+    padding: 1rem 0;
+    width: 100%;
+
+}
+
+
+@media (min-width: 580px){
+    .membership-skills{
+         font-size: 30px;
+    }
+    .line_one, .line_four{
+         border-right: 24px solid transparent;
+    border-top: 36.857px solid #c10e11;
+    margin-top: 0;
+}
+.line_two, .line_three{
+         border-left: 22px solid transparent;
+    border-bottom: 36.857px solid #c10e11;
+    margin-bottom: 9px;
+}
+.skills_col_one .memb_skill{  
+    padding: 1rem 0;
+}
+
+.skills_col_two .memb_skill{
+    padding: 1rem 0;
+}
+
+}
+@media (min-width: 700px){
+    .poster_one, .poster_two{
+    padding-top: 2rem;
+}
+        .membership-skills{
+         font-size: 40px;
+         align-items: flex-start;
+    }
+    
+.line_one, .line_four{
+         border-right: 24px solid transparent;
+    border-top: 36.857px solid #c10e11;
+}
+.line_two, .line_three{
+         border-left: 22px solid transparent;
+    border-bottom: 36.857px solid #c10e11;
+    margin-bottom: 9px;
+}
+
+}
+@media (min-width: 1000px){
+    .memb-poster{
+    width: 37.5vw;
+}
+.poster_one, .poster_two{
+        margin: 0 auto;
+}
+.poster_two{
+    align-self: auto;
+}
+}
+
+@media (min-width: 1400px){
+    .memb-poster{
+        max-width: 590px;
+    }
+    .poster_two{
+    align-self: flex-end;
+}
+    .skills_col_one .memb_skill{  
+    padding: 1.5rem 0;
+    padding-top: 0;
+}
+    .skills_col_two .memb_skill{
+    padding: 1.5rem 0;
+    padding-bottom: 0;
+}
+    .memb_skill, .contact_header_wrap{
+        width: auto;
+        }
+        .memb_line{
+    width: 430px;
+}
+        .margin_left{
+    margin-left: 95px;
+}
+    .pro-membership-posters{
+        flex-direction: row;
+    }
+.skills_col_two{
+    flex-direction: column;
+}
+}

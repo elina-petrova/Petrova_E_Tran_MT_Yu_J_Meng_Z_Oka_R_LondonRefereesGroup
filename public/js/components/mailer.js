@@ -24,6 +24,8 @@ async function SendMail(targetForm) {
 
     let mailStatus = await result.json();
 
+    console.log(mailStatus);
+
     return mailStatus;
 }
 

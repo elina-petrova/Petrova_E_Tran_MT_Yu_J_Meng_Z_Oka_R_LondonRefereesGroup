@@ -1,0 +1,215 @@
+#home-careerPromo, #pro-careerPromo{
+    position: relative;
+    padding: 0;
+    padding-top: 2rem;
+    padding-left: 5vw;
+    align-items: flex-start;
+
+    flex-direction: row;
+    h1{
+        white-space: pre-wrap;
+    }
+    p{
+        color: #fff;
+        width: 260px;
+        padding: 1.5rem 0;
+    }
+}
+
+
+#home-careerPromo{
+     background-image: url('../images/homapage-banner2.jpg'), url('../images/homapage-banner2.jpg');
+    background-position: 0% 0%, 100% 88%;
+    background-size: 550px;
+    background-repeat: no-repeat;
+}
+#pro-careerPromo{
+    background-image: url('../images/banner-pro-mobile.jpg');
+     background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+      flex-direction: column;
+    h1{
+        white-space: normal;
+    }
+}
+.careerWrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    width: 100%;
+    position: relative;
+}
+
+.careerText{
+    padding: 2rem 0;
+    z-index: 55;
+}
+
+#pro-careerPromo .careerText{
+    padding: 7rem 0;
+}
+
+.careerReferee{
+    width: 280px;
+    align-self: flex-end;
+    transform: scaleX(-1);
+    
+    img{
+        margin-bottom: -3px;
+    }
+    z-index:55;
+}
+
+ #pro-careerPromo .careerReferee{
+    width: 100px;
+     
+    position: absolute;
+    right: 10%;
+ }
+
+.redPar{
+    position: absolute;
+    top: 0;
+    right: 6%;
+    background: #c10e11;
+    bottom: -1px;
+    width: 92vw;
+    clip-path: polygon(32% 0%, 100% 0%, 68% 100%, 0% 100%);
+    z-index: 33;
+}
+
+.leftPar, .rightPar{
+    clip-path: polygon(40% 0%, 100% 0%, 60% 100%, 0% 100%);
+}
+
+.leftPar{
+    left:-60%;
+    bottom: 42%;
+}
+.rightPar{
+    right: -60%;
+    top: 42%;
+}
+
+@media (min-width: 500px) {
+    
+    .redPar{
+        width: 70vw;
+    }
+    #home-careerPromo, #pro-careerPromo{
+        padding-left: 2vw;
+    }
+    #home-careerPromo{
+        background-size: 590px;
+        background-position: 100% 88%, 0% 0%;
+    }
+    .careerText{
+    padding: 8rem 0;
+    }
+    #pro-careerPromo .careerText{
+        padding: 8rem 0;
+    }
+}
+
+@media (min-width: 700px){
+    #pro-careerPromo .careerReferee{
+    width: 120px;
+    }
+}
+
+@media (min-width: 600px) {
+
+        #pro-careerPromo{
+    background-image: url('../images/banner-ver2.jpg');
+    }
+}
+@media (min-width: 1024px) {
+    #pro-careerPromo .careerReferee{
+    width: 230px;
+    }
+        #pro-careerPromo .careerReferee{
+    width: 230px;
+    left: 8vw;
+ }
+    .careerWrap{
+    display: flex;
+    align-items: flex-start;
+    }
+    .careerReferee{
+    transform: scaleX(1);
+    }
+
+    .careerWrap{
+        padding-left: 8vw;
+            flex-direction: row;
+    }
+    .leftPar{
+    left:-49%;
+    bottom: 0;
+}
+.rightPar{
+    right: -49%;
+    top: 0;
+}
+#pro-careerPromo, #home-careerPromo{
+     padding-left: 7vw;
+}
+    #home-careerPromo{
+
+          background-image: url('../images/homapage-banner2.jpg'), url('../images/homapage-banner2.jpg');
+    background-position: 80% 88%, 0% 0%;
+    background-size: cover;
+    }
+}
+@media (min-width: 1300px) {
+        .leftPar, .rightPar{
+    clip-path: polygon(32% 0%, 100% 0%, 68% 100%, 0% 100%);
+}
+    #home-careerPromo, #pro-careerPromo{
+        padding: 0;
+        padding-top: 2rem;
+        padding-left: 25vw;
+    }
+    #home-careerPromo{
+        background-image: url('../images/homapage-banner2.jpg');
+    background-position: 80% 88%;
+    background-size: cover;
+    }
+}
+
+
+@media (min-width: 2000px) {
+    #pro-careerPromo .careerText{
+    padding-left: 18%;
+}
+    .careerWrap{
+    justify-content: flex-start;
+    }
+    #pro-careerPromo{
+        background-position: 0% 20%;
+    background-size: cover;
+    }
+    .redPar{
+        width: 50vw;
+        clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+        right: auto;
+    }
+    .leftPar{
+    left:-29%;
+}
+.rightPar{
+    right: -29%;
+}
+    #home-careerPromo, #pro-careerPromo{
+         padding-left: 26vw;
+
+    }
+    #home-careerPromo{
+              background-image: url('../images/homapage-banner2.jpg'), url('../images/homapage-banner2.jpg');
+    background-position: 80% 88%, 0% 0%;
+    background-size: contain;
+    }
+}

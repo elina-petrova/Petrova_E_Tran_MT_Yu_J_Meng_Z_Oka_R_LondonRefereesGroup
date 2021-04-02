@@ -11,7 +11,7 @@
     flex-direction: column;
     a{
         padding: 0.3rem $offset;
-        font-family: monotype-grotesque, sans-serif;
+        font-family: monotype-grotesque, 'Roboto', sans-serif;
         font-weight: 700;
         text-transform: uppercase;
         transition: all 0.2s ease-in-out;
@@ -78,7 +78,7 @@
      display: flex;
      flex-direction: column-reverse;
         align-items: flex-start;
-        font-family: monotype-grotesque, sans-serif;
+        font-family: monotype-grotesque, 'Roboto', sans-serif;
 
         span{
             font-weight: 700;

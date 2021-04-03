@@ -25,6 +25,31 @@
      form{
         display: flex;
         flex-direction: column;
+        label {
+            font-size: 15px;
+            font-family: monotype-grotesque,"Open Sans Condensed","Roboto",sans-serif;
+            font-weight: 600;
+        }
+
+        input{
+            margin-bottom: 10px;
+            font-family: monotype-grotesque,"Open Sans Condensed","Roboto",sans-serif;
+            font-weight: 300;
+        }
+
+        select{
+            margin-bottom: 30px;
+            font-family: monotype-grotesque,"Open Sans Condensed","Roboto",sans-serif;
+            font-weight: 300;
+        }
+
+        select.select_others {
+            margin-bottom: 0px;
+        }
+
+        button {
+            align-self: flex-end;
+        }
      }
 }
 
@@ -32,12 +57,31 @@
     .edit_user_form{
         margin-left: 2%;
         width: 40%;
-
+        h2{
+            font-size: 30px;
+        }
     }
 }
-   
 
-
+.edit_user_area {
+    .red_side_nav {
+        height: 100vh;
+        width: 35vw;
+        transform: translate(-18vw, 0px)  skewX(-20deg);
+        -o-transform: translate(-18vw, 0px)  skewX(-20deg);
+        -moz-transform: translate(-18vw, 0px)  skewX(-20deg);
+        -ms-transform: translate(-18vw, 0px)  skewX(-20deg);
+        -webkit-transform: translate(-18vw, 0px)  skewX(-20deg);
+        a {
+            transform: translate(18vw, 0px)  skewX(20deg);
+            -o-transform: translate(18vw, 0px)  skewX(20deg);
+            -moz-transform: translate(18vw, 0px)  skewX(20deg);
+            -ms-transform: translate(18vw, 0px)  skewX(20deg);
+            -webkit-transform: translate(18vw, 0px)  skewX(20deg);
+            font-size: 25px;
+        }
+    }
+}
 
 .notthisuser{
     a{

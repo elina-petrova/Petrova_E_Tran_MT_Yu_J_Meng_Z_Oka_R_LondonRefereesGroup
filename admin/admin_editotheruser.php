@@ -69,7 +69,7 @@ if (isset($_POST['edituser'])) {
                             <!-- <label for="user_id">Username</label> -->
                             <?php  if (empty($chosen_user)):?>
                             <div class="select_user">
-                                <select name="user_id" id="user_id">
+                                <select name="user_id" id="user_id" class="select_others">
                                 <option selected="">SELECT A USER HERE</option>
                                 <!-- Loop all users in a Dropdown Menu -->
                                     <?php foreach ($all_users as $user): ?>

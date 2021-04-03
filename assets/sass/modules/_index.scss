@@ -49,19 +49,43 @@
         border-radius: 3px;  
         z-index: 1;  
         transform-origin: 4px 0px;
+        -ms-transform-origin: 4px 0px;
+        -moz-transform-origin: 4px 0px;
+        -o-transform-origin: 4px 0px;
+        -webkit-transform-origin: 4px 0px;
         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                     background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                     opacity 0.55s ease;
+        -webkit-transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+        background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+        opacity 0.55s ease;
+        -o-transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+        background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+        opacity 0.55s ease;
+        -moz-transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+        background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+        opacity 0.55s ease;
+        -ms-transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+        background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+        opacity 0.55s ease;
         }
 
         #menuToggle span:first-child
         {
         transform-origin: 0% 0%;
+        -ms-transform-origin: 0% 0%;
+        -webkit-transform-origin: 0% 0%;
+        -o-transform-origin: 0% 0%;
+        -ms-transform-origin: 0% 0%;
         }
 
         #menuToggle span:nth-last-child(2)
         {
         transform-origin: 0% 100%;
+        -ms-transform-origin: 0% 100%;
+        -o-transform-origin: 0% 100%;
+        -webkit-transform-origin: 0% 100%;
+        -moz-transform-origin: 0% 100%;
         }
 
         /* 
@@ -72,6 +96,10 @@
         {
         opacity: 1;
         transform: rotate(45deg) translate(-2px, -1px);
+        -moz-transform: rotate(45deg) translate(-2px, -1px);
+        -o-transform: rotate(45deg) translate(-2px, -1px);
+        -ms-transform: rotate(45deg) translate(-2px, -1px);
+        -webkit-transform: rotate(45deg) translate(-2px, -1px);
         background: $white;
         }
 
@@ -82,6 +110,10 @@
         {
         opacity: 0;
         transform: rotate(0deg) scale(0.2, 0.2);
+        -moz-transform: rotate(0deg) scale(0.2, 0.2);
+        -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+        -o-transform: rotate(0deg) scale(0.2, 0.2);
+        -ms-transform: rotate(0deg) scale(0.2, 0.2);
         }
 
         /*
@@ -90,6 +122,10 @@
         #menuToggle input:checked ~ span:nth-last-child(2)
         {
         transform: rotate(-45deg) translate(0, -1px);
+        -o-transform: rotate(-45deg) translate(0, -1px);
+        -moz-transform: rotate(-45deg) translate(0, -1px);
+        -ms-transform: rotate(-45deg) translate(0, -1px);
+        -webkit-transform: rotate(-45deg) translate(0, -1px);
         }
 
         /*
@@ -104,6 +140,10 @@
         
         transform-origin: 0% 0%;
         transform: translate(150vw, 0);
+        -webkit-transform: translate(150vw, 0);
+        -moz-transform: translate(150vw, 0);
+        -o-transform: translate(150vw, 0);
+        -ms-transform: translate(150vw, 0);
         
         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
         }
@@ -119,6 +159,10 @@
         #menuToggle input:checked ~ ul
         {
         transform: none;
+        -o-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -webkit-transform: none;
         }
 
 
@@ -129,6 +173,10 @@
 .index_buttons{
     background-color: $black;
     transform: skewY(20deg);
+    -webkit-transform: skewY(20deg);
+    -o-transform: skewY(20deg);
+    -ms-transform: skewY(20deg);
+    -moz-transform: skewY(20deg);
     margin-top: -10vh;
     display: flex;
     justify-content: flex-end;
@@ -136,6 +184,10 @@
         height: 60vh;
         max-width: 30vw;
         transform: skewY(-20deg);
+        -o-transform: skewY(-20deg);
+        -moz-transform: skewY(-20deg);
+        -webkit-transform: skewY(-20deg);
+        -ms-transform: skewY(-20deg);
         margin-top: 5vh;
     }
     a{
@@ -144,6 +196,10 @@
         padding-top: 10px;
         text-align: right;
         transform: translateX(-50vw);
+        -o-transform: translateX(-50vw);
+        -moz-transform: translateX(-50vw);
+        -ms-transform: translateX(-50vw);
+        -webkit-transform: translateX(-50vw);
         font-family: monotype-grotesque-condensed,"Open Sans Condensed","Roboto",sans-serif;
     }
 }
@@ -182,6 +238,10 @@
         }
         a {
             transform: translateX(-30vw);
+            -ms-transform: translateX(-30vw);
+            -moz-transform: translateX(-30vw);
+            -webkit-transform: translateX(-30vw);
+            -o-transform: translateX(-30vw);
         }
     }
 }
@@ -195,6 +255,10 @@
         }
         a {
             transform: translateX(-20vw);
+            -o-transform: translateX(-20vw);
+            -moz-transform: translateX(-20vw);
+            -webkit-transform: translateX(-20vw);
+            -ms-transform: translateX(-20vw);
         }
     }
     .dashboard{
@@ -216,22 +280,42 @@
 
        #menuToggle {
         transform: translateX(-10%);
+        -o-transform: translateX(-10%);
+        -moz-transform: translateX(-10%);
+        -ms-transform: translateX(-10%);
+        -webkit-transform: translateX(-10%);
     }
        #menu{
         transform: translate(-30vw, 0);
+        -moz-transform: translate(-30vw, 0);
+        -ms-transform: translate(-30vw, 0);
+        -webkit-transform: translate(-30vw, 0);
+        -o-transform: translate(-30vw, 0);
        }
        .index_buttons{
            transform: translateX(-20vw) skewX(-20deg);
+           -moz-transform: translateX(-20vw) skewX(-20deg);
+           -o-transform: translateX(-20vw) skewX(-20deg);
+           -ms-transform: translateX(-20vw) skewX(-20deg);
+           -webkit-transform: translateX(-20vw) skewX(-20deg);
            width: 100vw;
            nav {
                 margin-top: 30vh;
                 transform: skewX(20deg);
+                -o-transform: skewX(20deg);
+                -moz-transform: skewX(20deg);
+                -webkit-transform: skewX(20deg);
+                -ms-transform: skewX(20deg);
                 display: flex;
                 flex-direction: column;
                 max-width: 300px;
                 a{
                     text-align: left;
                     transform: translateX(-5vw);
+                    -moz-transform: translateX(-5vw);
+                    -ms-transform: translateX(-5vw);
+                    -o-transform: translateX(-5vw);
+                    -webkit-transform: translateX(-5vw);
                     font-size: 21px;
                     padding-top: 30px ;
                 }

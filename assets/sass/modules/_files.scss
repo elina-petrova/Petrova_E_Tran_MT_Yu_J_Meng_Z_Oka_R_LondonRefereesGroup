@@ -2,13 +2,11 @@
     display: flex;
     flex-direction: row;
     color: $white;
-    height: 750px;
-
 
     .file_area{
         display: flex;
         flex-direction: column;
-        width: 70%;
+        max-width: 50vw;
 
         form{
             width: 80%;
@@ -16,16 +14,22 @@
         }
 
         input[type=text]{ 
-          width: 40%;
+          width: 100%;
     
         }
 
         label{
-            font-size: 18px;
-            margin:1% 0;  
-
+            font-size: 15px;
+            font-family: monotype-grotesque,"Open Sans Condensed","Roboto",sans-serif;
+            font-weight: 600;
+            margin-top: 30px;
         }
-        
+
+        button {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            align-self: flex-end;
+        }
     }
 
 
@@ -38,7 +42,7 @@
     h3{
         font-size: 22px;
         text-align: center;
-        margin: 1%;
+        padding-bottom: 30px;
     }
 
     p{
@@ -56,8 +60,9 @@
     }
     
     table{
-        width: 80% ;
-        margin: 0 auto;
+        width: 70% auto;
+        border: $white;
+        text-align: center;
     }
     
     table, th, td {
@@ -68,7 +73,7 @@
 
     th {
         padding: 10px;
-        font-size:17px;
+        font-size:15px;
         color: $black;
         background-color: $white;
         font-weight: 700;
@@ -92,5 +97,34 @@
     .file_action{
         display: flex;
         flex-direction:row;
+    }
+
+    .file_dashboard {
+        .red_side_nav {
+            height: 100vh;
+            width: 35vw;
+            transform: translate(-25vw, 0px)  skewX(-20deg);
+            -o-transform: translate(-25vw, 0px)  skewX(-20deg);
+            -moz-transform: translate(-25vw, 0px)  skewX(-20deg);
+            -ms-transform: translate(-25vw, 0px)  skewX(-20deg);
+            -webkit-transform: translate(-25vw, 0px)  skewX(-20deg);
+            a {
+                transform: translate(18vw, 0px)  skewX(20deg);
+                -o-transform: translate(18vw, 0px)  skewX(20deg);
+                -moz-transform: translate(18vw, 0px)  skewX(20deg);
+                -ms-transform: translate(18vw, 0px)  skewX(20deg);
+                -webkit-transform: translate(18vw, 0px)  skewX(20deg);
+                font-size: 25px;
+            }
+        }
+        h2 {
+            font-size: 30px;
+        }
+
+        .file_area{
+            label {
+                font-size: 25px;
+            }
+        }
     }
 }

@@ -43,8 +43,9 @@ if (isset($_POST['edituser'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../public/css/main.css">
     <link rel="stylesheet" type="text/css"  href="../public/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yax5rrr.css">
     <title>Edit User</title>
 </head>
 <body class= "cms">
@@ -68,7 +69,7 @@ if (isset($_POST['edituser'])) {
                             <!-- <label for="user_id">Username</label> -->
                             <?php  if (empty($chosen_user)):?>
                             <div class="select_user">
-                                <select name="user_id" id="user_id">
+                                <select name="user_id" id="user_id" class="select_others">
                                 <option selected="">SELECT A USER HERE</option>
                                 <!-- Loop all users in a Dropdown Menu -->
                                     <?php foreach ($all_users as $user): ?>

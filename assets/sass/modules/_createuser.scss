@@ -1,9 +1,21 @@
 .red_side_nav{
-    height: 750px;
+    height: auto;
     width: 30%;
     transform: translate(-140px, 0px)  skewX(-20deg);
+    -webkit-transform: translate(-140px, 0px)  skewX(-20deg);
+    -o-transform: translate(-140px, 0px)  skewX(-20deg);
+    -ms-transform: translate(-140px, 0px)  skewX(-20deg);
+    -moz-transform: translate(-140px, 0px)  skewX(-20deg);
     background-color: $red;
-    
+    a {
+        font-family: monotype-grotesque-condensed,"Open Sans Condensed","Roboto",sans-serif;
+        transform: skewX(20deg);
+        -moz-transform: skewX(20deg);
+        -webkit-transform: skewX(20deg);
+        -o-transform: skewX(20deg);
+        -ms-transform: skewX(20deg);
+        font-size: 15px;
+    }
 }
 
 .create_user_area{
@@ -14,7 +26,7 @@
   
     
     a{
-        font-size: 20px;
+        font-size: 15px;
         padding: 20px;
     }
     a:hover{
@@ -29,10 +41,11 @@
     display: flex;
     flex-direction: column;
     margin-top: 5%;
+    padding: 10px;
     width: 60%;
 
     h2{
-        font-size: 30px;
+        font-size: 20px;
         text-align: center;
         margin:3%;
     }
@@ -42,24 +55,51 @@
         margin: 4%;
         color: $red;
     }
+
+    label{
+        font-size: 15px;
+        font-family: monotype-grotesque,"Open Sans Condensed","Roboto",sans-serif;
+        font-weight: 600;
+    }
+
+    input{
+        margin-bottom: 10px;
+        font-family: monotype-grotesque,"Open Sans Condensed","Roboto",sans-serif;
+        font-weight: 300;
+    }
 }
 
 
 
 
 @media (min-width:900px){
-    .create_user_form{
-        margin-left: 2%;
-        width: 35%;
-
-        h2{
-            font-size: 30px;
+    .create_user_area {
+        .red_side_nav {
+            height: 100vh;
+            width: 35vw;
+            transform: translate(-18vw, 0px)  skewX(-20deg);
+            -o-transform: translate(-18vw, 0px)  skewX(-20deg);
+            -moz-transform: translate(-18vw, 0px)  skewX(-20deg);
+            -ms-transform: translate(-18vw, 0px)  skewX(-20deg);
+            -webkit-transform: translate(-18vw, 0px)  skewX(-20deg);
+            a {
+                transform: translate(18vw, 0px)  skewX(20deg);
+                -o-transform: translate(18vw, 0px)  skewX(20deg);
+                -moz-transform: translate(18vw, 0px)  skewX(20deg);
+                -ms-transform: translate(18vw, 0px)  skewX(20deg);
+                -webkit-transform: translate(18vw, 0px)  skewX(20deg);
+                font-size: 25px;
+            }
         }
     
-       
-
+        .create_user_form{
+            margin-left: 2%;
+            width: 35%;
+    
+            h2{
+                font-size: 30px;
+            }
+        }
     }
 }
-    
-    
-   
+

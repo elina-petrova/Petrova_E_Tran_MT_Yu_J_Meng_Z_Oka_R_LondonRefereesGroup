@@ -9,10 +9,10 @@ new_login_user_prevent();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../public/css/main.css">
     <link rel="stylesheet" type="text/css"  href="../public/css/reset.css">
-    
-    <title>Welcome Page</title>
+    <link rel="stylesheet" type="text/css" href="../public/css/main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yax5rrr.css">
+    <title>LRG Dashboard</title>
 </head>
 <body class="cms">
     <section class="index_area">
@@ -57,7 +57,7 @@ new_login_user_prevent();
         <div class="dashboard">
             <div class="login_user">      
                     <h2>Hello, <?php echo $_SESSION['user_name'];?>! </h2>
-                  
+                    <a href="admin_logout.php">LOG OUT</a>
             </div>
 
             <div class="responsiveCal">

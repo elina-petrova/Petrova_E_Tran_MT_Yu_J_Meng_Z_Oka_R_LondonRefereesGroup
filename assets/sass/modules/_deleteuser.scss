@@ -32,7 +32,6 @@
       }
 
     table{
-        margin: 2%;
         width: 70% auto;
         border: $white;
         text-align: center;
@@ -50,8 +49,26 @@
     td{
         padding: 1px;
     }
-    
+}
 
-
-
+@media (min-width:900px){
+    .delete_user_area {
+        .red_side_nav {
+            height: auto;
+            width: 35vw;
+            transform: translate(-25vw, 0px)  skewX(-20deg);
+            -o-transform: translate(-25vw, 0px)  skewX(-20deg);
+            -moz-transform: translate(-25vw, 0px)  skewX(-20deg);
+            -ms-transform: translate(-25vw, 0px)  skewX(-20deg);
+            -webkit-transform: translate(-25vw, 0px)  skewX(-20deg);
+            a {
+                transform: translate(18vw, 0px)  skewX(20deg);
+                -o-transform: translate(18vw, 0px)  skewX(20deg);
+                -moz-transform: translate(18vw, 0px)  skewX(20deg);
+                -ms-transform: translate(18vw, 0px)  skewX(20deg);
+                -webkit-transform: translate(18vw, 0px)  skewX(20deg);
+                font-size: 25px;
+            }
+        }
+    }
 }

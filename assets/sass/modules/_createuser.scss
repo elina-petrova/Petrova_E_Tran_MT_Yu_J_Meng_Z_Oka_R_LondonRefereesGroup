@@ -1,29 +1,16 @@
-.red_side_nav{
-    height: auto;
-    width: 30%;
-    transform: translate(-140px, 0px)  skewX(-20deg);
-    -webkit-transform: translate(-140px, 0px)  skewX(-20deg);
-    -o-transform: translate(-140px, 0px)  skewX(-20deg);
-    -ms-transform: translate(-140px, 0px)  skewX(-20deg);
-    -moz-transform: translate(-140px, 0px)  skewX(-20deg);
-    background-color: $red;
-    a {
-        font-family: monotype-grotesque-condensed,"Open Sans Condensed","Roboto",sans-serif;
-        transform: skewX(20deg);
-        -moz-transform: skewX(20deg);
-        -webkit-transform: skewX(20deg);
-        -o-transform: skewX(20deg);
-        -ms-transform: skewX(20deg);
-        font-size: 15px;
-    }
-}
-
 .create_user_area{
     display: flex;
     flex-direction: row;
     color: $white;
     border-radius:  20px;
-  
+    .red_side_nav{
+        background-color: $black;
+        transform: none;
+        a {
+            font-family: monotype-grotesque,"Roboto",sans-serif;
+            font-size: 15px;
+        }
+    }
     
     a{
         font-size: 15px;
@@ -74,7 +61,8 @@
 
 @media (min-width:900px){
     .create_user_area {
-        .red_side_nav {
+        div.red_side_nav {
+            background-color: $red;
             height: 100vh;
             width: 35vw;
             transform: translate(-18vw, 0px)  skewX(-20deg);

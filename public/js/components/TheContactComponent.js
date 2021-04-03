@@ -61,13 +61,13 @@ export default {
     <label for="name">Name</label>
     <input id="name" type="text" name="name" value="">
 
-    <label for="email">Email Adress</label>
+    <label for="email">Email Address</label>
     <input id="email" type="text" name="email" value="">
 
     <label for="subject">Subject</label>
     <input id="subject" type="text" name="subject" value="">
 
-    <label for="question">Your Question</label>
+    <label for="question">How can we help?</label>
     <textarea id="question" type="text" name="question" cols="30" rows="20"></textarea>
 
      <div v-on:click="processMail" type="submit" name="submit" class="contactFormSubmit button careerButton contactButton"><p>Submit</p></div>

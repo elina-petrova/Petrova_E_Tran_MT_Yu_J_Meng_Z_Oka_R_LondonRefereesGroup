@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: row;
     color: $white;
-
     .red_side_nav{
         background-color: $black;
         transform: none;
@@ -111,7 +110,7 @@
     .file_dashboard {
         .red_side_nav {
             background-color: $red;
-            height: 100vh;
+            height: 110vh;
             width: 35vw;
             transform: translate(-25vw, 0px)  skewX(-20deg);
             -o-transform: translate(-25vw, 0px)  skewX(-20deg);

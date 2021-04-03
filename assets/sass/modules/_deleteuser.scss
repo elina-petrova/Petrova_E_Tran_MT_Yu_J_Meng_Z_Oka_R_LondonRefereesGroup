@@ -3,6 +3,14 @@
     flex-direction: row;
     color: $white;
 
+    .red_side_nav{
+        background-color: $black;
+        transform: none;
+        a {
+            font-family: monotype-grotesque,"Roboto",sans-serif;
+            font-size: 15px;
+        }
+    }
     .delete_user{
         display: flex;
         flex-direction: column;
@@ -27,7 +35,7 @@
     
     
     table, th, td {
-        font-family: monotype-grotesque,sans-serif; 
+        font-family: monotype-grotesque, 'Roboto',sans-serif; 
         border: 3px solid $white;
       }
 
@@ -54,7 +62,8 @@
 @media (min-width:900px){
     .delete_user_area {
         .red_side_nav {
-            height: auto;
+            background-color: $red;
+            height: 100vh;
             width: 35vw;
             transform: translate(-25vw, 0px)  skewX(-20deg);
             -o-transform: translate(-25vw, 0px)  skewX(-20deg);

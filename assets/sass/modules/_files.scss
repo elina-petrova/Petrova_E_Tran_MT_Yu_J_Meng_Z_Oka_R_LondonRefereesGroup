@@ -3,6 +3,15 @@
     flex-direction: row;
     color: $white;
 
+    .red_side_nav{
+        background-color: $black;
+        transform: none;
+        a {
+            font-family: monotype-grotesque,"Roboto",sans-serif;
+            font-size: 15px;
+        }
+    }
+
     .file_area{
         display: flex;
         flex-direction: column;
@@ -101,6 +110,7 @@
 
     .file_dashboard {
         .red_side_nav {
+            background-color: $red;
             height: 100vh;
             width: 35vw;
             transform: translate(-25vw, 0px)  skewX(-20deg);
@@ -115,6 +125,8 @@
                 -ms-transform: translate(18vw, 0px)  skewX(20deg);
                 -webkit-transform: translate(18vw, 0px)  skewX(20deg);
                 font-size: 25px;
+                font-family: monotype-grotesque,"Roboto",sans-serif;
+                font-weight: 600;
             }
         }
         h2 {

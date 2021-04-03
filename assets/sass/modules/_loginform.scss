@@ -68,9 +68,9 @@
         flex-direction: column;
         color: $white;
         label{
-            font-size: 17px;
+            font-size: 23px;
             margin-top: 5%;
-            font-family: monotype-grotesque, sans-serif;
+            font-family: monotype-grotesque, 'Roboto', sans-serif;
             font-weight: 400;
         }
 
@@ -128,7 +128,7 @@
     }
 }
 
-@media (min-width:550px){ 
+@media (min-width:440px){ 
     .logo_area{
         margin-top: -11vh;
         .logo{
@@ -141,7 +141,7 @@
     
 }
 
-@media (min-width:630px){ 
+@media (min-width:490px){ 
     .logo_area{
         margin-top: -20vh;
         height: 70vh;
@@ -151,7 +151,7 @@
         }
 
         a{
-            margin-top: 35vh;
+            margin-top: 38vh;
         }
     }
     
@@ -222,7 +222,7 @@
     color:$white;
     h2{
         font-size: 25px;
-        font-family: monotype-grotesque, sans-serif;
+        font-family: monotype-grotesque, 'Roboto', sans-serif;
         font-weight: 400;
     }
 

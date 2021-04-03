@@ -1,23 +1,23 @@
 <?php
 require_once '../load.php';
-//make sure this page only access to 
+//make sure this page only access to
 confirm_logged_in(true);
 admin_access_only();
 
 $users = getAllUsers();
 
 
-if(!$users){
+if (!$users) {
     $message = 'Fail to get user list';
 }
 
 
-if(isset($_GET['id'])){
-   $delete_user_id = $_GET['id'];
+if (isset($_GET['id'])) {
+    $delete_user_id = $_GET['id'];
 
     $delete_user_id = deleteUser($delete_user_id);
 
-    if(!$delete_user_id){
+    if (!$delete_user_id) {
         $message = 'Fail to delete user';
     }
 }
@@ -32,8 +32,9 @@ if(isset($_GET['id'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../public/css/main.css">
     <link rel="stylesheet" type="text/css"  href="../public/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yax5rrr.css">
     <title>Delete User</title>
 </head>
 
@@ -61,7 +62,7 @@ if(isset($_GET['id'])){
                 </thead>
 
                 <tbody>
-                <?php while($single_user = $users  -> fetch(PDO::FETCH_ASSOC)):?>
+                <?php while ($single_user = $users  -> fetch(PDO::FETCH_ASSOC)):?>
                     <tr>
                         <td><?php echo $single_user['user_id'];?></td>
                         <td><?php echo $single_user['user_name'];?></td>

@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../public/css/main.css">
     <link rel="stylesheet" type="text/css"  href="../public/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yax5rrr.css">
     <title>Create user successful page.</title>
 </head>
 <body class= "cms">

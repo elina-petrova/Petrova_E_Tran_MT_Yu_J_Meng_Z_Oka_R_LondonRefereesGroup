@@ -1,7 +1,7 @@
 <?php
 require_once '../load.php';
 
-//make sure this page only access to 
+//make sure this page only access to
 confirm_logged_in();
 admin_access_only();
 
@@ -12,34 +12,33 @@ $user_name = '';
 $user_email = '';
 $user_password = '';
 
-if(isset($_POST['submit'])){
+if (isset($_POST['submit'])) {
      
     //user first name
-    if(empty($_POST['fname'])) { 
-        $fname_error = '* first name is required *'; 
+    if (empty($_POST['fname'])) {
+        $fname_error = '* first name is required *';
     } else {
         $user_fname = filter_var($_POST['fname'], FILTER_SANITIZE_STRING);
-    } 
+    }
             
     //user last name
-    if(empty($_POST['lname'])) { 
-        $lname_error = '* last name is required *'; 
+    if (empty($_POST['lname'])) {
+        $lname_error = '* last name is required *';
     } else {
         $user_lname = filter_var($_POST['lname'], FILTER_SANITIZE_STRING);
-    } 
-       //user email
-       if (empty($_POST['email'])) {
+    }
+    //user email
+    if (empty($_POST['email'])) {
         $email_error ='* email is required *';
-
     } else {
         $user_email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
     }
     
 
     //user name
-    if(empty($_POST['username'])) { 
-        $username_error = '* username is required *'; 
-    } else{
+    if (empty($_POST['username'])) {
+        $username_error = '* username is required *';
+    } else {
         $user_name = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
     }
     
@@ -68,10 +67,10 @@ if(isset($_POST['submit'])){
     $email_headers .= "To: $user_email\r\n";
     $email_headers .= "Content-Type: text/html";
 
-// Send the email to user
-    $email_result = mail($email_recipient, $email_subject, $email_message,  $email_headers);
+    // Send the email to user
+    $email_result = mail($email_recipient, $email_subject, $email_message, $email_headers);
 
-//password setting2
+    //password setting2
     //password is encrypted and stored in the database
     //$hash = password_hash($user_password, PASSWORD_DEFAULT);
     
@@ -95,8 +94,9 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../public/css/main.css">
     <link rel="stylesheet" type="text/css"  href="../public/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yax5rrr.css">
     <title>Create User Page</title>
 </head>
 <body class="cms">
@@ -113,25 +113,25 @@ if(isset($_POST['submit'])){
             
                 <?php echo !empty($message)?$message:'';?>
                     <label for="first_name">First Name :</label> 
-                    <input type="text" name="fname"  id="first_name" placeholder="<?php echo !empty( $fname_error)? $fname_error:'';?>  " value="<?= $user_fname;?>">
+                    <input type="text" name="fname"  id="first_name" placeholder="<?php echo !empty($fname_error)? $fname_error:'';?>  " value="<?= $user_fname;?>">
                    
 
                     <label for="last_name">Last Name :</label> 
-                    <input type="text" name="lname"  id="last_name" placeholder="<?php echo !empty( $lname_error)? $lname_error:'';?> " value="<?=$user_lname;?>">
+                    <input type="text" name="lname"  id="last_name" placeholder="<?php echo !empty($lname_error)? $lname_error:'';?> " value="<?=$user_lname;?>">
                     
 
                     <label for="user_name">User Name :</label>  
-                    <input type="text" name="username"  id="user_name" placeholder=" <?php echo !empty( $username_error)? $username_error:'';?> " value="<?= $user_name;?>">
+                    <input type="text" name="username"  id="user_name" placeholder=" <?php echo !empty($username_error)? $username_error:'';?> " value="<?= $user_name;?>">
                    
 
                     <label for="email">Email :</label> 
-                    <input type="email" name="email"  id="email" placeholder=" <?php echo !empty( $email_error)? $email_error:'';?> " value="<?= $user_email;?>">
+                    <input type="email" name="email"  id="email" placeholder=" <?php echo !empty($email_error)? $email_error:'';?> " value="<?= $user_email;?>">
                     
 
                     <label for="user_level">User Level :</label><br>
                     <select  name="user_level"  id="user_level" >
                     <?php  $user_level_map = getUserLevelMap();
-                    foreach($user_level_map as $val => $label): ?>
+                    foreach ($user_level_map as $val => $label): ?>
                     <option value="<?php echo $val;?>"><?php echo $label;?></option>   
                     <?php endforeach;?>
                     </select>

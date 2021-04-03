@@ -258,7 +258,7 @@ at all levels of competition.</p>
                             <p>Junior Membership Program Graduate</p>
                         </div>
                         <div class="button officials_button">
-                            <router-link to="/"  @click.native="scrollToTopFot"> Learn more </router-link>
+                            <router-link to="/programs"  @click.native="scrollToTopFot"> Learn more </router-link>
                         </div>
 
                     </div>
@@ -288,7 +288,7 @@ at all levels of competition.</p>
                             <p>Junior Membership Program Graduate</p>
                         </div>
                         <div class="button officials_button">
-                            <router-link to="/"  @click.native="scrollToTopFot"> Learn more </router-link>
+                            <router-link to="/programs"  @click.native="scrollToTopFot"> Learn more </router-link>
                         </div>
 
                     </div>
@@ -313,7 +313,7 @@ at all levels of competition.</p>
                             <p>Junior Membership Program Graduate</p>
                         </div>
                         <div class="button officials_button">
-                            <router-link to="/"  @click.native="scrollToTopFot"> Learn more </router-link>
+                            <router-link to="/programs"  @click.native="scrollToTopFot"> Learn more </router-link>
                         </div>
 
                     </div>

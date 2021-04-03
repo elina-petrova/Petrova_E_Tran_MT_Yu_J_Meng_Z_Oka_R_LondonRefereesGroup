@@ -49,12 +49,17 @@
     display: none;
 }
 
+@media (min-width: 450px){
+    .pro-hero{
+        background-image: url(../images/ourpro-hero.jpg);
+    }
+}
 @media (min-width: 700px){
 .pro-hero-content{
     margin-left: 10%;
 }
 .pro-hero{
-        background-image: url(../images/ourpro-hero.jpg);
+    background-image: url(../images/ourpro-hero.jpg);
         p{
         width: auto;
     }

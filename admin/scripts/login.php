@@ -1,6 +1,7 @@
 
 <?php
-function login($username, $password, $ip) {
+function login($username, $password, $ip)
+{
 
     ## TODO remove the following debug when done
     //return 'You are trying to login with Username:'.$username.'Password:'.$password;
@@ -17,33 +18,33 @@ function login($username, $password, $ip) {
         )
     );
 
-    if($found_user = $user_set -> fetch(PDO::FETCH_ASSOC)){//PDO::FETCH_ASSOC tells PDO to return the result as an associative array.
-       //if found user exist in user database, get him in!
+    if ($found_user = $user_set -> fetch(PDO::FETCH_ASSOC)) {//PDO::FETCH_ASSOC tells PDO to return the result as an associative array.
+        //if found user exist in user database, get him in!
 
-       if ($found_user['user_status'] ==='locked') {
-        return "* You account has locked *";
-        redirect_to('admin_login.php');
-        exit;
-    }
+        if ($found_user['user_status'] ==='locked') {
+            return "* Your account has been locked. Contact an Admin";
+            redirect_to('admin_login.php');
+            exit;
+        }
 
         $found_user_id = $found_user['user_id'];//get user id
 
        
         //Newly created user, not logged in two minutes, user locked
-        if ( $found_user['login_times'] == 0) {
+        if ($found_user['login_times'] == 0) {
             date_default_timezone_set('America/New_York');
 
             //simply compare two integer timestamp values...
-             $diff = time() - strtotime($found_user['user_date']);
+            $diff = time() - strtotime($found_user['user_date']);
             //$diff = strtotime($found_user['user_date']) - strtotime('now');
            
             // {    echo $diff.PHP_EOL;
             //     echo strtotime($found_user['user_date']).PHP_EOL;
             //     echo time().PHP_EOL;
             //     exit;
-            $new_user_login_time_limits = 24* 60* 60; 
-            if ( $diff  > $new_user_login_time_limits ) {
-                  // it been more than 2 minutes
+            $new_user_login_time_limits = 24* 60* 60;
+            if ($diff  > $new_user_login_time_limits) {
+                // it been more than 2 minutes
                 if ($found_user['user_status'] != 'locked') {
                     $update_user_query = 'UPDATE tbl_users SET user_status = :user_status WHERE user_id = :user_id';
                     $update_user_set = $pdo -> prepare($update_user_query);
@@ -78,7 +79,7 @@ function login($username, $password, $ip) {
         $_SESSION['user_ip'] = $found_user['user_ip'];//write user_ip in session
 
 
-        //update the user last login time by the current loggod in one 
+        //update the user last login time by the current loggod in one
         $update_user_query = 'UPDATE tbl_users SET last_login =now() WHERE user_id = :user_id';
         $update_user_set = $pdo -> prepare($update_user_query);
         $update_user_set -> execute(
@@ -102,36 +103,36 @@ function login($username, $password, $ip) {
         );
 
         //first time login redirect to edit user page
-        if($_SESSION['login_times'] == 1){
+        if ($_SESSION['login_times'] == 1) {
             redirect_to('admin_edituser.php');
         }
        
-       ##TODO : debug only, will change here
+        ##TODO : debug only, will change here
        //return 'Hello, ' . $username . '!  <br />  Your IP address (using $_SERVER[\'REMOTE_ADDR\']) is ' . $ip . '<br /><br />';
                
        //after login in succes, redirect user back to welcome.php, redirect_to function
-       
-
-    }else{
+    } else {
 
        //this is invaild attemp, reject it!
-  return "Sorry, your username or password isn't correct. ";
-       //redirect_to('admin_login.php');
+        return "Sorry, your username or password isn't correct. ";
+        //redirect_to('admin_login.php');
     }
 }
 
 
 //only login in user can see the index.php, otherwise, rediect to login page
-function confirm_logged_in(){
-    if(!isset($_SESSION['user_id'])){
-          redirect_to('admin_login.php');
+function confirm_logged_in()
+{
+    if (!isset($_SESSION['user_id'])) {
+        redirect_to('admin_login.php');
     }
 }
 
 
 
 //if user log out, redirect user to admin_login.php
-function logout(){
+function logout()
+{
     session_destroy();
     redirect_to('admin_login.php');
 }

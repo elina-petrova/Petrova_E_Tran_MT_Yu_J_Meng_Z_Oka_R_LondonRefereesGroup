@@ -22,20 +22,17 @@
     padding: 2rem 1rem;
     position: relative;
     .member-colored, .mmbInfo{
-        position: absolute;
-        opacity: 0;
-        left: 0;
-        right: 0;
         transition: all 0.3s ease-in-out;
     }
     .member-colored{
-        top: 0;
-        bottom: 0;
-        padding: 2rem 1rem;
         opacity: 1;
+        position: relative;
     }
     .mmbInfo{
+        position:absolute;
         bottom: 0;
+        left:0;
+        right: 0;
         background: rgba(0, 0, 0,0.5);
         margin: 2rem 1rem;
         padding: 0 1rem;
@@ -47,35 +44,26 @@
         }
     }
 }
-.memberWrap:hover .member-colored{
-    opacity: 1;
-}
-.memberWrap:hover .mmbInfo{
-    opacity: 1;
-}
 
 .blackImage{
-    filter: opacity(0.5);
+    display: none;
 }
 @media (min-width: 700px){
 .memberWrap{
     width: 30%;
-    padding: 2rem 1rem;
+    // padding: 2rem 1rem;
 }
 }
 
 @media(min-width: 900px){
     .membershipWrap{
     .mmbInfo{
-    opacity: 0;
     p{
                 font-size: 23px;
                 padding: 0.1rem 0;
     }
 }
-.member-colored{
-    opacity: 0;
-}
+
 }
 }
 @media (min-width: 1200px){

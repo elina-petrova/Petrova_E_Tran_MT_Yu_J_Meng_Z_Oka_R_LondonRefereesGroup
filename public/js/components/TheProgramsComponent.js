@@ -1,5 +1,5 @@
 import SocialMedia from "./socialMediaComponent.js";
-
+var rootElement = document.documentElement;
 export default {
     name: 'OfficiatingProgramComponent',
     template: `
@@ -245,7 +245,7 @@ export default {
     <p>Check out the resources and
 information to get you started
 as a hockey official.</p>
-<div class="button careerButton"><a href="/">Learn more</a></div>
+<div class="button careerButton"><router-link  to="/of-program" @click.native="scrollToTopFot">Learn more</router-link></div>
 </div>
 
 </div>
@@ -256,5 +256,13 @@ as a hockey official.</p>
         `,
     components: {
         "social-media": SocialMedia,
+    },
+    methods: {
+        scrollToTopFot: function () {
+            rootElement.scrollTo({
+                top: 0,
+            });
+            console.log('scrolled to top');
+        },
     }
 }

@@ -6,6 +6,7 @@
     height: 100vh;
     width: 100vw;
    background-color: white;
+   overflow: hidden;
    overflow-y: scroll;
 
    
@@ -219,14 +220,13 @@
             color: $black;
         }
     }
-}
-
-
-.responsiveCal {
-    padding-bottom: 50px;
-    iframe {
-        max-width: 80%;
+    .responsiveCal {
+        padding-bottom: 50px;
+        iframe {
+            max-width: 80%;
+        }
     }
+    
 }
 
 //login page mobile size

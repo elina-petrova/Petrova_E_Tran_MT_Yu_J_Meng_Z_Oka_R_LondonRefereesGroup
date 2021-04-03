@@ -56,13 +56,18 @@ const vm = new Vue({
                 top: 0,
                 behavior: "smooth"
             });
-            console.log('scrolled to top');
+        },
+
+        scrollToMentor: function () {
+            rootElement.scrollTo({
+                top: 2000,
+                behavior: "smooth"
+            });
         },
         scrollToTopFot: function () {
             rootElement.scrollTo({
                 top: 0,
             });
-            console.log('scrolled to top');
         },
 
         showMenu: function (e) {

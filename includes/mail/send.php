@@ -46,7 +46,7 @@ $result['inquery'] = $visitor_inquery;
 
 if ($error_found === 0) {
     $email_recipient = 'other@gmail.com';
-    $email_subject = 'Inquiry from Portfolio Site';
+    $email_subject = 'Request from LRG Website';
     $email_message = sprintf('Name: %s, Email: %s, Message: %s', $visitor_name, $visitor_email, $visitor_message);
     $email_headers = array(
     //best practise but you need to have a domain email
@@ -60,7 +60,7 @@ if ($error_found === 0) {
     if ($email_result) {
         $result['message'] = sprintf('Thank you for contacting us, %s!', $visitor_name);
     } else {
-        $result['message'] = sprintf('We are sorry your email did not go through');
+        $result['message'] = sprintf('We are sorry that your email did not go through');
     }
     $error_found = 0;
 }

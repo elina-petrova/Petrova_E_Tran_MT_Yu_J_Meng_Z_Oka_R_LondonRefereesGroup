@@ -1,4 +1,3 @@
-console.log('hi');
 
 var menuIcon;
 var mobileMenu;
@@ -42,7 +41,6 @@ const vm = new Vue({
     },
 
     mounted: function () {
-        console.log('vue cinnected');
 
         menuIcon = document.querySelectorAll(".menu_opener");
         mobileMenu = document.querySelector(".mobile_menu");
